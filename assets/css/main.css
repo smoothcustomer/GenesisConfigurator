@@ -105,7 +105,7 @@ body, html {
 	height: 100%;
 	color: #eee;
 	/* font-family: 'GenesisSansText', Helvetica, Arial, Verdana, sans-serif; */
-	font-family: 'GenesisSansHead', Helvetica, Arial, Verdana, sans-serif;
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
 	font-style: normal;
 	font-size: 14px;
 	line-height: 14px;
@@ -310,6 +310,38 @@ section.global-nav header .global-nav-panel.selected {
 	padding: 60px;
 }
 
+
+/*Global Buttons */
+
+.button {
+	height: 50px;
+	font-size: 11px;
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
+	letter-spacing: 1px;
+	line-height: 50px;
+	padding: 0 40px;
+	box-sizing: border-box;
+	cursor: pointer;
+	text-align: center;
+}
+
+.button.dark {
+	background-color: #000;
+	border: 1px solid #5d5d5d;
+	color: #fff;
+}
+
+.button.copper {
+	background-color: #A36B4F;
+	/* border: 1px solid #5d5d5d; */
+	color: #fff;
+}
+
+/*
+font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+font-size: 18px;
+color: #CD9A81;
+*/
 
 
 
