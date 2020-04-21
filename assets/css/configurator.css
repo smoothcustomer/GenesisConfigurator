@@ -16,7 +16,7 @@ section.configurator .subnav {
 	position: relative;
 	display: flex;
 	background-color: #000;
-	height: 70px;
+	height: 60px;
 	width: 100%;
 }
 
@@ -30,7 +30,7 @@ section.configurator .subnav .tabs {
 section.configurator .subnav .tab-button {
 	position: relative;
 	display: flex;
-	padding: 35px 0 40px 0;
+	padding: 30px 0 30px 0;
 	margin: 0 45px 0 0;
 	cursor: pointer;
 }
@@ -62,7 +62,7 @@ section.configurator .subnav .ctas {
 section.configurator .subnav .cta {
 	position: relative;
 	display: flex;
-	padding: 35px 0 0 40px;
+	padding: 30px 0 0 40px;
 	margin: 0 0 0 30px;
 	color: #CD9A81;
 	cursor: pointer;
@@ -73,7 +73,7 @@ section.configurator .subnav .cta .icon {
 	width: 40px;
 	height: 40px;
 	left: 0px;
-	top: 23px;
+	top: 18px;
 }
 
 section.configurator .subnav .cta .icon img {
@@ -93,7 +93,7 @@ section.configurator .visualizer {
 	background-color: #222;
 	background: url(../images/visualizer-fpo-2.jpg) no-repeat center center;
   	background-size: cover;
-	height: calc(100vh - 400px);
+	height: calc(100vh - 340px);
 	width: 100%;
 }
 
@@ -201,14 +201,14 @@ section.configurator .visualizer .ui .fullscreen-button .icon img {
 section.configurator .vehicle-info-bar {
 	position: absolute;
 	display: flex;
-	height: 70px;
+	height: 65px;
 	width: 100%;
 }
 
 section.configurator .vehicle-info-bar .vehicle-info {
 	position: absolute;
 	display: flex;
-	height: 70px;
+	height: 65px;
 	width: 100%;
 	z-index: 20;
 }
@@ -232,7 +232,7 @@ section.configurator .vehicle-info-bar .vehicle-info .model {
 	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
 	display: flex;
 	font-size: 28px;
-	padding: 29px 25px 0 0;
+	padding: 24px 25px 0 0;
 }
 
 section.configurator .vehicle-info-bar .vehicle-info .trim {
@@ -240,14 +240,14 @@ section.configurator .vehicle-info-bar .vehicle-info .trim {
 	display: flex;
 	font-size: 14px;
 	color: #CD9A81;
-	padding: 32px 25px 0 0;
+	padding: 27px 25px 0 0;
 }
 
 section.configurator .vehicle-info-bar .vehicle-info .msrp {
 	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
 	display: flex;
 	font-size: 14px;
-	padding: 32px 0 0 0;
+	padding: 27px 0 0 0;
 }
 
 section.configurator .vehicle-info-bar .vehicle-info .msrp span.msrp-label {
@@ -260,7 +260,7 @@ section.configurator .vehicle-info-bar .vehicle-info .zip {
 	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
 	display: flex;
 	font-size: 14px;
-	padding: 32px 30px 0 30px;
+	padding: 27px 30px 0 30px;
 	margin: 0 5px 0 0;
 }
 
@@ -269,7 +269,7 @@ section.configurator .vehicle-info-bar .vehicle-info .zip .icon {
 	width: 40px;
 	height: 40px;
 	left: -7px;
-	top: 19px;
+	top: 15px;
 }
 
 section.configurator .vehicle-info-bar .vehicle-info .zip .icon img {
@@ -282,7 +282,7 @@ section.configurator .vehicle-info-bar .vehicle-info .inventory {
 	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
 	display: flex;
 	font-size: 14px;
-	padding: 32px 0 0 30px;
+	padding: 27px 0 0 30px;
 }
 
 section.configurator .vehicle-info-bar .vehicle-info .inventory .icon {
@@ -290,7 +290,7 @@ section.configurator .vehicle-info-bar .vehicle-info .inventory .icon {
 	width: 40px;
 	height: 40px;
 	left: -10px;
-	top: 20px;
+	top: 16px;
 }
 
 section.configurator .vehicle-info-bar .vehicle-info .inventory .icon img {
@@ -301,7 +301,7 @@ section.configurator .vehicle-info-bar .vehicle-info .inventory .icon img {
 section.configurator .vehicle-info-bar .background {
 	position: absolute;
 	background-color: #000;
-	height: 74px;
+	height: 64px;
 	width: 100%;
 	left: 0;
 	top: 0;
@@ -320,14 +320,25 @@ section.configurator .panels {
 }
 
 section.configurator .panel {
-	padding: 60px 0;
+	display: none;
+	padding: 40px 0;
 }
 
+section.configurator .panel.selected {
+	display: flex;
+}
+
+
 section.configurator .panel-content {
-	/* background-color: #111; */
+	display: flex;
+	flex: 1;
+	flex-direction: column;
 }
 
 section.configurator .panel-content .row {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
 	padding: 0 0 60px 0;
 }
 
@@ -338,14 +349,14 @@ section.configurator .panel-content .row-header {
 	position: relative;
 	display: flex;
 	flex: 1;
-	padding: 0 80px 20px 80px;
+	padding: 0 80px 10px 80px;
 }
 
 section.configurator .panel-content .row-header .title {
 	display: flex;
 	flex: 1;
 	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
-	font-size: 20px;
+	font-size: 22px;
 	letter-spacing: 0.5px;
 	line-height: 50px;
 	color: #CD9A81;
@@ -375,21 +386,27 @@ section.configurator .panel-content .card {
 
 
 
-/* Model Card */
+/* Card */
 
-section.configurator .panel-content .card.model .inner-wrap {
+section.configurator .panel-content .card .inner-wrap {
+	display: flex;
+	flex: 1 0 auto;
 	position: relative;
 	padding: 20px;
 }
 
-section.configurator .panel-content .card.model .card-content {
+section.configurator .panel-content .card .card-content {
 	position: relative;
-	padding: 50px 35px 35px 35px;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	position: relative;
+	padding: 35px 35px 35px 35px;
 }
 
-section.configurator .panel-content .card.model .background {
+section.configurator .panel-content .card .background {
 	position: absolute;
-	background-color: #333;
+	background-color: #272727;
 	width: 100%;
 	height: 100%;
 	left: 0;
@@ -397,86 +414,99 @@ section.configurator .panel-content .card.model .background {
 	z-index: 1;
 }
 
-section.configurator .panel-content .card.model.selected .background {
+section.configurator .panel-content .card.selected .background {
 	background-color: #A36B4F;
 }
 
-section.configurator .panel-content .card.model .title {
+section.configurator .panel-content .card .select-icon {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 35px;
+	left: 31px;
+	z-index: 10;
+	opacity: .5;
+}
+
+section.configurator .panel-content .card .select-icon img {
+	width: 30px;
+	height: 30px;
+}
+
+
+section.configurator .panel-content .card .title {
 	position: relative;
 	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
 	font-size: 32px;
-	line-height: 32px;
+	line-height: 34px;
 	letter-spacing: 0.5px;
 	color: #fff;
-	padding: 0 0 15px 0;
+	padding: 0 0 5px 40px;
 	z-index: 10;
 }
 
-section.configurator .panel-content .card.model .bug {
+section.configurator .panel-content .card .bug {
 	position: relative;
 	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
 	font-size: 11px;
 	letter-spacing: 1px;
 	color: #CD9A81;
+	padding: 0 0 0 40px;
 	z-index: 10;
 }
 
-section.configurator .panel-content .card.model .vehicle-photo {
-	position: relative;
-	height: 160px;
-	background-color: #222;
-	margin: 20px 0 20px 0;
-	z-index: 10;
-}
-
-section.configurator .panel-content .card.model .specs {
+section.configurator .panel-content .card .specs {
 	position: relative;
 	margin: 0 0 30px 0;
 	z-index: 10;
 }
 
-section.configurator .panel-content .card.model .specs .labels {
+section.configurator .panel-content .card .specs .labels {
 	display: flex;
 	width: 100%;
 	margin: 0 0 15px 0;
 }
 
-section.configurator .panel-content .card.model .specs .values {
+section.configurator .panel-content .card .specs .values {
 	position: relative;
 	display: flex;
 	width: 100%;
 	z-index: 10;
 }
 
-
-section.configurator .panel-content .card.model .specs .label.msrp {
+section.configurator .panel-content .card .specs .label.msrp {
 	width: 40%;
 	flex: 0 0 40%;
 }
 
-section.configurator .panel-content .card.model .specs .label {
+section.configurator .panel-content .card .specs .label {
 	display: flex;
 	font-size: 11px;
 	letter-spacing: 1px;
 	flex: 1;
 	padding: 0 15px 0 0;
+	color: #CD9A81;
 }
 
-section.configurator .panel-content .card.model .specs .value.msrp {
+section.configurator .panel-content .card.selected .specs .label {
+	color: #fff;
+}
+
+section.configurator .panel-content .card .specs .value.msrp {
 	width: 40%;
 	flex: 0 0 40%;
 }
 
-section.configurator .panel-content .card.model .specs .value {
+section.configurator .panel-content .card .specs .value {
 	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
 	display: flex;
-	font-size: 20px;
+	font-size: 22px;
 	letter-spacing: 1px;
 	flex: 1;
 	padding: 0 15px 0 0;
 }
 
-section.configurator .panel-content .card.model .description {
+section.configurator .panel-content .card .description {
 	position: relative;
 	display: flex;
 	font-family: 'GenesisSansText-Regular', Helvetica, Arial, Verdana, sans-serif;
@@ -486,14 +516,57 @@ section.configurator .panel-content .card.model .description {
 	z-index: 10;
 }
 
-section.configurator .panel-content .card.model .button {
+section.configurator .panel-content .card .ctas {
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	flex: 1;
 	z-index: 10;
+}
+
+section.configurator .panel-content .card .button {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+section.configurator .panel-content .card.selected .button {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	border: 1px solid #fff;
 }
 
 
 
+/* Card Model */
 
+section.configurator .panel-content .card.model .vehicle-photo {
+	position: relative;
+	height: 160px;
+	background-color: #1a1a1a;
+	margin: 20px 0 40px 0;
+	z-index: 10;
+}
+
+section.configurator .panel-content .card.model .title-wrap {
+	height: 65px;
+}
+
+
+
+/* Card Trims */
+
+section.configurator .panel-content .card.trim .title {
+	padding: 0 0 30px 40px;
+}
+
+section.configurator .panel-content .card.trim .title-wrap {
+	height: 95px;
+}
 
 
 /* Configurator: Breakpoint Styles */
@@ -501,7 +574,7 @@ section.configurator .panel-content .card.model .button {
 /* ------------------------------------------------------------ */
 
 
-@media (min-width: 768px){
+@media (min-width: 0px){
 	section.configurator .panel-content .card {
 		width: 100%;
 	}
@@ -513,7 +586,7 @@ section.configurator .panel-content .card.model .button {
 	}
 }
 
-@media (min-width: 1280px){
+@media (min-width: 1340px){
 	section.configurator .panel-content .card {
 		width: 33.33%;
 	}
@@ -521,7 +594,7 @@ section.configurator .panel-content .card.model .button {
 
 @media (min-width: 1600px){
 	section.configurator .panel-content .card {
-		width: 25%;
+		width: 33.33%;
 	}
 }
 
