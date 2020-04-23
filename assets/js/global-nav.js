@@ -7,6 +7,8 @@ var globalNav = (function () {
  	// Private Vars
  	// ---------------------------------------------------------
 	let state = 'desktop';
+	let navBarHeight = 80;
+	let scrollPosition;
 
 
 
@@ -26,6 +28,7 @@ var globalNav = (function () {
 
 		initPanels();
 		initTabs();
+		initScrollManager();
 	};
 
 
@@ -35,6 +38,38 @@ var globalNav = (function () {
 	// var buildGlobalNav = function() {
 	// 	window.console && console.log('globalNav.buildGlobalNav()');
 	// };
+
+
+
+	/* Scrolling */
+
+	/*
+	 * initScrollManager
+	 */
+	var initScrollManager = function() {
+		window.console && console.log('globalNav.initScrollManager()');
+
+		$(document).on('scroll', handleScroll);
+	};
+
+	/*
+	 * handleScroll
+	 */
+	var handleScroll = function() {
+		window.console && console.log('globalNav.handleScroll()');
+
+		scrollPosition = $(document).scrollTop();
+		let newHeaderPosition = 0 - scrollPosition;
+		if (newHeaderPosition < 0 - navBarHeight) {
+			newHeaderPosition = 0 - navBarHeight;
+		}
+
+
+		$('section.global-nav header').css('top', newHeaderPosition);
+
+
+		window.console && console.log('scrollPosition: ', scrollPosition);
+	};
 
 
 

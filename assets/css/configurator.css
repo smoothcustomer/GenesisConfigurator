@@ -94,6 +94,7 @@ section.configurator .visualizer {
 	background: url(../images/visualizer-fpo-2.jpg) no-repeat center center;
   	background-size: cover;
 	height: calc(100vh - 340px);
+	min-height: 560px;
 	width: 100%;
 }
 
@@ -205,6 +206,16 @@ section.configurator .vehicle-info-bar {
 	width: 100%;
 }
 
+section.configurator .vehicle-info-bar.sticky {
+	position: fixed;
+	display: flex;
+	height: 65px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
 section.configurator .vehicle-info-bar .vehicle-info {
 	position: absolute;
 	display: flex;
@@ -268,8 +279,8 @@ section.configurator .vehicle-info-bar .vehicle-info .zip .icon {
 	position: absolute;
 	width: 40px;
 	height: 40px;
-	left: -7px;
-	top: 15px;
+	left: -5px;
+	top: 17px;
 }
 
 section.configurator .vehicle-info-bar .vehicle-info .zip .icon img {
@@ -290,7 +301,7 @@ section.configurator .vehicle-info-bar .vehicle-info .inventory .icon {
 	width: 40px;
 	height: 40px;
 	left: -10px;
-	top: 16px;
+	top: 17px;
 }
 
 section.configurator .vehicle-info-bar .vehicle-info .inventory .icon img {
@@ -418,6 +429,24 @@ section.configurator .panel-content .card.selected .background {
 	background-color: #A36B4F;
 }
 
+
+section.configurator .panel-content .card.selected .select-icon .deselected {
+	display: none;
+}
+
+section.configurator .panel-content .card.selected .select-icon .selected {
+	display: block;
+}
+
+
+section.configurator .panel-content .card .select-icon .deselected {
+	display: block;
+}
+
+section.configurator .panel-content .card .select-icon .selected {
+	display: none;
+}
+
 section.configurator .panel-content .card .select-icon {
 	position: absolute;
 	width: 30px;
@@ -425,7 +454,11 @@ section.configurator .panel-content .card .select-icon {
 	top: 35px;
 	left: 31px;
 	z-index: 10;
-	opacity: .5;
+	opacity: .3;
+}
+
+section.configurator .panel-content .card.selected .select-icon {
+	opacity: .9;
 }
 
 section.configurator .panel-content .card .select-icon img {
@@ -571,6 +604,154 @@ section.configurator .panel-content .card.trim .title {
 section.configurator .panel-content .card.trim .title-wrap {
 	height: 95px;
 }
+
+
+
+/* Colors */
+
+section.configurator .panel-content.color .row {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	/* border: 1px solid green; */
+	/* padding: 0 50px 0 50px; */
+}
+
+section.configurator .panel-content.color .row .colors {
+	position: relative;
+	/* display: flex;
+	flex: 1;
+	flex-direction: column; */
+	width: 50%;
+	padding: 0 80px;
+}
+
+section.configurator .panel-content.color .row-header {
+	position: relative;
+	display: flex;
+	/* flex: 1; */
+	/* flex-direction: row; */
+	/* border: 1px solid red; */
+	padding: 0 0 25px 0;
+}
+
+section.configurator .panel-content.color .row-header .current-selection {
+	display: flex;
+	justify-content: flex-end;
+	padding: 20px 0 10px 0;
+	font-size: 11px;
+	letter-spacing: 1px;
+}
+
+section.configurator .panel-content.color .color-swatches {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section.configurator .panel-content.color .color-swatches .swatch {
+	display: flex;
+	width: 120px;
+	height: 120px;
+	/* border: 1px solid teal; */
+}
+
+section.configurator .panel-content.color .color-swatches .swatch .swatch-button {
+	position: relative;
+	display: flex;
+	width: 100px;
+	height: 100px;
+	background: #444;
+	border-radius: 50px;
+	border: 0;
+}
+
+section.configurator .panel-content.color .color-swatches .swatch.selected .swatch-button {
+	border: 1px solid #CD9A81;
+}
+
+
+/* Exterior */
+
+section.configurator .panel-content.color .color-swatches .swatch.color1 .swatch-button {
+	background: #1a1a1a;
+}
+
+section.configurator .panel-content.color .color-swatches .swatch.color2 .swatch-button {
+	background: #103a59;
+}
+
+section.configurator .panel-content.color .color-swatches .swatch.color3 .swatch-button {
+	background: #06275c;
+}
+
+section.configurator .panel-content.color .color-swatches .swatch.color4 .swatch-button {
+	background: #850900;
+}
+
+section.configurator .panel-content.color .color-swatches .swatch.color5 .swatch-button {
+	background: #272727;
+}
+
+section.configurator .panel-content.color .color-swatches .swatch.color6 .swatch-button {
+	background: #373737;
+}
+
+section.configurator .panel-content.color .color-swatches .swatch.color7 .swatch-button {
+	background: #555;
+}
+
+section.configurator .panel-content.color .color-swatches .swatch.color8 .swatch-button {
+	background: #ddd;
+}
+
+section.configurator .panel-content.color .color-swatches .swatch.color9 .swatch-button {
+	background: #eee;
+}
+
+/* Interior */
+
+section.configurator .panel-content.color .color-swatches .swatch.color10 .swatch-button {
+	background: #333;
+}
+
+section.configurator .panel-content.color .color-swatches .swatch.color11 .swatch-button {
+	background: #ccc;
+}
+
+
+
+section.configurator .panel-content.color .color-swatches .swatch .swatch-button .select-icon {
+	position: absolute;
+	display: none;
+	width: 30px;
+	height: 30px;
+	top: 35px;
+	left: 35px;
+	z-index: 10;
+	background: rgb(0,0,0,0.2);
+	border-radius: 15px;
+}
+
+section.configurator .panel-content.color .color-swatches .swatch.selected .swatch-button .select-icon {
+	display: block;
+}
+
+section.configurator .panel-content.color .color-swatches .swatch .swatch-button .select-icon img {
+	width: 30px;
+	height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Configurator: Breakpoint Styles */
