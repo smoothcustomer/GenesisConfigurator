@@ -341,12 +341,28 @@ section.global-nav header .global-nav-panel.selected {
 	color: #fff;
 }
 
+.button .label.selected {
+	display: none;
+}
+
+.button .label.deselected {
+	display: block;
+}
+
+.card.selected .button .label.selected {
+	display: block;
+}
+
+.card.selected .button .label.deselected {
+	display: none;
+}
+
+
 /*
 font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
 font-size: 18px;
 color: #CD9A81;
 */
-
 
 
 

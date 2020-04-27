@@ -114,8 +114,16 @@ var configurator = (function () {
 		window.console && console.log('configurator.initTabs()');
 
 
-		// Set default tab selection state
-		switchTab(0);
+		// Check for existing hash value and
+		// set default tab selection state
+		window.console && console.log('window.location.hash: ', window.location.hash);
+
+		if (window.location.hash) {
+			let hashElement = $('.tab-button[label="' + window.location.hash.substring(1) + '"]');
+			switchTab(hashElement.attr('index'), hashElement.attr('label'));
+		} else {
+			switchTab(0, $('.tab-button[index="0"]').attr('label'));
+		}
 
 
 		// Global Nav Button Event Listeners
@@ -152,19 +160,20 @@ var configurator = (function () {
 	 */
 	var handleTabButtonClick = function(e, element) {
 		window.console && console.log('configurator.handleTabButtonClick()');
-		window.console && console.log('index: ', element.attr('index'));
+		// window.console && console.log('index: ', element.attr('index'));
 
 		if (!element.hasClass('selected')) {
-			switchTab(element.attr('index'));
+			switchTab(element.attr('index'), element.attr('label'));
 		}
 	};
 
 	/*
 	 * switchTab
 	 */
-	var switchTab = function(index) {
+	var switchTab = function(index, label) {
 		window.console && console.log('configurator.switchTab()');
 		window.console && console.log('index: ', index);
+		window.console && console.log('label: ', label);
 
 		// Change tab button state
 		$('.configurator .subnav .tabs .tab-button').removeClass('selected');
@@ -173,6 +182,9 @@ var configurator = (function () {
 		// Change tab state
 		$('.configurator .panels .panel').removeClass('selected');
 		$('.configurator .panels .panel[index="' + index + '"]').addClass('selected');
+
+		// Set selection hash
+		window.location.hash = label;
 	};
 
 
