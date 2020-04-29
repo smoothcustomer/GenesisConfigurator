@@ -15,14 +15,14 @@ section.configurator {
 section.configurator .subnav {
 	position: relative;
 	display: flex;
-	background-color: #000;
-	height: 60px;
+	background-color: #111;
+	height: 70px;
 	width: 100%;
 }
 
 section.configurator .subnav .tabs {
 	display: flex;
-	flex: 1;
+	flex: 1;b
 	justify-content: flex-start;
 	padding: 0 0 0 80px;
 }
@@ -53,8 +53,8 @@ section.configurator .subnav .tab-button.selected .underline {
 
 section.configurator .subnav .ctas {
 	display: flex;
-	flex: 0 0 300px;
-	width: 300px;
+	flex: 0 0 200px;
+	width: 200px;
 	justify-content: flex-end;
 	padding: 0 80px 0 0;
 }
@@ -202,14 +202,14 @@ section.configurator .visualizer .ui .fullscreen-button .icon img {
 section.configurator .vehicle-info-bar {
 	position: absolute;
 	display: flex;
-	height: 65px;
+	height: 70px;
 	width: 100%;
 }
 
 section.configurator .vehicle-info-bar.sticky {
 	position: fixed;
 	display: flex;
-	height: 65px;
+	height: 70px;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -219,7 +219,7 @@ section.configurator .vehicle-info-bar.sticky {
 section.configurator .vehicle-info-bar .vehicle-info {
 	position: absolute;
 	display: flex;
-	height: 65px;
+	height: 70px;
 	width: 100%;
 	z-index: 20;
 }
@@ -312,7 +312,7 @@ section.configurator .vehicle-info-bar .vehicle-info .inventory .icon img {
 section.configurator .vehicle-info-bar .background {
 	position: absolute;
 	background-color: #000;
-	height: 64px;
+	height: 70px;
 	width: 100%;
 	left: 0;
 	top: 0;
@@ -514,18 +514,28 @@ section.configurator .panel-content .card .specs .values {
 	z-index: 10;
 }
 
-section.configurator .panel-content .card .specs .label.msrp {
-	width: 40%;
-	flex: 0 0 40%;
-}
 
 section.configurator .panel-content .card .specs .label {
 	display: flex;
 	font-size: 11px;
 	letter-spacing: 1px;
 	flex: 1;
-	padding: 0 15px 0 0;
 	color: #CD9A81;
+}
+
+section.configurator .panel-content .card .specs .label.msrp {
+	width: 45%;
+	flex: 0 0 45%;
+}
+
+section.configurator .panel-content .card .specs .label.mpg {
+	width: 35%;
+	flex: 0 0 35%;
+}
+
+section.configurator .panel-content .card .specs .label.hp {
+	width: 20%;
+	flex: 0 0 20%;
 }
 
 section.configurator .panel-content .card.selected .specs .label {
@@ -533,8 +543,18 @@ section.configurator .panel-content .card.selected .specs .label {
 }
 
 section.configurator .panel-content .card .specs .value.msrp {
-	width: 40%;
-	flex: 0 0 40%;
+	width: 45%;
+	flex: 0 0 45%;
+}
+
+section.configurator .panel-content .card .specs .value.mpg {
+	width: 35%;
+	flex: 0 0 35%;
+}
+
+section.configurator .panel-content .card .specs .value.hp {
+	width: 20%;
+	flex: 0 0 20%;
 }
 
 section.configurator .panel-content .card .specs .value {
@@ -543,7 +563,6 @@ section.configurator .panel-content .card .specs .value {
 	font-size: 22px;
 	letter-spacing: 1px;
 	flex: 1;
-	padding: 0 15px 0 0;
 }
 
 section.configurator .panel-content .card .description {
@@ -568,11 +587,19 @@ section.configurator .panel-content .card .description li {
 section.configurator .panel-content .card .ctas {
 	position: relative;
 	display: flex;
+	z-index: 10;
+}
+
+
+section.configurator .panel-content .card .align-bottom {
+	position: relative;
+	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	flex: 1;
 	z-index: 10;
 }
+
 
 section.configurator .panel-content .card .button {
 	position: relative;
@@ -605,9 +632,9 @@ section.configurator .panel-content .card.model .vehicle-photo img {
 	width: 100%;
 }
 
-section.configurator .panel-content .card.model .title-wrap {
+/* section.configurator .panel-content .card.model .title-wrap {
 	height: 65px;
-}
+} */
 
 
 
@@ -620,6 +647,19 @@ section.configurator .panel-content .card.trim .title {
 /* section.configurator .panel-content .card.trim .title-wrap {
 	height: 95px;
 } */
+
+
+/* Card Accessory */
+section.configurator .panel-content .card.accessory .accessory-photo {
+	position: relative;
+	width: 100%;
+	margin: 20px 0 40px 0;
+	z-index: 10;
+}
+
+section.configurator .panel-content .card.accessory .accessory-photo img {
+	width: 100%;
+}
 
 
 
@@ -734,8 +774,6 @@ section.configurator .panel-content.color .color-swatches .swatch.color11 .swatc
 	background: #ccc;
 }
 
-
-
 section.configurator .panel-content.color .color-swatches .swatch .swatch-button .select-icon {
 	position: absolute;
 	display: none;
@@ -756,6 +794,201 @@ section.configurator .panel-content.color .color-swatches .swatch .swatch-button
 	width: 30px;
 	height: 30px;
 }
+
+
+
+
+
+
+
+/* Summary */
+/* ------------------------------------------------------------ */
+
+section.configurator .panel-content.summary {
+	flex-direction: row;
+	padding: 0 80px;
+}
+
+section.configurator .panel-content.summary .column {
+	display: flex;
+}
+
+section.configurator .panel-content.summary .column.info {
+	display: flex;
+	flex: 1;
+}
+
+
+
+
+/* Contact Forms */
+
+section.configurator .panel-content.summary .column.contact {
+	display: flex;
+	flex-direction: column;
+	width: 380px;
+	flex: 0 0 380px;
+}
+
+section.configurator .panel-content.summary .column.contact .tabs {
+	display: flex;
+}
+
+section.configurator .panel-content.summary .column.contact .tabs .tab-button {
+	position: relative;
+	display: flex;
+	padding: 20px 0 30px 0;
+	width: 50%;
+	color: #444;
+}
+
+section.configurator .panel-content.summary .column.contact .tabs .tab-button.selected {
+	color: #fff;
+}
+
+section.configurator .panel-content.summary .column.contact .tabs .tab-button .underline {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #CD9A81;
+}
+
+section.configurator .panel-content.summary .column.contact .tabs .tab-button.selected .underline {
+	display: block;
+}
+
+section.configurator .panel-content.summary .column.contact .form {
+	display: flex;
+	background-color: #272727;
+	padding: 40px;
+	min-height: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Vehicle Information */
+
+section.configurator .panel-content.summary .row {
+	padding: 0 60px 60px 0;
+}
+
+section.configurator .panel-content.summary .row-header {
+	flex: 0;
+	padding: 0 0 30px 0;
+}
+
+
+section.configurator .panel-content.summary .vehicle-info {
+	display: flex;
+	flex-direction: row;
+	padding: 25px 0 0 0;
+}
+
+section.configurator .panel-content.summary .vehicle-info .model-trim {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+}
+
+section.configurator .panel-content.summary .vehicle-info .model-trim .model {
+	font-size: 40px;
+	line-height: 40px;
+	letter-spacing: 1px;
+	color: #fff;
+	padding: 0 0 10px 0;
+}
+
+section.configurator .panel-content.summary .vehicle-info .model-trim .trim {
+	font-size: 22px;
+	line-height: 22px;
+	letter-spacing: 0.5px;
+	color: #CD9A81;
+}
+
+section.configurator .panel-content.summary .vehicle-info .specs {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 360px;
+	width: 360px;
+}
+
+section.configurator .panel-content.summary .vehicle-info .specs .labels {
+	display: flex;
+	width: 100%;
+	margin: 0 0 15px 0;
+}
+
+section.configurator .panel-content.summary .vehicle-info .specs .values {
+	position: relative;
+	display: flex;
+	width: 100%;
+	z-index: 10;
+	padding: 10px 0 0 0;
+}
+
+section.configurator .panel-content.summary .vehicle-info .specs .label {
+	display: flex;
+	font-size: 11px;
+	letter-spacing: 1px;
+	flex: 1;
+	color: #CD9A81;
+}
+
+section.configurator .panel-content.summary .vehicle-info .specs .label.msrp {
+	width: 45%;
+	flex: 0 0 45%;
+}
+
+section.configurator .panel-content.summary .vehicle-info .specs .label.mpg {
+	width: 35%;
+	flex: 0 0 35%;
+}
+
+section.configurator .panel-content.summary .vehicle-info .specs .label.hp {
+	width: 20%;
+	flex: 0 0 20%;
+}
+
+section.configurator .panel-content.summary .vehicle-info .specs .value.msrp {
+	width: 45%;
+	flex: 0 0 45%;
+}
+
+section.configurator .panel-content.summary .vehicle-info .specs .value.mpg {
+	width: 35%;
+	flex: 0 0 35%;
+}
+
+section.configurator .panel-content.summary .vehicle-info .specs .value.hp {
+	width: 20%;
+	flex: 0 0 20%;
+}
+
+section.configurator .panel-content.summary .vehicle-info .specs .value {
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	display: flex;
+	font-size: 22px;
+	letter-spacing: 1px;
+	flex: 1;
+}
+
+
 
 
 
