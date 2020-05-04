@@ -46,7 +46,7 @@ var configurator = (function () {
 		window.console && console.log('configurator.handleScroll()');
 
 		scrollPosition = $(document).scrollTop();
-		let newVisualizerHeight = $(window).height() - scrollPosition - 340;
+		let newVisualizerHeight = $(window).height() - scrollPosition - 360;
 		let newVisualizerMinHeight = (560 - scrollPosition);
 
 		if (scrollPosition >= 80) {
@@ -54,20 +54,20 @@ var configurator = (function () {
 				$('.vehicle-info-bar').addClass('sticky');
 			}
 
-			$('.visualizer').css({
-				'height': newVisualizerHeight,
-				'min-height': newVisualizerMinHeight
-			});
+			// $('.visualizer').css({
+			// 	'height': newVisualizerHeight,
+			// 	'min-height': newVisualizerMinHeight
+			// });
 
 		} else if (scrollPosition < 80) {
 			if ($('.vehicle-info-bar').hasClass('sticky')) {
 				$('.vehicle-info-bar').removeClass('sticky');
 			}
 
-			$('.visualizer').css({
-				'height': '',
-				'min-height': ''
-			});
+			// $('.visualizer').css({
+			// 	'height': '',
+			// 	'min-height': ''
+			// });
 		}
 
 

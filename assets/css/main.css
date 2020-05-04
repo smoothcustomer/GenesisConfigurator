@@ -108,12 +108,21 @@ body, html {
 	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
 	font-style: normal;
 	font-size: 14px;
+	letter-spacing: 0.5px;
 	line-height: 14px;
 	-webkit-font-smoothing: antialiased;
 }
 
 /* Global Nav: Core Styles */
 /* ------------------------------------------------------------ */
+
+.legal {
+	font-family: 'GenesisSansText', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 11px;
+	line-height: 16px;
+	letter-spacing: 0;
+	color: #666;
+}
 
 span.copper {
 	color: #CD9A81;
@@ -331,6 +340,12 @@ section.global-nav header .global-nav-panel.selected {
 
 .button.dark {
 	background-color: #000;
+	border: 1px solid #5d5d5d;
+	color: #fff;
+}
+
+.button.dark-translucent {
+	background-color: rgba(0, 0, 0, 0.15);
 	border: 1px solid #5d5d5d;
 	color: #fff;
 }

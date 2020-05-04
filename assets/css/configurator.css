@@ -38,9 +38,10 @@ section.configurator .subnav .tab-button {
 section.configurator .subnav .tab-button .underline {
 	position: absolute;
 	width: 100%;
-	height: 2px;
-	bottom: 0;
+	height: 1px;
+	top: 70px;
 	left: 0;
+	line-height: 0;
 }
 
 section.configurator .subnav .tab-button.selected {
@@ -93,7 +94,7 @@ section.configurator .visualizer {
 	background-color: #222;
 	background: url(../images/visualizer-fpo-2.jpg) no-repeat center center;
   	background-size: cover;
-	height: calc(100vh - 340px);
+	height: calc(100vh - 360px);
 	min-height: 560px;
 	width: 100%;
 }
@@ -222,6 +223,7 @@ section.configurator .vehicle-info-bar .vehicle-info {
 	height: 70px;
 	width: 100%;
 	z-index: 20;
+	padding: 2px 0 0 0;
 }
 
 section.configurator .vehicle-info-bar .vehicle-info .left-column {
@@ -233,8 +235,8 @@ section.configurator .vehicle-info-bar .vehicle-info .left-column {
 
 section.configurator .vehicle-info-bar .vehicle-info .right-column {
 	display: flex;
-	flex: 0 0 300px;
-	width: 300px;
+	flex: 0 0 320px;
+	width: 320px;
 	justify-content: flex-end;
 	padding: 0 80px 0 0;
 }
@@ -243,7 +245,7 @@ section.configurator .vehicle-info-bar .vehicle-info .model {
 	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
 	display: flex;
 	font-size: 28px;
-	padding: 27px 25px 0 0;
+	padding: 27px 20px 0 0;
 }
 
 section.configurator .vehicle-info-bar .vehicle-info .trim {
@@ -311,15 +313,19 @@ section.configurator .vehicle-info-bar .vehicle-info .inventory .icon img {
 
 section.configurator .vehicle-info-bar .background {
 	position: absolute;
-	background-color: #000;
+	background-color: #111;
 	height: 70px;
 	width: 100%;
 	left: 0;
 	top: 0;
 	opacity: 0.6;
 	z-index: 10;
+	transition: opacity 0.6s ease-out;
 }
 
+section.configurator .vehicle-info-bar.sticky .background {
+	opacity: 1;
+}
 
 
 /* Configurator: Panels */
@@ -367,7 +373,7 @@ section.configurator .panel-content .row-header .title {
 	display: flex;
 	flex: 1;
 	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
-	font-size: 22px;
+	font-size: 18px;
 	letter-spacing: 0.5px;
 	line-height: 50px;
 	color: #CD9A81;
@@ -417,7 +423,7 @@ section.configurator .panel-content .card .card-content {
 
 section.configurator .panel-content .card .background {
 	position: absolute;
-	background-color: #272727;
+	background-color: #222;
 	width: 100%;
 	height: 100%;
 	left: 0;
@@ -479,10 +485,14 @@ section.configurator .panel-content .card .title {
 }
 
 section.configurator .panel-content .card .title.small {
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 18px;
+	line-height: 24px;
 	letter-spacing: 0.5px;
-	padding: 5px 0 30px 40px;
+	padding: 3px 0 30px 40px;
+}
+
+section.configurator .panel-content .card.selected .title.small span.copper {
+	color: #fff;
 }
 
 section.configurator .panel-content .card .bug {
@@ -518,6 +528,7 @@ section.configurator .panel-content .card .specs .values {
 section.configurator .panel-content .card .specs .label {
 	display: flex;
 	font-size: 11px;
+	line-height: 14px;
 	letter-spacing: 1px;
 	flex: 1;
 	color: #CD9A81;
@@ -613,7 +624,8 @@ section.configurator .panel-content .card.selected .button {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	border: 1px solid rgba(255, 255, 255, 0.25);;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	background-color: transparent;
 }
 
 
@@ -632,22 +644,11 @@ section.configurator .panel-content .card.model .vehicle-photo img {
 	width: 100%;
 }
 
-/* section.configurator .panel-content .card.model .title-wrap {
-	height: 65px;
-} */
-
-
-
 /* Card Trims */
 
 section.configurator .panel-content .card.trim .title {
 	padding: 0 0 30px 40px;
 }
-
-/* section.configurator .panel-content .card.trim .title-wrap {
-	height: 95px;
-} */
-
 
 /* Card Accessory */
 section.configurator .panel-content .card.accessory .accessory-photo {
@@ -816,6 +817,40 @@ section.configurator .panel-content.summary .column {
 section.configurator .panel-content.summary .column.info {
 	display: flex;
 	flex: 1;
+	font-family: 'GenesisSansText-Regular', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 13px;
+	line-height: 22px;
+}
+
+section.configurator .panel-content.summary .column.value {
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: 0.5px;
+}
+
+section.configurator .panel-content.summary .column.label {
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: 0.5px;
+}
+
+
+section.configurator .panel-content.summary .separator-line {
+	height: 1px;
+	width: 100%;
+	margin: 30px 0;
+	background-color: #222;
+}
+
+section.configurator .panel-content.summary .title {
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+	letter-spacing: 0.5px;
+	color: #CD9A81;
+	margin: 0 0 30px 0;
 }
 
 
@@ -828,51 +863,64 @@ section.configurator .panel-content.summary .column.contact {
 	flex-direction: column;
 	width: 380px;
 	flex: 0 0 380px;
+
 }
+
+section.configurator .panel-content.summary .column.contact .inner-wrap {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #222;
+	box-sizing: border-box;
+	padding: 0 30px;
+}
+
 
 section.configurator .panel-content.summary .column.contact .tabs {
 	display: flex;
 }
 
-section.configurator .panel-content.summary .column.contact .tabs .tab-button {
+section.configurator .panel-content.summary .tabs .tab-button {
 	position: relative;
 	display: flex;
-	padding: 20px 0 30px 0;
+	padding: 30px 0 30px 0;
 	width: 50%;
 	color: #444;
+	/* justify-content: center; */
 }
 
-section.configurator .panel-content.summary .column.contact .tabs .tab-button.selected {
-	color: #fff;
+section.configurator .panel-content.summary .tabs .tab-button .label {
+	display: flex;
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 14px;
+	color: #444;
+	/* padding: 0 0 0 5px; */
 }
 
-section.configurator .panel-content.summary .column.contact .tabs .tab-button .underline {
-	display: none;
+section.configurator .panel-content.summary .tabs .tab-button.selected .label {
+	color: #CD9A81;
+}
+
+section.configurator .panel-content.summary .tabs .tab-button .underline {
+	display: flex;
 	position: absolute;
 	width: 100%;
-	height: 2px;
+	height: 1px;
 	bottom: 0;
 	left: 0;
-	background-color: #CD9A81;
+	line-height: 0;
+	background-color: #444;
 }
 
-section.configurator .panel-content.summary .column.contact .tabs .tab-button.selected .underline {
-	display: block;
+section.configurator .panel-content.summary .tabs .tab-button.selected .underline {
+	background-color: #CD9A81;
 }
 
 section.configurator .panel-content.summary .column.contact .form {
 	display: flex;
-	background-color: #272727;
-	padding: 40px;
+	/* background-color: #222; */
 	min-height: 600px;
+	padding: 40px 0;
 }
-
-
-
-
-
-
-
 
 
 
@@ -895,7 +943,7 @@ section.configurator .panel-content.summary .row-header {
 section.configurator .panel-content.summary .vehicle-info {
 	display: flex;
 	flex-direction: row;
-	padding: 25px 0 0 0;
+	padding: 0 0 0 0;
 }
 
 section.configurator .panel-content.summary .vehicle-info .model-trim {
@@ -924,14 +972,18 @@ section.configurator .panel-content.summary .vehicle-info .specs {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	flex: 0 0 360px;
-	width: 360px;
+	flex: 0 0 380px;
+	width: 380px;
 }
 
 section.configurator .panel-content.summary .vehicle-info .specs .labels {
 	display: flex;
 	width: 100%;
 	margin: 0 0 15px 0;
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 11px;
+	letter-spacing: 1px;
+	color: #CD9A81;
 }
 
 section.configurator .panel-content.summary .vehicle-info .specs .values {
@@ -939,12 +991,13 @@ section.configurator .panel-content.summary .vehicle-info .specs .values {
 	display: flex;
 	width: 100%;
 	z-index: 10;
-	padding: 10px 0 0 0;
+	padding: 7px 0 0 0;
 }
 
 section.configurator .panel-content.summary .vehicle-info .specs .label {
 	display: flex;
 	font-size: 11px;
+	line-height: 14px;
 	letter-spacing: 1px;
 	flex: 1;
 	color: #CD9A81;
@@ -991,12 +1044,248 @@ section.configurator .panel-content.summary .vehicle-info .specs .value {
 
 
 
+/* Accordians */
+
+section.configurator .panel-content.summary .cost-detail {
+	padding: 80px 0 0 0;
+}
+
+section.configurator .panel-content.summary .cost-detail .title {
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+	letter-spacing: 0.5px;
+	color: #CD9A81;
+	margin: 0 0 30px 0;
+}
+
+section.configurator .panel-content.summary .cost-detail .accordian-rows {
+
+}
+
+section.configurator .panel-content.summary .cost-detail .accordian-row {
+	display: flex;
+	flex-direction: row;
+	background-color: #111;
+	padding: 40px;
+	margin: 0 0 20px 0;
+}
+
+section.configurator .panel-content.summary .cost-detail .accordian-row .column {
+	display: flex;
+}
+
+section.configurator .panel-content.summary .cost-detail .accordian-row .column.title {
+	width: 160px;
+	flex: 0 0 160px;
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: 0.5px;
+	color: #CD9A81;
+}
+
+section.configurator .panel-content.summary .cost-detail .accordian-row .column.value {
+	width: 100px;
+	flex: 0 0 100px;
+}
+
+section.configurator .panel-content.summary .cost-detail .accordian-row .column.nav {
+	width: 40px;
+	flex: 0 0 40px;
+	justify-content: flex-end;
+}
+
+section.configurator .panel-content.summary .cost-detail .accordian-row .column.info {
+	flex: 1;
+	flex-direction: column;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+section.configurator .panel-content.summary .cost-detail .accordian-row .column.info {
+	flex: 1;
+	flex-direction: column;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+section.configurator .panel-content.summary .cost-detail .accordian-row .title {
+
+}
+
+
+
+
+/* Cost Totals */
+
+section.configurator .panel-content.summary .cost-detail .totals {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 0;
+}
+
+section.configurator .panel-content.summary .cost-detail .total {
+	display: flex;
+	flex-direction: row;
+	padding: 15px 40px;
+}
+
+section.configurator .panel-content.summary .cost-detail .total .column {
+	display: flex;
+	width: 50%;
+}
+
+section.configurator .panel-content.summary .cost-detail .total .column.value {
+	justify-content: flex-end;
+}
+
+section.configurator .panel-content.summary .cost-detail .total.msrp .column.value {
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 22px;
+	line-height: 22px;
+	letter-spacing: 1px;
+	color: #CD9A81;
+}
+
+
+
+
+
+/* Payment Calculator */
+
+section.configurator .panel-content.summary .payment-calculator {
+	padding: 40px;
+}
+
+section.configurator .panel-content.summary .payment-calculator .tabs .tab-button {
+	width: 240px;
+}
+
+section.configurator .panel-content.summary .payment-calculator .form {
+	display: flex;
+	flex-direction: column;
+	padding: 60px 0;
+}
+
+section.configurator .panel-content.summary .payment-calculator .form .input-row {
+	display: flex;
+	padding: 0 0 60px 0;
+}
+
+section.configurator .panel-content.summary .payment-calculator .form .input-row .input {
+	display: flex;
+	flex-direction: column;
+	width: calc(25% - 20px);
+	padding: 0 20px 0 0;
+}
+
+section.configurator .panel-content.summary .payment-calculator .form .input-row .input .inner-wrap {
+	position: relative;
+}
+
+
+
+section.configurator .panel-content.summary .payment-calculator .form .input-row .input .underline {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	bottom: 0;
+	left: 0;
+	line-height: 0;
+	background-color: #CD9A81;
+}
 
 
 
 
 
 
+
+
+section.configurator .panel-content.summary .payment-calculator .label {
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	letter-spacing: 1px;
+	color: #CD9A81;
+}
+
+
+section.configurator .panel-content.summary .payment-calculator .value {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	flex: 1;
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 32px;
+	line-height: 32px;
+	letter-spacing: 1px;
+	color: #fff;
+	padding: 20px 0 0 0;
+	z-index: 10;
+}
+
+section.configurator .panel-content.summary .payment-calculator .payment .value {
+	position: relative;
+	display: block;
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	padding: 20px 0;
+}
+
+section.configurator .panel-content.summary .payment-calculator .value span.inline-label {
+	display: inline;
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 11px;
+	line-height: 32px;
+	letter-spacing: 1px;
+	color: #CD9A81;
+}
+
+section.configurator .panel-content.summary .payment-calculator .form .result-row {
+	display: flex;
+}
+
+section.configurator .panel-content.summary .payment-calculator .form .result-row .payment {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+section.configurator .panel-content.summary .payment-calculator .form .result-row .ctas {
+	position: relative;
+	display: flex;
+	width: 50%;
+}
+
+section.configurator .panel-content.summary .payment-calculator .form .result-row .ctas .button {
+	position: absolute;
+	height: 60px;
+	width: 280px;
+	padding: 0;
+	line-height: 60px;
+	bottom: 0;
+	right: 0;
+}
+
+
+
+
+
+
+/* Inventory Results */
+
+section.configurator .panel-content.summary .inventory-results {
+	padding: 40px;
+}
+
+
+/* Local Retailers */
+
+section.configurator .panel-content.summary .local-retailers {
+	padding: 40px;
+}
 
 
 
