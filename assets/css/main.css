@@ -64,6 +64,8 @@ input, textarea {
 	padding: 0;
 	font-family: Helvetica, Arial, Verdana, sans-serif;
 	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 }
 input:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0 50px white inset;
@@ -119,7 +121,7 @@ body, html {
 .legal {
 	font-family: 'GenesisSansText', Helvetica, Arial, Verdana, sans-serif;
 	font-size: 11px;
-	line-height: 16px;
+	line-height: 18px;
 	letter-spacing: 0;
 	color: #666;
 }
