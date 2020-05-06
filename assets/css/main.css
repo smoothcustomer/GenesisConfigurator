@@ -109,9 +109,9 @@ body, html {
 	/* font-family: 'GenesisSansText', Helvetica, Arial, Verdana, sans-serif; */
 	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
 	font-style: normal;
-	font-size: 14px;
-	letter-spacing: 0.5px;
-	line-height: 14px;
+	font-size: 13px;
+	letter-spacing: 1px;
+	line-height: 13px;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -347,7 +347,7 @@ section.global-nav header .global-nav-panel.selected {
 }
 
 .button.dark-translucent {
-	background-color: rgba(0, 0, 0, 0.15);
+	background-color: rgba(0, 0, 0, 0.2);
 	border: 1px solid #5d5d5d;
 	color: #fff;
 }

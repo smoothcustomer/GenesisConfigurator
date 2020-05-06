@@ -24,7 +24,7 @@ section.global-nav header {
 section.global-nav header .genesis-logo {
 	display: flex;
 	height: 80px;
-	padding: 0 25px;
+	padding: 0 45px;
 	/* background-color: darkmagenta; */
 	cursor: pointer;
 }
@@ -42,7 +42,7 @@ section.global-nav header .global-nav-buttons {
 	flex: 1;
 	justify-content: flex-end;
 	height: 80px;
-	padding: 0 40px;
+	padding: 0 50px;
 }
 
 section.global-nav header .global-nav-button {
