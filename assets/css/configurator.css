@@ -3,6 +3,7 @@
 /* ------------------------------------------------------------ */
 
 section.configurator {
+	position: relative;
 	padding: 0;
 	min-height: calc(100vh - 80px);
 }
@@ -15,41 +16,83 @@ section.configurator {
 section.configurator .subnav {
 	position: relative;
 	display: flex;
-	background-color: #111;
+	background-color: #171717;
 	height: 70px;
 	width: 100%;
 }
 
 section.configurator .subnav .tabs {
 	display: flex;
-	flex: 1;b
-	justify-content: flex-start;
-	padding: 0 0 0 80px;
+	flex: 1;
+	justify-content: center;
+	height: 70px;
+	padding: 0 80px;
 }
 
 section.configurator .subnav .tab-button {
 	position: relative;
 	display: flex;
-	padding: 30px 0 30px 0;
-	margin: 0 45px 0 0;
+	/* padding: 30px 0; */
+	height: 70px;
+	width: 16.66%;
+	justify-content: center;
+	/* margin: 0 60px 0 0; */
 	cursor: pointer;
 }
 
-section.configurator .subnav .tab-button .underline {
+section.configurator .subnav .tab-button .number {
 	position: absolute;
-	width: 100%;
-	height: 1px;
-	top: 70px;
-	left: 0;
-	line-height: 0;
-}
-
-section.configurator .subnav .tab-button.selected {
+	width: 18px;
+	height: 18px;
+	border-radius: 11px;
+	/* background-color: #444; */
+	border: 1px solid #CD9A81;
 	color: #CD9A81;
+	font-size: 10px;
+	line-height: 19px;
+	text-align: center;
+	font-family: 'GenesisSansText-Bold', Helvetica, Arial, Verdana, sans-serif;
+	left: -30px;
+	top: 24px;
+	opacity: 0.7;
+	box-sizing: border-box;
 }
 
-section.configurator .subnav .tab-button.selected .underline {
-	background-color: #CD9A81;
+section.configurator .subnav .tab-button.selected .number {
+	border: 1px solid #fff;
+	color: #fff;
+	opacity: 0.5;
+}
+
+
+section.configurator .subnav .tab-button .label {
+	position: relative;
+	z-index: 20;
+	line-height: 70px;
+	transform: translateX(10px);
+}
+
+
+section.configurator .subnav .tab-button .underline {
+	display: none;
+	position: absolute;
+	width: calc(100% + 40px);
+	height: 70px;
+	top: 0;
+	left: -20px;
+	line-height: 0;
+	z-index: 10;
+}
+
+
+
+
+/* section.configurator .subnav .tab-button.selected {
+	color: #CD9A81;
+} */
+
+section.configurator .subnav .tab-button.selected  {
+	background-color: #A36B4F;
 }
 
 section.configurator .subnav .ctas {
@@ -85,18 +128,26 @@ section.configurator .subnav .cta .icon img {
 
 
 
+
+
+
+
 /* Configurator: Visualizer */
 /* ------------------------------------------------------------ */
 
 section.configurator .visualizer {
 	position: relative;
-	display: flex;
+	display: none;
 	background-color: #222;
 	background: url(../images/visualizer-fpo-2.jpg) no-repeat center center;
   	background-size: cover;
 	height: calc(100vh - 360px);
 	min-height: 560px;
 	width: 100%;
+}
+
+section.configurator .visualizer.active {
+	display: flex;
 }
 
 section.configurator .visualizer .ui {
@@ -115,6 +166,7 @@ section.configurator .pill-button {
 	font-size: 14px;
 	padding: 0 20px;
 	border-radius: 15px;
+	margin: 0 5px;
 }
 
 section.configurator .pill-button.selected {
@@ -130,7 +182,7 @@ section.configurator .visualizer .ui .fullscreen {
 
 section.configurator .visualizer .ui .mode {
 	justify-content: flex-start;
-	padding: 40px 0 0 80px;
+	padding: 30px 0 0 80px;
 	width: 320px;
 	flex: 0 0 320px;
 }
@@ -138,6 +190,7 @@ section.configurator .visualizer .ui .mode {
 section.configurator .visualizer .ui .mode-button {
 	position: relative;
 	padding: 0 20px 0 45px;
+	margin: 0 5px 0 0;
 }
 
 section.configurator .visualizer .ui .mode-button .icon {
@@ -154,7 +207,7 @@ section.configurator .visualizer .ui .mode-button .icon img {
 }
 
 section.configurator .visualizer .ui .mode-ui {
-	padding: 40px 0 0 0;
+	padding: 30px 0 0 0;
 	flex: 1;
 }
 
@@ -170,7 +223,7 @@ section.configurator .visualizer .ui .mode-ui .mode-ui-360-button {
 
 section.configurator .visualizer .ui .fullscreen {
 	justify-content: flex-end;
-	padding: 40px 80px 0 0;
+	padding: 30px 80px 0 0;
 	width: 320px;
 	flex: 0 0 320px;
 }
@@ -201,10 +254,16 @@ section.configurator .visualizer .ui .fullscreen-button .icon img {
 /* ------------------------------------------------------------ */
 
 section.configurator .vehicle-info-bar {
+	display: none;
 	position: absolute;
-	display: flex;
 	height: 70px;
 	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+section.configurator .vehicle-info-bar.active {
+	display: flex;
 }
 
 section.configurator .vehicle-info-bar.sticky {
@@ -338,7 +397,7 @@ section.configurator .panels {
 
 section.configurator .panel {
 	display: none;
-	padding: 40px 0;
+	padding: 60px 0;
 }
 
 section.configurator .panel.selected {
@@ -373,7 +432,7 @@ section.configurator .panel-content .row-header .title {
 	display: flex;
 	flex: 1;
 	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
-	font-size: 18px;
+	font-size: 24px;
 	letter-spacing: 0.5px;
 	line-height: 50px;
 	color: #CD9A81;
@@ -417,9 +476,17 @@ section.configurator .panel-content .card .card-content {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
+	padding: 320px 35px 35px 35px;
+}
+
+section.configurator .panel-content .card.trim .card-content {
 	position: relative;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
 	padding: 35px 35px 35px 35px;
 }
+
 
 section.configurator .panel-content .card .background {
 	position: absolute;
@@ -472,15 +539,58 @@ section.configurator .panel-content .card .select-icon img {
 	height: 30px;
 }
 
+section.configurator .panel-content .card.model .title-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 20;
+}
 
-section.configurator .panel-content .card .title {
+
+section.configurator .panel-content .card .info-button {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 10px;
+	right: 10px;
+	z-index: 30;
+}
+
+
+section.configurator .panel-content .card .info-button .icon {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	border-radius: 11px;
+	background-color: rgba(0,0,0,0.2);
+	border: 1px solid #fff;
+	color: #fff;
+	font-size: 10px;
+	line-height: 19px;
+	text-align: center;
+	font-family: 'GenesisSansText-Bold', Helvetica, Arial, Verdana, sans-serif;
+	left: 6px;
+	top: 6px;
+	opacity: 0.45;
+	box-sizing: border-box;
+}
+
+section.configurator .panel-content .card.model .info-button .icon {
+	opacity: 0.7;
+}
+
+section.configurator .panel-content .card.model .title-wrap .title {
+	font-size: 38px;
+}
+
+section.configurator .panel-content .card .title-wrap .title {
 	position: relative;
 	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
 	font-size: 32px;
 	line-height: 34px;
 	letter-spacing: 0.5px;
 	color: #fff;
-	padding: 0 0 5px 40px;
+	padding: 220px 30px 5px 30px;
 	z-index: 10;
 }
 
@@ -497,13 +607,16 @@ section.configurator .panel-content .card.selected .title.small span.copper {
 }
 
 section.configurator .panel-content .card .bug {
-	position: relative;
+	position: absolute;
 	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
 	font-size: 11px;
 	letter-spacing: 1px;
-	color: #CD9A81;
-	padding: 0 0 0 40px;
+	color: #fff;
+	padding: 5px 10px 3px 10px;
 	z-index: 10;
+	background-color: #A36B4F;
+	top: 0;
+	left: 0;
 }
 
 section.configurator .panel-content .card .specs {
@@ -583,7 +696,7 @@ section.configurator .panel-content .card .description {
 	font-family: 'GenesisSansText-Regular', Helvetica, Arial, Verdana, sans-serif;
 	font-size: 13px;
 	line-height: 22px;
-	margin: 20px 0 30px 0;
+	margin: 0 0 40px 0;
 	z-index: 10;
 }
 
@@ -625,8 +738,8 @@ section.configurator .panel-content .card.selected .button {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	border: 1px solid rgba(255, 255, 255, 0.25);
-	background-color: transparent;
+	border: 1px solid transparent;
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -634,12 +747,25 @@ section.configurator .panel-content .card.selected .button {
 /* Card Model */
 
 section.configurator .panel-content .card.model .vehicle-photo {
-	position: relative;
+	position: absolute;
 	width: 100%;
+	height: 280px;
 	/* background-color: #1a1a1a; */
-	margin: 20px 0 40px 0;
+	/* margin: 20px 0 40px 0;
+	z-index: 10; */
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0;
+	left: 0;
+	top: 0;
 	z-index: 10;
 }
+
+
+
+
 
 section.configurator .panel-content .card.model .vehicle-photo img {
 	width: 100%;
@@ -648,7 +774,7 @@ section.configurator .panel-content .card.model .vehicle-photo img {
 /* Card Trims */
 
 section.configurator .panel-content .card.trim .title {
-	padding: 0 0 30px 40px;
+	padding: 0 20px 30px 40px;
 }
 
 /* Card Accessory */
@@ -945,7 +1071,7 @@ section.configurator .panel-content.summary .row-header {
 section.configurator .panel-content.summary .vehicle-info {
 	display: flex;
 	flex-direction: row;
-	padding: 0 0 0 0;
+	padding: 30px 0 0 0;
 }
 
 section.configurator .panel-content.summary .vehicle-info .model-trim {
@@ -964,8 +1090,8 @@ section.configurator .panel-content.summary .vehicle-info .model-trim .model {
 }
 
 section.configurator .panel-content.summary .vehicle-info .model-trim .trim {
-	font-size: 22px;
-	line-height: 22px;
+	font-size: 18px;
+	line-height: 18px;
 	letter-spacing: 0.5px;
 	color: #CD9A81;
 }
@@ -1049,7 +1175,7 @@ section.configurator .panel-content.summary .vehicle-info .specs .value {
 /* Accordians */
 
 section.configurator .panel-content.summary .cost-detail {
-	padding: 80px 0 0 0;
+	padding: 60px 0 0 0;
 }
 
 section.configurator .panel-content.summary .cost-detail .title {
@@ -1058,7 +1184,7 @@ section.configurator .panel-content.summary .cost-detail .title {
 	line-height: 18px;
 	letter-spacing: 0.5px;
 	color: #CD9A81;
-	margin: 0 0 30px 0;
+	margin: 0 0 40px 0;
 }
 
 section.configurator .panel-content.summary .cost-detail .accordian-rows {
@@ -1510,7 +1636,26 @@ section.configurator .panel-content.summary .inventory-results .card-content .lo
 /* Local Retailers */
 
 section.configurator .panel-content.summary .local-retailers {
+	display: flex;
+	flex-direction: column;
 	padding: 40px;
+}
+
+section.configurator .panel-content.summary .local-retailers .retailer {
+	display: flex;
+	min-height: 360px;
+}
+
+section.configurator .panel-content.summary .local-retailers .retailer .contact {
+	display: flex;
+	width: 30%;
+	flex: 0 0 30%;
+}
+
+section.configurator .panel-content.summary .local-retailers .retailer #map {
+	display: flex;
+	flex: 1;
+	background-color: #aaa;
 }
 
 

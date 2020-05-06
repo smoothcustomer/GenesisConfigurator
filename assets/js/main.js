@@ -46,6 +46,7 @@ var app = (function(){
 
 		globalNav.init();
 		configurator.init();
+		//googleMap.init();
 	};
 
 	/*

@@ -183,6 +183,16 @@ var configurator = (function () {
 		$('.configurator .panels .panel').removeClass('selected');
 		$('.configurator .panels .panel[index="' + index + '"]').addClass('selected');
 
+		// Show/hide visualizer on Model selection step
+		if ( label == 'models' ) {
+			$('.vehicle-info-bar').removeClass('active');
+			$('.visualizer').removeClass('active');
+		} else {
+			$('.vehicle-info-bar').addClass('active');
+			$('.visualizer').addClass('active');
+		}
+
+
 		// Set selection hash
 		window.location.hash = label;
 	};
