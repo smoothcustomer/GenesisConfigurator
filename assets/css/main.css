@@ -329,12 +329,13 @@ section.global-nav header .global-nav-panel.selected {
 /*Global Buttons */
 
 .button {
-	height: 60px;
+	height: 50px;
+	width: 200px;
 	font-size: 11px;
 	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
 	letter-spacing: 1px;
-	line-height: 60px;
-	padding: 0 60px;
+	line-height: 50px;
+	/* padding: 0 60px; */
 	box-sizing: border-box;
 	cursor: pointer;
 	text-align: center;

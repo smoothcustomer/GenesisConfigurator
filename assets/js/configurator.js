@@ -45,13 +45,14 @@ var configurator = (function () {
 	var handleScroll = function() {
 		window.console && console.log('configurator.handleScroll()');
 
+
 		scrollPosition = $(document).scrollTop();
-		let newVisualizerHeight = $(window).height() - scrollPosition - 360;
-		let newVisualizerMinHeight = (560 - scrollPosition);
+		//let newVisualizerHeight = $(window).height() - scrollPosition - 360;
+		//let newVisualizerMinHeight = (560 - scrollPosition);
 
 		if (scrollPosition >= 80) {
-			if (!$('.vehicle-info-bar').hasClass('sticky')) {
-				$('.vehicle-info-bar').addClass('sticky');
+			if (!$('.subnav').hasClass('sticky')) {
+				$('.subnav').addClass('sticky');
 			}
 
 			// $('.visualizer').css({
@@ -60,8 +61,8 @@ var configurator = (function () {
 			// });
 
 		} else if (scrollPosition < 80) {
-			if ($('.vehicle-info-bar').hasClass('sticky')) {
-				$('.vehicle-info-bar').removeClass('sticky');
+			if ($('.subnav').hasClass('sticky')) {
+				$('.subnav').removeClass('sticky');
 			}
 
 			// $('.visualizer').css({
@@ -72,6 +73,7 @@ var configurator = (function () {
 
 
 		window.console && console.log('scrollPosition: ', scrollPosition);
+
 	};
 
 
