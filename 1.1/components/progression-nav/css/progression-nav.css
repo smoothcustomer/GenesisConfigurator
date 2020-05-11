@@ -1,0 +1,203 @@
+
+/* Progression Nav */
+/* ------------------------------------------------------------ */
+
+#progression-nav {
+	position: absolute;
+	display: flex;
+	background-color: #171717;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+#progression-nav.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+#progression-nav .tabs {
+	display: flex;
+	flex: 1;
+	height: 80px;
+	padding: 0 80px;
+}
+
+#progression-nav .tab-button {
+	position: relative;
+	display: flex;
+	flex: 0;
+	padding: 0;
+	height: 80px;
+	cursor: pointer;
+}
+
+#progression-nav .tab-button .label {
+	display: flex;
+	position: relative;
+	z-index: 20;
+	line-height: 80px;
+	font-size: 13px;
+	letter-spacing: 1px;
+	color: #888;
+	padding: 0 40px 0 0;
+}
+
+#progression-nav .tab-button .icon {
+	position: relative;
+	display: flex;
+	width: 30px;
+	opacity: 0.5;
+}
+
+#progression-nav .tab-button .icon img {
+	position: absolute;
+	width: 30px;
+	top: 24px;
+	left: -7px;
+}
+
+#progression-nav .tab-button.selected .icon {
+	opacity: 1;
+}
+
+#progression-nav .tab-button.selected .label {
+	color: #fff;
+}
+
+#progression-nav .tab-button .underline {
+	display: none;
+	position: absolute;
+	width: calc(100% - 37px);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	line-height: 0;
+	z-index: 10;
+	background-color: #CD9A81;
+}
+
+#progression-nav .tab-button.selected .underline {
+	display: block;
+}
+
+#progression-nav .cta .icon img {
+	width: 36px;
+	height: 36px;
+}
+
+#progression-nav .next-button .button {
+	position: absolute;
+	width: 200px;
+	left: 40px;
+	line-height: 52px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+}
+
+#progression-nav .next-button {
+	position: absolute;
+	width: 320px;
+	height: 80px;
+	top: 0;
+	right: 0;
+	background-color: #171717;
+	z-index: 30;
+}
+
+#progression-nav .next-button .gradient {
+	position: absolute;
+	width: 40px;
+	height: 80px;
+	top: 0;
+	left: -40px;
+	background: linear-gradient(to right, rgba(23,23,23,0) 0%,rgba(23,23,23,1) 100%);
+}
+
+
+
+
+/* Breakpoint Styles */
+/* 1920px, 1600px, 1366px, 1280px, 1024px, 768px */
+/* ------------------------------------------------------------ */
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+	#progression-nav {
+		top: 50vh;
+		height: 60px;
+	}
+	#progression-nav .tabs {
+		height: 60px;
+		padding: 0 20px;
+	}
+	#progression-nav .tab-button {
+		height: 60px;
+	}
+	#progression-nav .tab-button .label {
+		line-height: 60px;
+	}
+	#progression-nav .tab-button .icon img {
+		top: 14px;
+	}
+	#progression-nav .next-button .button {
+		width: 160px;
+		height: 40px;
+		line-height: 42px;
+		left: 40px;
+	}
+	#progression-nav .next-button {
+		width: 220px;
+		height: 60px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	#progression-nav {
+		top: 50vh;
+		height: 60px;
+	}
+	#progression-nav .tabs {
+		height: 60px;
+		padding: 0 20px;
+	}
+	#progression-nav .tab-button {
+		height: 60px;
+	}
+	#progression-nav .tab-button .label {
+		line-height: 60px;
+	}
+	#progression-nav .tab-button .icon img {
+		top: 14px;
+	}
+	#progression-nav .next-button .button {
+		width: 160px;
+		height: 40px;
+		line-height: 42px;
+		left: 40px;
+	}
+	#progression-nav .next-button {
+		width: 220px;
+		height: 60px;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px)  {
+
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1599px)  {
+
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px)  {
+
+}
+
+@media screen and (min-width: 1920px) and (max-width: 1023px)  {
+
+}

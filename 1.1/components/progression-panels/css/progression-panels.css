@@ -1,0 +1,41 @@
+
+/* Progression Panels */
+/* ------------------------------------------------------------ */
+
+#progression-panels {
+	padding: 0;
+}
+
+
+
+/* Breakpoint Styles */
+/* 1920px, 1600px, 1366px, 1280px, 1024px, 768px */
+/* ------------------------------------------------------------ */
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+	#progression-panels {
+		padding: 80px 0 0 0;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	#progression-panels {
+		padding: 80px 0 0 0;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px)  {
+
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1599px)  {
+
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px)  {
+
+}
+
+@media screen and (min-width: 1920px) and (max-width: 1023px)  {
+
+}

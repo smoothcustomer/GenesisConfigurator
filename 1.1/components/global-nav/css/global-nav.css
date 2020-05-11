@@ -1,0 +1,248 @@
+
+/* Global Nav: Core Styles */
+/* ------------------------------------------------------------ */
+
+#global-nav {
+	width: 100%;
+	height: 80px;
+	font-size: 16px;
+	line-height: 16px;
+	z-index: 200;
+}
+
+#global-nav header {
+	position: relative;
+	display: flex;
+	top: 0;
+	left: 0;
+	background: #000;
+	width: 100%;
+	height: 80px;
+	z-index: 200;
+}
+
+#global-nav header .genesis-logo {
+	display: flex;
+	height: 80px;
+	padding: 0 45px;
+	/* background-color: darkmagenta; */
+	cursor: pointer;
+}
+
+#global-nav header .genesis-logo img {
+	display: flex;
+	width: 120px;
+}
+
+/* Hamburger */
+
+#global-nav header .hamburger {
+	display: none;
+	flex: 1;
+	justify-content: flex-end;
+	height: 80px;
+	padding: 0 50px 0 0;
+}
+
+
+/* Nav Buttons */
+
+#global-nav header .global-nav-buttons {
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+	height: 80px;
+	padding: 0 50px;
+}
+
+#global-nav header .global-nav-button {
+	position: relative;
+	display: flex;
+	height: 80px;
+	padding: 0 25px;
+	cursor: pointer;
+}
+
+#global-nav header .global-nav-button.selected {
+	color: #cd9a81;
+}
+
+#global-nav header .global-nav-button .label {
+	font-size: 16px;
+	line-height: 16px;
+	padding: 32px 20px 0 0;
+}
+
+#global-nav header .global-nav-button .caret {
+	position: absolute;
+	right: 20px;
+	top: 30px;
+}
+
+.caret svg {
+	width: 20px;
+	height: 20px;
+}
+
+.caret svg .caret-line {
+	fill: none;
+	stroke: #ffffff;
+	stroke-miterlimit: 10;
+}
+
+.global-nav-button.selected .caret {
+	transform: rotate(180deg) scaleX(-1) translateY(2px);
+}
+
+.global-nav-button.selected .caret svg .caret-line {
+	stroke: #cd9a81;
+}
+
+
+/* Tabs */
+
+.tab-nav {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 20px 0 40px 0;
+	/* background-color: darkcyan; */
+}
+
+.tab-nav-button {
+	position: relative;
+	display: flex;
+	margin: 0 20px;
+	padding: 20px 0;
+	font-size: 14px;
+	line-height: 14px;
+	cursor: pointer;
+}
+
+.tab-nav-button.selected {
+	color: #cd9a81;
+}
+
+.tab-nav-button .underline {
+	position: absolute;
+	width: 0%;
+	height: 1px;
+	left: 0;
+	bottom: 0;
+	background-color: #cd9a81;
+}
+
+.tab-nav-button.selected .underline {
+	width: 100%;
+}
+
+.tabs {
+	position: relative;
+	display: flex;
+	width: 100%;
+}
+
+.tab {
+	position: relative;
+	display: none;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 40px;
+}
+
+.tab.selected {
+	display: flex;
+}
+
+
+/* Nav Panels */
+
+#global-nav header .global-nav-panels {
+	position: absolute;
+	display: none;
+	top: 80px;
+	left: 0;
+	width: 100%;
+	/* height: 480px; */
+	background-color: #000000;
+}
+#global-nav header .global-nav-panels.open {
+	display: flex;
+}
+
+
+
+#global-nav header .global-nav-panel {
+	position: relative;
+	display: none;
+	flex-direction: column;
+	width: 100%;
+}
+
+#global-nav header .global-nav-panel.selected {
+	display: flex;
+}
+
+
+/* Vehicle Panel */
+
+
+
+/* Vehicle Card */
+
+.vehicle-card {
+	display: flex;
+	width: 33.33%;
+}
+
+.vehicle-card .inner-wrap {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	background-color: #191919;
+	margin: 30px;
+	padding: 60px;
+}
+
+
+
+
+
+/* Breakpoint Styles */
+/* 1920px, 1600px, 1366px, 1280px, 1024px, 768px */
+/* ------------------------------------------------------------ */
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+	#global-nav header .hamburger {
+		display: flex;
+	}
+	#global-nav header .global-nav-buttons {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	#global-nav header .hamburger {
+		display: flex;
+	}
+	#global-nav header .global-nav-buttons {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px)  {
+
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1599px)  {
+
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px)  {
+
+}
+
+@media screen and (min-width: 1920px) and (max-width: 1023px)  {
+
+}

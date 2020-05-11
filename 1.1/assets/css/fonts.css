@@ -1,0 +1,36 @@
+/* Fonts */
+/* ------------------------------------------------------------ */
+@font-face {
+    font-family: 'GenesisSansHead-Light';
+    src: url('../fonts/genesis-sans-head/GenesisSansHead-Light.eot');
+    src: url('../fonts/genesis-sans-head/GenesisSansHead-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/genesis-sans-head/GenesisSansHead-Light.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'GenesisSansHead-Regular';
+    src: url('../fonts/genesis-sans-head/GenesisSansHead-Regular.eot');
+    src: url('../fonts/genesis-sans-head/GenesisSansHead-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/genesis-sans-head/GenesisSansHead-Regular.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'GenesisSansText-Bold';
+    src: url('../fonts/genesis-sans-text/GenesisSansText-Bold.eot');
+    src: url('../fonts/genesis-sans-text/GenesisSansText-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/genesis-sans-text/GenesisSansText-Bold.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'GenesisSansText-Medium';
+    src: url('../fonts/genesis-sans-text/GenesisSansText-Medium.eot');
+    src: url('../fonts/genesis-sans-text/GenesisSansText-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/genesis-sans-text/GenesisSansText-Medium.woff') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'GenesisSansText';
+    src: url('../fonts/genesis-sans-text/GenesisSansText.eot');
+    src: url('../fonts/genesis-sans-text/GenesisSansText.eot?#iefix') format('embedded-opentype'), url('../fonts/genesis-sans-text/GenesisSansText.woff') format('woff');
+    font-weight: normal;
+}
