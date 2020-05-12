@@ -75,9 +75,9 @@ var progressionPanels = (function () {
 
 		//
 		// // Change tab state
-		// $('#progression-nav .panels .panel').removeClass('selected');
-		// $('#progression-nav .panels .panel[index="' + index + '"]').addClass('selected');
-		$('#progression-panels').html(label);
+		$('#progression-panels .panel').removeClass('selected');
+		$('#progression-panels .panel[index="' + index + '"]').addClass('selected');
+		//$('#progression-panels').html(label);
 	};
 
 

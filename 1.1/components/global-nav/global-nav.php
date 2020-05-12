@@ -5,7 +5,11 @@
 			<img src="assets/images/genesis-logo.svg" alt="">
 		</div>
 
-		<div class="hamburger">Hamburger</div>
+		<div class="hamburger">
+			<div class="line top"></div>
+			<div class="line middle"></div>
+			<div class="line bottom"></div>
+		</div>
 
 		<div class="global-nav-buttons">
 			<div class="global-nav-button" index="0">

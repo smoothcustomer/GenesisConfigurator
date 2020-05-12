@@ -34,15 +34,36 @@
 	width: 120px;
 }
 
+
 /* Hamburger */
 
 #global-nav header .hamburger {
+	position: relative;
 	display: none;
 	flex: 1;
 	justify-content: flex-end;
 	height: 80px;
 	padding: 0 50px 0 0;
 }
+
+#global-nav header .hamburger .line {
+	position: absolute;
+	height: 1.5px;
+	width: 28px;
+	background-color: #fff;
+	right: 40px;
+}
+
+#global-nav header .hamburger .line.top {
+	top: 34px;
+}
+#global-nav header .hamburger .line.middle {
+	top: 40px;
+}
+#global-nav header .hamburger .line.bottom {
+	top: 46px;
+}
+
 
 
 /* Nav Buttons */
@@ -220,6 +241,12 @@
 	#global-nav header .global-nav-buttons {
 		display: none;
 	}
+	#global-nav header .genesis-logo {
+		padding: 0 20px;
+	}
+	#global-nav header .genesis-logo img {
+		width: 100px;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -229,20 +256,26 @@
 	#global-nav header .global-nav-buttons {
 		display: none;
 	}
+	#global-nav header .genesis-logo {
+		padding: 0 20px;
+	}
+	#global-nav header .genesis-logo img {
+		width: 100px;
+	}
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1279px)  {
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
 
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1599px)  {
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
 
 }
 
-@media screen and (min-width: 1600px) and (max-width: 1919px)  {
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
 
 }
 
-@media screen and (min-width: 1920px) and (max-width: 1023px)  {
+@media screen and (min-width: 1920px) {
 
 }
