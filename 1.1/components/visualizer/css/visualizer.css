@@ -4,11 +4,7 @@
 
 #visualizer {
 	position: relative;
-	height: calc(100vh - 360px);
-
-	background-position: center center;
-  	background-size: cover;
-	background-repeat: no-repeat;
+	height: calc(100vh - 400px);
 }
 
 

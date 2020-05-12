@@ -1,0 +1,233 @@
+
+/* Local Inventory */
+/* ------------------------------------------------------------ */
+
+#progression-panels .panel-content.summary .inventory-results {
+	padding: 40px 20px;
+}
+
+#progression-panels .panel-content.summary .text-cta {
+	position: relative;
+	height: 26px;
+	cursor: pointer;
+	margin: 0 0 0 15px;
+}
+
+#progression-panels .panel-content.summary .text-cta.zip {
+	margin: 0 20px 0 10px;
+	padding: 0 0 0 22px;
+}
+
+#progression-panels .panel-content.summary .text-cta.zip .icon {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: -16px;
+	top: -14px;
+}
+
+#progression-panels .panel-content.summary .text-cta .label {
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: 0.5px;
+	color: #fff;
+}
+
+#progression-panels .panel-content.summary .text-cta .underline {
+	position: absolute;
+	background-color: #CD9A81;
+	height: 1px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+#progression-panels .panel-content.summary .full-inventory {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#progression-panels .panel-content.summary .full-inventory .text-cta {
+	display: flex;
+}
+
+#progression-panels .panel-content.summary .inventory-results .row-header {
+	padding: 0 20px;
+}
+
+#progression-panels .panel-content.summary .inventory-results .cards {
+	width: 100%;
+	padding: 0;
+}
+
+#progression-panels .panel-content.summary .inventory-results .cards .card {
+	width: 50%;
+}
+
+#progression-panels .panel-content.summary .inventory-results .cards .card .inner-wrap {
+	padding: 20px 20px 20px 20px;
+}
+
+#progression-panels .panel-content.summary .inventory-results .card-content .header {
+	display: flex;
+	flex-direction: row;
+	z-index: 10;
+}
+
+#progression-panels .panel-content.summary .inventory-results .card-content .header .vehicle-info {
+	display: flex;
+	flex-direction: column;
+}
+
+#progression-panels .panel-content.summary .inventory-results .card-content {
+	padding: 295px 35px 35px 35px;
+}
+
+#progression-panels .panel-content.summary .inventory-results .card-content .vehicle-photo {
+	position: absolute;
+	width: 100%;
+	height: 240px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+
+#progression-panels .panel-content.summary .inventory-results .full-inventory {
+	padding: 20px 20px 0 20px;
+}
+
+#progression-panels .panel-content.summary .inventory-results .model {
+	position: relative;
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 32px;
+	line-height: 34px;
+	letter-spacing: 0.5px;
+	color: #fff;
+	padding: 0 0 10px 0;
+	z-index: 10;
+}
+
+#progression-panels .panel-content.summary .inventory-results .card .header {
+	display: flex;
+	padding: 0 0 25px 0;
+}
+
+#progression-panels .panel-content.summary .inventory-results .vehicle-info {
+	flex: 1;
+	padding: 0;
+}
+
+#progression-panels .panel-content.summary .inventory-results .msrp {
+	width: 100px;
+	flex: 0 0 100px;
+	text-align: right;
+}
+
+#progression-panels .panel-content.summary .inventory-results .msrp .value {
+	font-size: 22px;
+	line-height: 24px;
+}
+
+#progression-panels .panel-content.summary .inventory-results .msrp .label {
+	position: relative;
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	letter-spacing: 0.5px;
+	color: #CD9A81;
+	padding: 0 0 5px 0;
+	z-index: 10;
+}
+
+#progression-panels .panel-content.summary .inventory-results .build-details {
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	color: #aaa;
+}
+
+#progression-panels .panel-content.summary .inventory-results .card .swatches {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+#progression-panels .panel-content.summary .inventory-results .card .swatch {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	top: 210px;
+}
+
+#progression-panels .panel-content.summary .inventory-results .card .swatch.interior {
+	left: 30px;
+	background-color: #aaa;
+	z-index: 20;
+}
+
+#progression-panels .panel-content.summary .inventory-results .card .swatch.exterior {
+	left: 80px;
+	background-color: #111;
+	z-index: 30;
+}
+
+#progression-panels .panel-content.summary .inventory-results .location .label {
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	padding: 0 0 0 25px;
+	color: #CD9A81;
+}
+
+#progression-panels .panel-content.summary .inventory-results .card-content .location {
+	display: flex;
+	flex: 1;
+	position: relative;
+	z-index: 10;
+	padding: 0 0 30px 0;
+}
+
+#progression-panels .panel-content.summary .inventory-results .card-content .location .icon {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: -12px;
+	left: -13px;
+}
+
+
+
+/* Breakpoint Styles */
+/* 1920px, 1600px, 1366px, 1280px, 1024px, 768px */
+/* ------------------------------------------------------------ */
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
+
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+
+}

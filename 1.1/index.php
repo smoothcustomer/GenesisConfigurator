@@ -16,6 +16,9 @@
 	<link href="components/global-nav/css/global-nav.css" rel="stylesheet">
 	<link href="components/configurator/css/configurator.css" rel="stylesheet">
 	<link href="components/visualizer/css/visualizer.css" rel="stylesheet">
+	<link href="components/visualizer-360/css/visualizer-360.css" rel="stylesheet">
+	<link href="components/visualizer-ui/css/visualizer-ui.css" rel="stylesheet">
+
 	<link href="components/progression-nav/css/progression-nav.css" rel="stylesheet">
 	<link href="components/progression-panels/css/progression-panels.css" rel="stylesheet">
 	<link href="components/progression-panel-accessories/css/progression-panel-accessories.css" rel="stylesheet">
@@ -24,6 +27,12 @@
 	<link href="components/progression-panel-packages/css/progression-panel-packages.css" rel="stylesheet">
 	<link href="components/progression-panel-summary/css/progression-panel-summary.css" rel="stylesheet">
 	<link href="components/progression-panel-trims/css/progression-panel-trims.css" rel="stylesheet">
+	<link href="components/contact-form/css/contact-form.css" rel="stylesheet">
+	<link href="components/cost-detail/css/cost-detail.css" rel="stylesheet">
+	<link href="components/local-inventory/css/local-inventory.css" rel="stylesheet">
+	<link href="components/local-retailers/css/local-retailers.css" rel="stylesheet">
+	<link href="components/payment-calculator/css/payment-calculator.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -54,8 +63,6 @@
 	<script src="components/global-nav/js/global-nav.js"></script>
 	<script src="components/progression-nav/js/progression-nav.js"></script>
 	<script src="components/progression-panels/js/progression-panels.js"></script>
-
-
 
 
 </body>

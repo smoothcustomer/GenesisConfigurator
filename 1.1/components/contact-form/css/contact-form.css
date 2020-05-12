@@ -1,0 +1,54 @@
+
+/* Contact Form */
+/* ------------------------------------------------------------ */
+
+#progression-panels .panel-content.summary .column.contact {
+	display: flex;
+	flex-direction: column;
+	width: 380px;
+	flex: 0 0 380px;
+}
+
+#progression-panels .panel-content.summary .column.contact .inner-wrap {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #222;
+	box-sizing: border-box;
+	padding: 0 30px;
+}
+
+#progression-panels .panel-content.summary .column.contact .form {
+	display: flex;
+	min-height: 600px;
+	padding: 55px 0;
+	color: #888;
+}
+
+
+/* Breakpoint Styles */
+/* 1920px, 1600px, 1366px, 1280px, 1024px, 768px */
+/* ------------------------------------------------------------ */
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
+
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+
+}

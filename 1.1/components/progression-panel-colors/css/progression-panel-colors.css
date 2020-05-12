@@ -1,14 +1,131 @@
 
-/* Configurator */
+/* Progression Panel Colors */
 /* ------------------------------------------------------------ */
 
-#configurator {
-	position: relative;
-	padding: 80px 0 0 0;
-	/* min-height: calc(100vh - 160px); */
-	min-height: calc(100vh + 450px);
-	overflow: hidden;
+#progression-panels .panel-content.color .row {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
 }
+
+#progression-panels .panel-content.color .row .colors {
+	position: relative;
+	width: 50%;
+	padding: 0 80px;
+}
+
+#progression-panels .panel-content.color .row-header {
+	position: relative;
+	display: flex;
+	padding: 0 0 25px 0;
+}
+
+#progression-panels .panel-content.color .row-header .current-selection {
+	display: flex;
+	justify-content: flex-end;
+	padding: 20px 0 10px 0;
+	font-size: 11px;
+	letter-spacing: 1px;
+}
+
+#progression-panels .panel-content.color .color-swatches {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch {
+	display: flex;
+	width: 120px;
+	height: 120px;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch .swatch-button {
+	position: relative;
+	display: flex;
+	width: 100px;
+	height: 100px;
+	background: #444;
+	border-radius: 50px;
+	border: 0;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch.selected .swatch-button {
+	border: 1px solid #CD9A81;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch .swatch-button .select-icon {
+	position: absolute;
+	display: none;
+	width: 30px;
+	height: 30px;
+	top: 35px;
+	left: 35px;
+	z-index: 10;
+	background: rgb(0,0,0,0.2);
+	border-radius: 15px;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch.selected .swatch-button .select-icon {
+	display: block;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch .swatch-button .select-icon img {
+	width: 30px;
+	height: 30px;
+}
+
+
+
+/* Exterior */
+
+#progression-panels .panel-content.color .color-swatches .swatch.color1 .swatch-button {
+	background: #1a1a1a;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch.color2 .swatch-button {
+	background: #103a59;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch.color3 .swatch-button {
+	background: #06275c;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch.color4 .swatch-button {
+	background: #850900;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch.color5 .swatch-button {
+	background: #272727;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch.color6 .swatch-button {
+	background: #373737;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch.color7 .swatch-button {
+	background: #555;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch.color8 .swatch-button {
+	background: #ddd;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch.color9 .swatch-button {
+	background: #eee;
+}
+
+
+/* Interior */
+
+#progression-panels .panel-content.color .color-swatches .swatch.color10 .swatch-button {
+	background: #333;
+}
+
+#progression-panels .panel-content.color .color-swatches .swatch.color11 .swatch-button {
+	background: #ccc;
+}
+
+
 
 
 /* Breakpoint Styles */
@@ -16,15 +133,11 @@
 /* ------------------------------------------------------------ */
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
-	#configurator {
-		padding: 0;
-	}
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-	#configurator {
-		padding: 0;
-	}
+
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {

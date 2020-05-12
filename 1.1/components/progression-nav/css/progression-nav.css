@@ -112,10 +112,10 @@
 
 #progression-nav .next-button .gradient {
 	position: absolute;
-	width: 40px;
+	width: 60px;
 	height: 80px;
 	top: 0;
-	left: -40px;
+	left: -60px;
 	background: linear-gradient(to right, rgba(23,23,23,0) 0%,rgba(23,23,23,1) 100%);
 }
 
@@ -145,13 +145,13 @@
 		top: 14px;
 	}
 	#progression-nav .next-button .button {
-		width: 160px;
-		height: 40px;
-		line-height: 42px;
-		left: 40px;
+		display: none;
 	}
 	#progression-nav .next-button {
-		width: 220px;
+		width: 0px;
+		height: 60px;
+	}
+	#progression-nav .next-button .gradient {
 		height: 60px;
 	}
 }
@@ -175,13 +175,13 @@
 		top: 14px;
 	}
 	#progression-nav .next-button .button {
-		width: 160px;
-		height: 40px;
-		line-height: 42px;
-		left: 40px;
+		display: none;
 	}
 	#progression-nav .next-button {
-		width: 220px;
+		width: 0px;
+		height: 60px;
+	}
+	#progression-nav .next-button .gradient {
 		height: 60px;
 	}
 }

@@ -211,7 +211,7 @@ section.configurator .visualizer.active {
 	display: flex;
 }
 
-section.configurator .visualizer .ui {
+/* section.configurator .visualizer .ui {
 	position: absolute;
 	display: flex;
 	width: 100%;
@@ -219,9 +219,9 @@ section.configurator .visualizer .ui {
 	bottom: 0;
 	left: 0;
 	background: linear-gradient(0deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
-}
+} */
 
-section.configurator .pill-button {
+/* section.configurator .pill-button {
 	position: relative;
 	height: 30px;
 	line-height: 31px;
@@ -252,16 +252,12 @@ section.configurator .pill-button.selected .background {
 	background-color: #A36B4F;
 }
 
-
-
-
 section.configurator .visualizer .ui .mode,
 section.configurator .visualizer .ui .mode-ui,
 section.configurator .visualizer .ui .fullscreen {
 	position: relative;
 	display: flex;
-	/* height: 100%; */
-}
+} */
 
 /* section.configurator .visualizer .ui .mode {
 	justify-content: flex-start;
@@ -269,7 +265,7 @@ section.configurator .visualizer .ui .fullscreen {
 	width: 320px;
 	flex: 0 0 320px;
 } */
-
+/*
 section.configurator .visualizer .ui .mode-button {
 	position: relative;
 	padding: 0 20px 0 45px;
@@ -330,7 +326,7 @@ section.configurator .visualizer .ui .fullscreen-button .icon {
 section.configurator .visualizer .ui .fullscreen-button .icon img {
 	width: 36px;
 	height: 36px;
-}
+} */
 
 
 
@@ -338,7 +334,7 @@ section.configurator .visualizer .ui .fullscreen-button .icon img {
 /* Configurator: Vehicle Info */
 /* ------------------------------------------------------------ */
 
-section.configurator .vehicle-info-bar {
+/* section.configurator .vehicle-info-bar {
 	display: none;
 	position: relative;
 	height: 70px;
@@ -349,7 +345,7 @@ section.configurator .vehicle-info-bar {
 
 section.configurator .vehicle-info-bar.active {
 	display: flex;
-}
+} */
 
 /* section.configurator .vehicle-info-bar.sticky {
 	position: fixed;
@@ -361,7 +357,7 @@ section.configurator .vehicle-info-bar.active {
 	z-index: 100;
 } */
 
-section.configurator .vehicle-info-bar .vehicle-info {
+/* section.configurator .vehicle-info-bar .vehicle-info {
 	position: absolute;
 	display: flex;
 	height: 50px;
@@ -385,15 +381,9 @@ section.configurator .vehicle-info-bar .vehicle-info .right-column {
 	width: 320px;
 	justify-content: flex-end;
 	padding: 50px 80px 0 0;
-}
+} */
 
-section.configurator .vehicle-info-bar .vehicle-info .model {
-	/* font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
-	display: flex;
-	font-size: 30px;
-	letter-spacing: 0.5px;
-	padding: 28px 20px 0 0; */
-
+/* section.configurator .vehicle-info-bar .vehicle-info .model {
 	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
 	display: flex;
 	font-size: 60px;
@@ -417,14 +407,14 @@ section.configurator .vehicle-info-bar .vehicle-info .msrp {
 	display: flex;
 	font-size: 18px;
 	line-height: 18px;
-}
+} */
 
 /* section.configurator .vehicle-info-bar .vehicle-info .msrp span.msrp-label {
 	color: #CD9A81;
 	padding: 0 6px 0 0;
 } */
 
-section.configurator .vehicle-info-bar .vehicle-info .zip {
+/* section.configurator .vehicle-info-bar .vehicle-info .zip {
 	position: relative;
 	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
 	display: flex;
@@ -451,7 +441,6 @@ section.configurator .vehicle-info-bar .vehicle-info .inventory {
 	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
 	display: flex;
 	font-size: 14px;
-	/* padding: 18px 0 0 30px; */
 }
 
 section.configurator .vehicle-info-bar .vehicle-info .inventory .label {
@@ -461,9 +450,9 @@ section.configurator .vehicle-info-bar .vehicle-info .inventory .label {
 	font-size: 14px;
 	line-height: 32px;
 	padding: 0 5px 0 0;
-}
+} */
 
-section.configurator .vehicle-info-bar .vehicle-info .inventory .pill-button {
+/* section.configurator .vehicle-info-bar .vehicle-info .inventory .pill-button {
 	padding: 0 10px;
 }
 
@@ -471,8 +460,6 @@ section.configurator .vehicle-info-bar .vehicle-info .inventory .pill-button .la
 	padding: 0;
 	line-height: 32px;
 }
-
-
 
 section.configurator .vehicle-info-bar .vehicle-info .inventory .icon {
 	position: absolute;
@@ -489,7 +476,6 @@ section.configurator .vehicle-info-bar .vehicle-info .inventory .icon img {
 
 section.configurator .vehicle-info-bar .background {
 	position: absolute;
-	/* background-color: #000; */
 	background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
 	height: 200px;
 	width: 100%;
@@ -502,7 +488,7 @@ section.configurator .vehicle-info-bar .background {
 
 section.configurator .vehicle-info-bar.sticky .background {
 	opacity: 1;
-}
+} */
 
 
 /* Configurator: Panels */
@@ -930,26 +916,17 @@ section.configurator .panel-content .card.model .vehicle-photo {
 
 /* Card Trims */
 
-section.configurator .panel-content .card.trim .title {
+/* section.configurator .panel-content .card.trim .title {
 	padding: 0 0 30px 0;
-}
+} */
 
 
 
 /* Card Accessory */
-section.configurator .panel-content .card.accessory .accessory-photo {
-	/* position: relative;
-	width: 100%;
-	margin: 25px 0 40px 0;
-	z-index: 10; */
-
+/* section.configurator .panel-content .card.accessory .accessory-photo {
 	position: absolute;
 	width: 100%;
 	height: 220px;
-	/* background-color: #1a1a1a; */
-	/* margin: 20px 0 40px 0;
-	z-index: 10; */
-
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -969,26 +946,21 @@ section.configurator .panel-content .card.accessory .card-content {
 
 section.configurator .panel-content .card.accessory .title.small {
 	padding: 0 0 30px 0;
-}
+} */
 
 
 
 
 /* Colors */
 
-section.configurator .panel-content.color .row {
+/* section.configurator .panel-content.color .row {
 	display: flex;
 	flex: 1;
 	flex-direction: row;
-	/* border: 1px solid green; */
-	/* padding: 0 50px 0 50px; */
 }
 
 section.configurator .panel-content.color .row .colors {
 	position: relative;
-	/* display: flex;
-	flex: 1;
-	flex-direction: column; */
 	width: 50%;
 	padding: 0 80px;
 }
@@ -996,9 +968,6 @@ section.configurator .panel-content.color .row .colors {
 section.configurator .panel-content.color .row-header {
 	position: relative;
 	display: flex;
-	/* flex: 1; */
-	/* flex-direction: row; */
-	/* border: 1px solid red; */
 	padding: 0 0 25px 0;
 }
 
@@ -1019,7 +988,6 @@ section.configurator .panel-content.color .color-swatches .swatch {
 	display: flex;
 	width: 120px;
 	height: 120px;
-	/* border: 1px solid teal; */
 }
 
 section.configurator .panel-content.color .color-swatches .swatch .swatch-button {
@@ -1034,12 +1002,12 @@ section.configurator .panel-content.color .color-swatches .swatch .swatch-button
 
 section.configurator .panel-content.color .color-swatches .swatch.selected .swatch-button {
 	border: 1px solid #CD9A81;
-}
+} */
 
 
 /* Exterior */
 
-section.configurator .panel-content.color .color-swatches .swatch.color1 .swatch-button {
+/* section.configurator .panel-content.color .color-swatches .swatch.color1 .swatch-button {
 	background: #1a1a1a;
 }
 
@@ -1073,19 +1041,19 @@ section.configurator .panel-content.color .color-swatches .swatch.color8 .swatch
 
 section.configurator .panel-content.color .color-swatches .swatch.color9 .swatch-button {
 	background: #eee;
-}
+} */
 
 /* Interior */
 
-section.configurator .panel-content.color .color-swatches .swatch.color10 .swatch-button {
+/* section.configurator .panel-content.color .color-swatches .swatch.color10 .swatch-button {
 	background: #333;
 }
 
 section.configurator .panel-content.color .color-swatches .swatch.color11 .swatch-button {
 	background: #ccc;
-}
+} */
 
-section.configurator .panel-content.color .color-swatches .swatch .swatch-button .select-icon {
+/* section.configurator .panel-content.color .color-swatches .swatch .swatch-button .select-icon {
 	position: absolute;
 	display: none;
 	width: 30px;
@@ -1104,7 +1072,7 @@ section.configurator .panel-content.color .color-swatches .swatch.selected .swat
 section.configurator .panel-content.color .color-swatches .swatch .swatch-button .select-icon img {
 	width: 30px;
 	height: 30px;
-}
+} */
 
 
 
@@ -1115,7 +1083,7 @@ section.configurator .panel-content.color .color-swatches .swatch .swatch-button
 /* Summary */
 /* ------------------------------------------------------------ */
 
-section.configurator .panel-content.summary {
+/* section.configurator .panel-content.summary {
 	flex-direction: row;
 	padding: 0 80px;
 }
@@ -1162,13 +1130,13 @@ section.configurator .panel-content.summary .title {
 	color: #CD9A81;
 	margin: 0 0 30px 0;
 }
-
+ */
 
 
 
 /* Contact Forms */
 
-section.configurator .panel-content.summary .column.contact {
+/* section.configurator .panel-content.summary .column.contact {
 	display: flex;
 	flex-direction: column;
 	width: 380px;
@@ -1187,30 +1155,30 @@ section.configurator .panel-content.summary .column.contact .inner-wrap {
 
 section.configurator .panel-content.summary .column.contact .tabs {
 	display: flex;
-}
+} */
 
-section.configurator .panel-content.summary .tabs .tab-button {
+
+
+/* section.configurator .panel-content.summary .column.contact .tabs .tab-button {
 	position: relative;
 	display: flex;
 	padding: 30px 0 30px 0;
 	width: 50%;
 	color: #444;
-	/* justify-content: center; */
 }
 
-section.configurator .panel-content.summary .tabs .tab-button .label {
+section.configurator .panel-content.summary .column.contact .tabs .tab-button .label {
 	display: flex;
 	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
 	font-size: 14px;
 	color: #444;
-	/* padding: 0 0 0 5px; */
 }
 
-section.configurator .panel-content.summary .tabs .tab-button.selected .label {
+section.configurator .panel-content.summary .column.contact .tabs .tab-button.selected .label {
 	color: #CD9A81;
 }
 
-section.configurator .panel-content.summary .tabs .tab-button .underline {
+section.configurator .panel-content.summary .column.contact .tabs .tab-button .underline {
 	display: flex;
 	position: absolute;
 	width: 100%;
@@ -1221,17 +1189,16 @@ section.configurator .panel-content.summary .tabs .tab-button .underline {
 	background-color: #444;
 }
 
-section.configurator .panel-content.summary .tabs .tab-button.selected .underline {
+section.configurator .panel-content.summary .column.contact .tabs .tab-button.selected .underline {
 	background-color: #CD9A81;
 }
 
 section.configurator .panel-content.summary .column.contact .form {
 	display: flex;
-	/* background-color: #222; */
 	min-height: 600px;
 	padding: 55px 0;
 	color: #888;
-}
+} */
 
 
 
@@ -1241,7 +1208,7 @@ section.configurator .panel-content.summary .column.contact .form {
 
 /* Vehicle Information */
 
-section.configurator .panel-content.summary .row {
+/* section.configurator .panel-content.summary .row {
 	padding: 0 60px 60px 0;
 }
 
@@ -1250,15 +1217,11 @@ section.configurator .panel-content.summary .row-header {
 	padding: 0 0 30px 0;
 }
 
-
 section.configurator .panel-content.summary .vehicle-info {
 	display: flex;
 	flex-direction: row;
 	padding: 30px 0 0 0;
 }
-
-
-
 
 section.configurator .panel-content.summary .vehicle-info .model-trim {
 	display: flex;
@@ -1353,13 +1316,13 @@ section.configurator .panel-content.summary .vehicle-info .specs .value {
 	font-size: 22px;
 	letter-spacing: 1px;
 	flex: 1;
-}
+} */
 
 
 
 
-/* Accordians */
-
+/* Cost Detail */
+/*
 section.configurator .panel-content.summary .cost-detail {
 	padding: 60px 0 0 0;
 }
@@ -1371,10 +1334,6 @@ section.configurator .panel-content.summary .cost-detail .title {
 	letter-spacing: 0.5px;
 	color: #CD9A81;
 	margin: 0 0 40px 0;
-}
-
-section.configurator .panel-content.summary .cost-detail .accordian-rows {
-
 }
 
 section.configurator .panel-content.summary .cost-detail .accordian-row {
@@ -1429,15 +1388,6 @@ section.configurator .panel-content.summary .cost-detail .accordian-row .column.
 	padding: 1px 0 0 0;
 }
 
-section.configurator .panel-content.summary .cost-detail .accordian-row .title {
-
-}
-
-
-
-
-/* Cost Totals */
-
 section.configurator .panel-content.summary .cost-detail .totals {
 	display: flex;
 	flex-direction: column;
@@ -1465,7 +1415,12 @@ section.configurator .panel-content.summary .cost-detail .total.msrp .column.val
 	line-height: 22px;
 	letter-spacing: 1px;
 	color: #CD9A81;
-}
+} */
+
+
+
+
+
 
 
 
@@ -1473,7 +1428,7 @@ section.configurator .panel-content.summary .cost-detail .total.msrp .column.val
 
 /* Payment Calculator */
 
-section.configurator .panel-content.summary .payment-calculator {
+/* section.configurator .panel-content.summary .payment-calculator {
 	padding: 40px;
 }
 
@@ -1594,7 +1549,7 @@ section.configurator .panel-content.summary .payment-calculator .form .result-ro
 	bottom: 0;
 	right: 0;
 }
-
+ */
 
 
 
@@ -1602,7 +1557,7 @@ section.configurator .panel-content.summary .payment-calculator .form .result-ro
 
 /* Inventory Results */
 
-section.configurator .panel-content.summary .inventory-results {
+/* section.configurator .panel-content.summary .inventory-results {
 	padding: 40px 20px;
 }
 
@@ -1680,12 +1635,6 @@ section.configurator .panel-content.summary .inventory-results .card-content .he
 	flex-direction: column;
 }
 
-section.configurator .panel-content.summary .inventory-results .card-content .header .msrp {
-	/* display: flex;
-	flex-direction: column; */
-}
-
-
 section.configurator .panel-content.summary .inventory-results .card-content {
 	padding: 295px 35px 35px 35px;
 }
@@ -1703,12 +1652,9 @@ section.configurator .panel-content.summary .inventory-results .card-content .ve
 	z-index: 10;
 }
 
-
-
 section.configurator .panel-content.summary .inventory-results .full-inventory {
 	padding: 20px 20px 0 20px;
 }
-
 
 section.configurator .panel-content.summary .inventory-results .model {
 	position: relative;
@@ -1760,11 +1706,6 @@ section.configurator .panel-content.summary .inventory-results .build-details {
 	color: #aaa;
 }
 
-/* section.configurator .panel-content.summary .inventory-results .card .swatches-location {
-	display: flex;
-	padding: 0 0 30px 0;
-} */
-
 section.configurator .panel-content.summary .inventory-results .card .swatches {
 	position: absolute;
 	width: 100%;
@@ -1814,7 +1755,7 @@ section.configurator .panel-content.summary .inventory-results .card-content .lo
 	height: 40px;
 	top: -12px;
 	left: -13px;
-}
+} */
 
 
 
@@ -1822,7 +1763,7 @@ section.configurator .panel-content.summary .inventory-results .card-content .lo
 
 /* Local Retailers */
 
-section.configurator .panel-content.summary .local-retailers {
+/* section.configurator .panel-content.summary .local-retailers {
 	display: flex;
 	flex-direction: column;
 	padding: 40px;
@@ -1843,7 +1784,7 @@ section.configurator .panel-content.summary .local-retailers .retailer #map {
 	display: flex;
 	flex: 1;
 	background-color: #aaa;
-}
+} */
 
 
 
@@ -1871,7 +1812,7 @@ section.configurator .panel-content.summary .local-retailers .retailer #map {
 		padding: 0 40px 10px 40px;
 	}
 
-	section.configurator .visualizer .ui .mode,
+	/* section.configurator .visualizer .ui .mode,
 	section.configurator .visualizer .ui .mode-ui,
 	section.configurator .visualizer .ui .fullscreen {
 		height: 100%;
@@ -1904,7 +1845,7 @@ section.configurator .panel-content.summary .local-retailers .retailer #map {
 
 	section.configurator .visualizer .ui {
 		height: 140px;
-	}
+	} */
 }
 
 

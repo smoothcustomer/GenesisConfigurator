@@ -1,0 +1,441 @@
+
+/* Visualizer */
+/* ------------------------------------------------------------ */
+
+#visualizer .ui {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	/* background: linear-gradient(0deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%); */
+	background: rgba(0, 0, 0, 0.0);
+	z-index: 10;
+}
+
+#visualizer .ui .nav {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 50%;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+}
+
+#visualizer .ui .pill-button {
+	position: relative;
+	height: 30px;
+	line-height: 31px;
+	font-size: 14px;
+	padding: 0 20px;
+	margin: 0 5px;
+	opacity: 0.8;
+}
+
+#visualizer .ui .pill-button.selected {
+	opacity: 1;
+}
+
+#visualizer .ui .pill-button .label {
+	position: relative;
+	font-size: 13px;
+	line-height: 32px;
+	letter-spacing: 1px;
+	z-index: 20;
+}
+
+#visualizer .ui .pill-button .background,
+#visualizer .ui .vehicle-info-bar .pill-button .background {
+	position: absolute;
+	height: 30px;
+	width: 100%;
+	left: 0;
+	top: 0;
+	border-radius: 15px;
+	opacity: 1;
+	z-index: 10;
+}
+
+#visualizer .ui .pill-button.selected .background {
+	background-color: #A36B4F;
+}
+
+#visualizer .ui .mode-nav,
+#visualizer .ui .mode-subnav,
+#visualizer .ui .fullscreen {
+	position: absolute;
+	display: flex;
+}
+
+/* UI Vignettes */
+
+#visualizer .ui .vehicle-info-bar .vignette {
+	position: absolute;
+	width: 100%;
+	height: 200px;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 100%);
+}
+
+#visualizer .ui .nav .vignette {
+	position: absolute;
+	width: 100%;
+	height: 120px;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	background: linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 100%);
+}
+
+
+
+/* Mode Nav */
+
+#visualizer .ui .mode-nav {
+	position: absolute;
+	display: flex;
+	width: 50%;
+	left: 80px;
+	bottom: 40px;
+}
+
+#visualizer .ui .mode-button {
+	padding: 0 15px 0 45px;
+	margin: 0;
+}
+
+#visualizer .ui .mode-button .icon {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 9px;
+	top: -3px;
+	z-index: 20;
+}
+
+#visualizer .ui .mode-button .icon img {
+	width: 36px;
+	height: 36px;
+}
+
+
+/* Mode Subnav */
+
+#visualizer .ui .mode-subnav {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	left: 0;
+	right: 0;
+	bottom: 40px;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+#visualizer .ui .mode-subnav .mode-subnav-360 {
+	display: flex;
+}
+
+#visualizer .ui .mode-subnav .mode-subnav-360-button {
+	display: flex;
+}
+
+
+/* Fullscreen Toggle */
+
+#visualizer .ui .fullscreen {
+	position: absolute;
+	right: 80px;
+	bottom: 40px;
+}
+
+#visualizer .ui .fullscreen-button {
+	position: relative;
+	line-height: 32px;
+	padding: 0 0 0 32px;
+}
+
+#visualizer .ui .fullscreen-button .icon {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: -8px;
+	top: -3px;
+}
+
+#visualizer .ui .fullscreen-button .icon img {
+	width: 36px;
+	height: 36px;
+}
+
+
+/* Vehicle Info */
+
+#visualizer .ui .vehicle-info-bar {
+	position: absolute;
+	display: flex;
+	height: 50%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info {
+	position: absolute;
+	display: flex;
+	height: 60px;
+	width: 100%;
+	z-index: 20;
+	letter-spacing: 0.5px;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .left-column {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	padding: 50px 0 0 80px;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .right-column {
+	display: flex;
+	flex: 0 0 260px;
+	width: 260px;
+	justify-content: flex-end;
+	padding: 52px 80px 0 0;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .model {
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	display: flex;
+	font-size: 60px;
+	line-height: 60px;
+	color: #fff;
+	padding: 0 0 5px 0;
+	transform: translateX(-2px);
+	text-shadow: 0px 1px 10px rgba(0,0,0,0.25);
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .trim {
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
+	display: flex;
+	font-size: 16px;
+	line-height: 16px;
+	color: #CD9A81;
+	color: #fff;
+	padding: 0 0 0 0;
+	text-shadow: 0px 1px 10px rgba(0,0,0,0.25);
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .specs {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	flex: 1;
+	z-index: 10;
+	padding: 5px 0 0 0;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .specs .labels {
+	display: flex;
+	width: 100%;
+	margin: 0 0 20px 0;
+	justify-content: flex-end;
+	text-shadow: 0px 1px 10px rgba(0,0,0,0.25);
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .specs .values {
+	position: relative;
+	display: flex;
+	width: 100%;
+	z-index: 10;
+	justify-content: flex-end;
+	text-shadow: 0px 1px 10px rgba(0,0,0,0.25);
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .specs .label {
+	display: flex;
+	font-size: 11px;
+	line-height: 14px;
+	letter-spacing: 1px;
+	flex: 1;
+	color: #fff;
+	padding: 0 0 0 10px;
+	justify-content: flex-end;
+	text-align: right;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .specs .label.msrp {
+	width: 160px;
+	flex: 0 0 160px;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .specs .value {
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	display: flex;
+	font-size: 28px;
+	letter-spacing: 1px;
+	flex: 1;
+	padding: 0 0 0 10px;
+	justify-content: flex-end;
+	text-align: right;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .specs .value.msrp {
+	width: 160px;
+	flex: 0 0 160px;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .zip {
+	position: relative;
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
+	display: flex;
+	font-size: 14px;
+	padding: 18px 30px 0 30px;
+	margin: 0 5px 0 0;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .zip .icon {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: -5px;
+	top: 15px;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .zip .icon img {
+	width: 36px;
+	height: 36px;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .inventory {
+	position: relative;
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
+	display: flex;
+	font-size: 14px;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .inventory .label {
+	position: relative;
+	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
+	display: flex;
+	font-size: 14px;
+	line-height: 32px;
+	padding: 0 5px 0 0;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .inventory .pill-button {
+	padding: 0 10px;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .inventory .pill-button .label {
+	padding: 0;
+	line-height: 32px;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .inventory .icon {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: -10px;
+	top: 15px;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .inventory .icon img {
+	width: 36px;
+	height: 36px;
+}
+
+#visualizer .ui .vehicle-info-bar .background {
+	position: absolute;
+	background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+	height: 200px;
+	width: 100%;
+	left: 0;
+	top: 0;
+	opacity: 0.6;
+	z-index: 10;
+	transition: opacity 0.6s ease-out;
+}
+
+#visualizer .ui .vehicle-info-bar.sticky .background {
+	opacity: 1;
+}
+
+
+
+
+/* Breakpoint Styles */
+/* 1920px, 1600px, 1366px, 1280px, 1024px, 768px */
+/* ------------------------------------------------------------ */
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+	#visualizer .ui .mode-nav {
+		left: 20px;
+		flex-direction: column;
+	}
+	#visualizer .ui .mode-nav .pill-button {
+		padding: 0 20px 0 55px;
+		margin: 10px 0 0 0;
+	}
+	#visualizer .ui .mode-nav .pill-button .label {
+		display: none;
+	}
+	#visualizer .ui .mode-nav .pill-button .background {
+		width: 30px;
+		left: 11px;
+	}
+	#visualizer .ui .fullscreen {
+		right: 20px;
+		bottom: 30px;
+		height: 32px;
+	}
+	#visualizer .ui .fullscreen .fullscreen-button .label {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	#visualizer .ui .mode-nav {
+		left: 20px;
+		flex-direction: column;
+	}
+	#visualizer .ui .mode-nav .pill-button {
+		padding: 0 20px 0 55px;
+		margin: 10px 0 0 0;
+	}
+	#visualizer .ui .mode-nav .pill-button .label {
+		display: none;
+	}
+	#visualizer .ui .mode-nav .pill-button .background {
+		width: 30px;
+		left: 11px;
+	}
+	#visualizer .ui .fullscreen {
+		right: 20px;
+		bottom: 30px;
+		height: 32px;
+	}
+	#visualizer .ui .fullscreen .fullscreen-button .label {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
+
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+
+}

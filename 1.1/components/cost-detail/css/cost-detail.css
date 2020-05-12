@@ -1,0 +1,127 @@
+
+/* Cost Detail */
+/* ------------------------------------------------------------ */
+
+#progression-panels .panel-content.summary .cost-detail {
+	padding: 60px 0 0 0;
+}
+
+#progression-panels .panel-content.summary .cost-detail .title {
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+	letter-spacing: 0.5px;
+	color: #CD9A81;
+	margin: 0 0 40px 0;
+}
+
+#progression-panels .panel-content.summary .cost-detail .accordian-row {
+	display: flex;
+	flex-direction: row;
+	background-color: #111;
+	padding: 40px;
+	margin: 0 0 20px 0;
+}
+
+#progression-panels .panel-content.summary .cost-detail .accordian-row .column {
+	display: flex;
+}
+
+#progression-panels .panel-content.summary .cost-detail .accordian-row .column.title {
+	width: 140px;
+	flex: 0 0 140px;
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 15px;
+	line-height: 15px;
+	letter-spacing: 0.5px;
+	color: #CD9A81;
+	padding: 4px 0 0 0;
+}
+
+#progression-panels .panel-content.summary .cost-detail .accordian-row .column.value {
+	width: 80px;
+	flex: 0 0 80px;
+	padding: 4px 0 0 0;
+	justify-content: flex-end;
+}
+
+#progression-panels .panel-content.summary .cost-detail .accordian-row .column.nav {
+	width: 80px;
+	flex: 0 0 80px;
+	justify-content: flex-end;
+}
+
+#progression-panels .panel-content.summary .cost-detail .accordian-row .column.info {
+	flex: 1;
+	flex-direction: column;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#progression-panels .panel-content.summary .cost-detail .accordian-row .column.info {
+	flex: 1;
+	flex-direction: column;
+	font-size: 14px;
+	line-height: 20px;
+	color: #aaa;
+	padding: 1px 0 0 0;
+}
+
+#progression-panels .panel-content.summary .cost-detail .totals {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 0;
+}
+
+#progression-panels .panel-content.summary .cost-detail .total {
+	display: flex;
+	flex-direction: row;
+	padding: 15px 40px;
+}
+
+#progression-panels .panel-content.summary .cost-detail .total .column {
+	display: flex;
+	width: 50%;
+}
+
+#progression-panels .panel-content.summary .cost-detail .total .column.value {
+	justify-content: flex-end;
+}
+
+#progression-panels .panel-content.summary .cost-detail .total.msrp .column.value {
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 22px;
+	line-height: 22px;
+	letter-spacing: 1px;
+	color: #CD9A81;
+}
+
+
+
+/* Breakpoint Styles */
+/* 1920px, 1600px, 1366px, 1280px, 1024px, 768px */
+/* ------------------------------------------------------------ */
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
+
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+
+}

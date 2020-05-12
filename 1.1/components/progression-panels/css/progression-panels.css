@@ -86,11 +86,6 @@
 	padding: 320px 35px 35px 35px;
 }
 
-#progression-panels .panel-content .card.trim .card-content,
-#progression-panels .panel-content .card.package .card-content {
-	padding: 35px 35px 35px 35px;
-}
-
 #progression-panels .panel-content .card .background {
 	position: absolute;
 	background-color: #222;

@@ -1,4 +1,10 @@
 
+<section id="visualizer">
 
-<section id="visualizer" style="background-image: url(assets/images/visualizer-fpo-2.jpg)">
+	<!-- UI -->
+	<?php include 'components/visualizer-ui/visualizer-ui.php'; ?>
+
+	<!-- 360 -->
+	<?php include 'components/visualizer-360/visualizer-360.php'; ?>
+
 </section>

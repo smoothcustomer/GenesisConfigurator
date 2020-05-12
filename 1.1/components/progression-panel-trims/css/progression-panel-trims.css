@@ -1,13 +1,15 @@
 
-/* Configurator */
+/* Progression Panel Trims */
 /* ------------------------------------------------------------ */
 
-#configurator {
-	position: relative;
-	padding: 80px 0 0 0;
-	/* min-height: calc(100vh - 160px); */
-	min-height: calc(100vh + 450px);
-	overflow: hidden;
+/* Card: Trim */
+
+#progression-panels .panel-content .card.trim .title {
+	padding: 0 0 30px 0;
+}
+
+#progression-panels .panel-content .card.trim .card-content {
+	padding: 35px 35px 35px 35px;
 }
 
 
@@ -16,15 +18,11 @@
 /* ------------------------------------------------------------ */
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
-	#configurator {
-		padding: 0;
-	}
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-	#configurator {
-		padding: 0;
-	}
+
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
