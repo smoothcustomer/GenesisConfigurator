@@ -376,35 +376,34 @@ section.global-nav header .global-nav-panel.selected {
 }
 
 
-/*
-font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
-font-size: 18px;
-color: #CD9A81;
-*/
 
 
 
-/* Global Nav: Breakpoint Styles */
+
+/* Breakpoint Styles */
 /* 1920px, 1600px, 1366px, 1280px, 1024px, 768px */
 /* ------------------------------------------------------------ */
 
-
-@media (min-width: 768px){
-
-}
-
-@media (min-width: 1024px){
+@media screen and (min-width: 0px) and (max-width: 767px) {
 
 }
 
-@media (min-width: 1280px){
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
 }
 
-@media (min-width: 1600px){
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
 
 }
 
-@media (min-width: 1920px){
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
+
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+
+}
+
+@media screen and (min-width: 1920px) {
 
 }

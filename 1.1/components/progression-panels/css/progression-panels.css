@@ -280,10 +280,26 @@
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
 	#progression-panels {
-		padding: 80px 0 0 0;
+		padding: 50px 0 0 0;
+	}
+	#progression-panels .panel {
+		padding: 30px 0;
 	}
 	#progression-panels .panel-content .card {
 		width: 100%;
+	}
+
+
+	#progression-panels .panel-content .row-header {
+		padding: 0 20px 10px 20px;
+	}
+
+	#progression-panels .panel-content .cards {
+		padding: 0 20px;
+	}
+
+	#progression-panels .panel-content .card .inner-wrap {
+		padding: 10px 0;
 	}
 }
 

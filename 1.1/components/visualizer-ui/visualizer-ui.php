@@ -5,17 +5,22 @@
 		<div class="vehicle-info">
 			<div class="left-column">
 				<div class="model">2020 G70</div>
-				<div class="trim">2.0T 6-Speed Manual RWD</div>
+				<div class="build">
+					<div class="trim">2.0T 6-Speed Manual RWD</div>
+					<div class="color">Victoria Black / Black Leatherette</div>
+				</div>
 			</div>
 			<div class="right-column">
 				<div class="specs">
-					<div class="labels">
-						<div class="label inventory">Local<br>Inventory</div>
-						<div class="label msrp">Estimated<br>MSRP</div>
+					<div class="spec inventory">
+						<div class="value">47</div>
+						<div class="label desktop">Matches<br>Located</div>
+						<div class="label mobile">Matches</div>
 					</div>
-					<div class="values">
-						<div class="value inventory">47</div>
-						<div class="value msrp">$35,250</div>
+					<div class="spec msrp">
+						<div class="value"><span class="super">$</span>35,250</div>
+						<div class="label desktop">Estimated<br>MSRP*</div>
+						<div class="label mobile">MSRP*</div>
 					</div>
 				</div>
 			</div>
@@ -44,15 +49,15 @@
 		<div class="mode-subnav">
 			<div class="mode-subnav-360">
 				<div class="pill-button mode-subnav-360-button selected">
-					<div class="label">View Interior</div>
+					<div class="label"><span class="mobile-hidden">View</span> Interior</div>
 					<div class="background"></div>
 				</div>
 			</div>
 		</div>
 		<div class="fullscreen">
 			<div class="fullscreen-button">
-				<div class="label">Fullscreen</div>
 				<div class="icon"><img src="assets/images/icons/icon-fullscreen-white.svg" alt=""></div>
+				<div class="label">Fullscreen</div>
 			</div>
 		</div>
 		<div class="vignette"></div>

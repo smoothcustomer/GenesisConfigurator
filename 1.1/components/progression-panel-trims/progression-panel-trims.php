@@ -1,7 +1,7 @@
 <div class="panel-content">
 	<div class="row">
 		<div class="row-header">
-			<div class="title">Choose a Trim</div>
+			<div class="title">Select a Trim</div>
 			<div class="ctas">
 				<div class="button dark">Compare Trims</div>
 			</div>
