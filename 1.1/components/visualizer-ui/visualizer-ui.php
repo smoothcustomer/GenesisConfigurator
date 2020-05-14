@@ -5,9 +5,13 @@
 		<div class="vehicle-info">
 			<div class="left-column">
 				<div class="model">2020 G70</div>
-				<div class="build">
+				<div class="build desktop">
 					<div class="trim">2.0T 6-Speed Manual RWD</div>
 					<div class="color">Victoria Black / Black Leatherette</div>
+				</div>
+				<div class="build mobile">
+					<div class="trim">2.0T 6-Speed Manual</div>
+					<div class="color">Rear Wheel Drive</div>
 				</div>
 			</div>
 			<div class="right-column">
@@ -19,8 +23,8 @@
 					</div>
 					<div class="spec msrp">
 						<div class="value"><span class="super">$</span>35,250</div>
-						<div class="label desktop">Estimated<br>MSRP*</div>
-						<div class="label mobile">MSRP*</div>
+						<div class="label desktop">Estimated<br>MSRP</div>
+						<div class="label mobile">Estimated MSRP</div>
 					</div>
 				</div>
 			</div>
@@ -49,7 +53,7 @@
 		<div class="mode-subnav">
 			<div class="mode-subnav-360">
 				<div class="pill-button mode-subnav-360-button selected">
-					<div class="label"><span class="mobile-hidden">View</span> Interior</div>
+					<div class="label"><span class="mobile-hidden">Interior</div>
 					<div class="background"></div>
 				</div>
 			</div>

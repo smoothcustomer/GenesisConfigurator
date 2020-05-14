@@ -3,7 +3,11 @@
 		<div class="row-header">
 			<div class="title">Select a Trim</div>
 			<div class="ctas">
-				<div class="button dark">Compare Trims</div>
+				<div class="compare-button">
+					<div class="icon"><img src="assets/images/icons/icon-compare.svg" alt=""></div>
+					<div class="label desktop">Compare Trims</div>
+					<div class="label mobile">Compare</div>
+				</div>
 			</div>
 		</div>
 		<div class="cards">
@@ -11,9 +15,9 @@
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
-							<div class="title">3.3T AWD</div>
+							<div class="engine">3.3T</div>
+							<div class="drivetrain">All Wheel Drive</div>
 						</div>
-
 						<div class="align-bottom">
 							<div class="specs">
 								<div class="labels">
@@ -28,12 +32,17 @@
 								</div>
 							</div>
 							<div class="description">
-								G70 2.0L Turbocharged inline 4-cylinder 8-speed automatic with SHIFTRONIC RWD.
+								<ul>
+									<li>G70 2.0L Turbocharged inline 4-cylinder</li>
+									<li>8-speed automatic with SHIFTRONIC</li>
+									<li>Rear wheel drive</li>
+								</ul>
 							</div>
 							<div class="ctas">
+								<div class="expand">+ View Specs</div>
 								<div class="button dark-translucent">
-									<div class="label deselected">Select</div>
-									<div class="label selected">Selected</div>
+									<div class="label deselected">Select Trim</div>
+									<div class="label selected">Trim Selected</div>
 								</div>
 							</div>
 						</div>
@@ -46,7 +55,8 @@
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
-							<div class="title">3.3T RWD</div>
+							<div class="engine">3.3T</div>
+							<div class="drivetrain">Rear Wheel Drive</div>
 						</div>
 
 						<div class="align-bottom">
@@ -63,12 +73,19 @@
 								</div>
 							</div>
 							<div class="description">
-								G70 2.0L Turbocharged inline 4-cylinder 8-speed automatic with SHIFTRONIC RWD.
+								<ul>
+									<li>G70 2.0L Turbocharged inline 4-cylinder</li>
+									<li>8-speed automatic with SHIFTRONIC</li>
+									<li>Rear wheel drive</li>
+								</ul>
 							</div>
 							<div class="ctas">
-								<div class="button dark-translucent">
-									<div class="label deselected">Select</div>
-									<div class="label selected">Selected</div>
+								<div class="ctas">
+									<div class="expand">+ View Specs</div>
+									<div class="button dark-translucent">
+										<div class="label deselected">Select Trim</div>
+										<div class="label selected">Selected</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -81,7 +98,8 @@
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
-							<div class="title">2.0T 6-Speed Manual RWD</div>
+							<div class="engine">2.0T</div>
+							<div class="drivetrain">6-Speed Manual Rear Wheel Drive</div>
 						</div>
 
 						<div class="align-bottom">
@@ -98,12 +116,19 @@
 								</div>
 							</div>
 							<div class="description">
-								G70 2.0L Turbocharged inline 4-cylinder 8-speed automatic with SHIFTRONIC RWD.
+								<ul>
+									<li>G70 2.0L Turbocharged inline 4-cylinder</li>
+									<li>8-speed automatic with SHIFTRONIC</li>
+									<li>Rear wheel drive</li>
+								</ul>
 							</div>
 							<div class="ctas">
-								<div class="button dark-translucent">
-									<div class="label deselected">Select</div>
-									<div class="label selected">Selected</div>
+								<div class="ctas">
+									<div class="expand">+ View Specs</div>
+									<div class="button dark-translucent">
+										<div class="label deselected">Select Trim</div>
+										<div class="label selected">Selected</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -116,7 +141,12 @@
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
-							<div class="title">2.0T AWD</div>
+							<div class="engine">2.0T</div>
+							<div class="drivetrain">All Wheel Drive</div>
+							<!-- <div class="select-icon">
+								<img class="selected" src="assets/images/icons/icon-card-select-circle-selected.svg" alt="">
+								<img class="deselected" src="assets/images/icons/icon-card-select-circle.svg" alt="">
+							</div> -->
 						</div>
 
 						<div class="align-bottom">
@@ -133,12 +163,19 @@
 								</div>
 							</div>
 							<div class="description">
-								G70 2.0L Turbocharged inline 4-cylinder 8-speed automatic with SHIFTRONIC RWD.
+								<ul>
+									<li>G70 2.0L Turbocharged inline 4-cylinder</li>
+									<li>8-speed automatic with SHIFTRONIC</li>
+									<li>Rear wheel drive</li>
+								</ul>
 							</div>
 							<div class="ctas">
-								<div class="button dark-translucent">
-									<div class="label deselected">Select</div>
-									<div class="label selected">Selected</div>
+								<div class="ctas">
+									<div class="expand">+ View Specs</div>
+									<div class="button dark-translucent">
+										<div class="label deselected">Select Trim</div>
+										<div class="label selected">Selected</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -151,7 +188,12 @@
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
-							<div class="title">2.0T RWD</div>
+							<div class="engine">2.0T</div>
+							<div class="drivetrain">Rear Wheel Drive</div>
+							<!-- <div class="select-icon">
+								<img class="selected" src="assets/images/icons/icon-card-select-circle-selected.svg" alt="">
+								<img class="deselected" src="assets/images/icons/icon-card-select-circle.svg" alt="">
+							</div> -->
 						</div>
 
 						<div class="align-bottom">
@@ -168,12 +210,19 @@
 								</div>
 							</div>
 							<div class="description">
-								G70 2.0L Turbocharged inline 4-cylinder 8-speed automatic with SHIFTRONIC RWD.
+								<ul>
+									<li>G70 2.0L Turbocharged inline 4-cylinder</li>
+									<li>8-speed automatic with SHIFTRONIC</li>
+									<li>Rear wheel drive</li>
+								</ul>
 							</div>
 							<div class="ctas">
-								<div class="button dark-translucent">
-									<div class="label deselected">Select</div>
-									<div class="label selected">Selected</div>
+								<div class="ctas">
+									<div class="expand">+ View Specs</div>
+									<div class="button dark-translucent">
+										<div class="label deselected">Select Trim</div>
+										<div class="label selected">Selected</div>
+									</div>
 								</div>
 							</div>
 						</div>

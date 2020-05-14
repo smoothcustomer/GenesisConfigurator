@@ -115,6 +115,11 @@ body, html {
 	-webkit-font-smoothing: antialiased;
 }
 
+body.hidden {
+	display: none;
+}
+
+
 /* Global Nav: Core Styles */
 /* ------------------------------------------------------------ */
 

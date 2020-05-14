@@ -35,7 +35,7 @@
 
 </head>
 
-<body>
+<body class="hidden">
 
 	<!-- Component: Global Nav -->
 	<?php include 'components/global-nav/global-nav.php'; ?>
@@ -63,6 +63,7 @@
 	<script src="components/global-nav/js/global-nav.js"></script>
 	<script src="components/progression-nav/js/progression-nav.js"></script>
 	<script src="components/progression-panels/js/progression-panels.js"></script>
+	<script src="components/visualizer/js/visualizer.js"></script>
 
 
 </body>

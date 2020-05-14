@@ -7,6 +7,10 @@
 	height: calc(100vh - 400px);
 }
 
+#configurator.hide-visualizer #visualizer {
+	display: none;
+}
+
 
 /* Breakpoint Styles */
 /* 1920px, 1600px, 1366px, 1280px, 1024px, 768px */
@@ -14,13 +18,13 @@
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
 	#visualizer {
-		height: 50vh;
+		height: calc(60vh - 50px);
 	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 	#visualizer {
-		height: 50vh;
+		height: calc(60vh - 50px);
 	}
 }
 

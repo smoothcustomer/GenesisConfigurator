@@ -27,16 +27,20 @@ var app = (function(){
 	var initApp = function() {
 		console.log('app.initApp()');
 
+		// NOTE
+		// Font loading is not working for some reason
+		// deactivating for now
+
 		// Google font loader
-		loadFonts();
+		//loadFonts();
 
 		// Listen for fonts to be finished loading
-		$(window).on('fontsloaded', function(){
-			console.log('fonts loaded');
+		//$(window).on('fontsloaded', function(){
+			//console.log('fonts loaded');
 
 			initModules();
 			startModules();
-		});
+		//});
 	};
 
 
@@ -56,6 +60,7 @@ var app = (function(){
 		globalNav.init();
 		progressionNav.init();
 		progressionPanels.init();
+		visualizer.init();
 	};
 
 
@@ -72,6 +77,11 @@ var app = (function(){
 		globalNav.start();
 		progressionNav.start();
 		progressionPanels.start();
+		visualizer.start();
+
+
+		// Show body
+		$('body').removeClass('hidden');
 	};
 
 
@@ -89,8 +99,8 @@ var app = (function(){
 			    	'GenesisSansHead-Light',
 			    	'GenesisSansHead-Regular',
 			    	'GenesisSansText-Bold',
-			    	'GenesisSansText-Medium',
-			    	'GenesisSansText'
+			    	'GenesisSansText-Medium'
+					//,'GenesisSansText'
 			    ],
 				urls: ['assets/css/fonts.css']
 			},

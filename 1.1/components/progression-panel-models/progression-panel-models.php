@@ -2,7 +2,7 @@
 <div class="panel-content">
 	<div class="row">
 		<div class="row-header">
-			<div class="title">Build a Current Model</div>
+			<div class="title">Build Current Genesis</div>
 			<div class="ctas">
 				<div class="button dark">Compare Models</div>
 			</div>
@@ -34,7 +34,7 @@
 						<div class="align-bottom">
 							<div class="ctas">
 								<div class="button dark-translucent">
-									<div class="label deselected">Select</div>
+									<div class="label deselected">Select GV80</div>
 									<div class="label selected">Selected</div>
 								</div>
 							</div>
@@ -69,7 +69,7 @@
 						<div class="align-bottom">
 							<div class="ctas">
 								<div class="button dark-translucent">
-									<div class="label deselected">Select</div>
+									<div class="label deselected">Select G70</div>
 									<div class="label selected">Selected</div>
 								</div>
 							</div>
@@ -105,7 +105,7 @@
 						<div class="align-bottom">
 							<div class="ctas">
 								<div class="button dark-translucent">
-									<div class="label deselected">Select</div>
+									<div class="label deselected">Select G80</div>
 									<div class="label selected">Selected</div>
 								</div>
 							</div>
@@ -140,7 +140,7 @@
 						<div class="align-bottom">
 							<div class="ctas">
 								<div class="button dark-translucent">
-									<div class="label deselected">Select</div>
+									<div class="label deselected">Select G90</div>
 									<div class="label selected">Selected</div>
 								</div>
 							</div>
@@ -154,7 +154,7 @@
 
 	<div class="row">
 		<div class="row-header">
-			<div class="title">Build a Prior Model</div>
+			<div class="title">Build Prior Genesis</div>
 			<div class="ctas">
 				<div class="button dark">Compare Models</div>
 			</div>
@@ -186,7 +186,7 @@
 						<div class="align-bottom">
 							<div class="ctas">
 								<div class="button dark-translucent">
-									<div class="label deselected">Select</div>
+									<div class="label deselected">Select GV80</div>
 									<div class="label selected">Selected</div>
 								</div>
 							</div>
@@ -221,7 +221,7 @@
 						<div class="align-bottom">
 							<div class="ctas">
 								<div class="button dark-translucent">
-									<div class="label deselected">Select</div>
+									<div class="label deselected">Select G70</div>
 									<div class="label selected">Selected</div>
 								</div>
 							</div>
@@ -257,7 +257,7 @@
 						<div class="align-bottom">
 							<div class="ctas">
 								<div class="button dark-translucent">
-									<div class="label deselected">Select</div>
+									<div class="label deselected">Select G80</div>
 									<div class="label selected">Selected</div>
 								</div>
 							</div>
@@ -292,7 +292,7 @@
 						<div class="align-bottom">
 							<div class="ctas">
 								<div class="button dark-translucent">
-									<div class="label deselected">Select</div>
+									<div class="label deselected">Select G90</div>
 									<div class="label selected">Selected</div>
 								</div>
 							</div>

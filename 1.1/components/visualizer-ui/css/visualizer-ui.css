@@ -241,6 +241,16 @@
 	padding: 21px 0 0 0;
 }
 
+#visualizer .ui .vehicle-info-bar .vehicle-info .build.desktop {
+	display: flex;
+}
+
+#visualizer .ui .vehicle-info-bar .vehicle-info .build.mobile {
+	display: none;
+}
+
+
+
 #visualizer .ui .vehicle-info-bar .vehicle-info .trim,
 #visualizer .ui .vehicle-info-bar .vehicle-info .color {
 	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
@@ -400,12 +410,12 @@
 @media screen and (min-width: 0px) and (max-width: 767px) {
 	#visualizer .ui .mode-nav {
 		left: 2px;
-		bottom: 17px;
+		bottom: 22px;
 		flex-direction: column-reverse;;
 	}
 
 	#visualizer .ui .mode-subnav {
-		bottom: 18px;
+		bottom: 23px;
 	}
 
 	#visualizer .ui .mode-subnav-360 .pill-button {
@@ -434,11 +444,15 @@
 
 	#visualizer .ui .fullscreen {
 		right: 22px;
-		bottom: 13px;
+		bottom: 18px;
 		height: 32px;
 	}
 
 	#visualizer .ui .fullscreen .fullscreen-button .label {
+		display: none;
+	}
+
+	#visualizer .ui .vehicle-info-bar .vehicle-info .right-column .spec.inventory {
 		display: none;
 	}
 
@@ -452,9 +466,10 @@
 	}
 
 	#visualizer .ui .vehicle-info-bar .vehicle-info .model {
-		font-size: 19px;
-		line-height: 19px;
-		padding: 10px 0 2px 20px;
+		font-size: 20px;
+		line-height: 20px;
+		letter-spacing: 0.5;
+		padding: 14px 0 2px 20px;
 	}
 
 	#visualizer .ui .vehicle-info-bar .vehicle-info .trim {
@@ -464,7 +479,7 @@
 	}
 
 	#visualizer .ui .vehicle-info-bar .vehicle-info .specs {
-		padding: 10px 20px 0 0;
+		padding: 14px 20px 0 0;
 	}
 
 	#visualizer .ui .vehicle-info-bar .vehicle-info .spec {
@@ -480,6 +495,11 @@
 		font-size: 10px;
 		line-height: 12px;
 		flex: none;
+		justify-content: flex-end;
+		text-align: right;
+	}
+
+	#visualizer .ui .vehicle-info-bar .vehicle-info .trim {
 		justify-content: flex-start;
 		text-align: left;
 	}
@@ -493,12 +513,13 @@
 	}
 
 	#visualizer .ui .vehicle-info-bar .vehicle-info .specs .value {
-		font-size: 19px;
-		line-height: 19px;
+		font-size: 20px;
+		line-height: 20px;
+		letter-spacing: 0;
 		flex: none;
 		padding: 0 0 2px 0;
-		justify-content: flex-start;
-		text-align: left;
+		justify-content: flex-end;
+		text-align: right;
 	}
 
 	#visualizer .ui .vehicle-info-bar .vehicle-info .specs .value span.super {
@@ -527,20 +548,22 @@
 	}
 
 	#visualizer .ui .vehicle-info-bar,
+	#visualizer .ui .vehicle-info-bar .vehicle-info,
 	#visualizer .ui .vehicle-info-bar .vignette {
-		height: 50px;
+		height: 60px;
 	}
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 	#visualizer .ui .mode-nav {
-		left: 2px;
-		bottom: 17px;
+		left: 22px;
+		bottom: 32px;
 		flex-direction: column-reverse;;
 	}
 
 	#visualizer .ui .mode-subnav {
-		bottom: 18px;
+		bottom: 33px;
 	}
 
 	#visualizer .ui .mode-subnav-360 .pill-button {
@@ -568,8 +591,8 @@
 	}
 
 	#visualizer .ui .fullscreen {
-		right: 22px;
-		bottom: 13px;
+		right: 32px;
+		bottom: 28px;
 		height: 32px;
 	}
 
@@ -577,94 +600,58 @@
 		display: none;
 	}
 
-	#visualizer .ui .vehicle-info-bar .vehicle-info .right-column {
-		padding: 0;
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .left-column {
-		padding: 0;
-		flex: 1;
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .model {
-		font-size: 19px;
-		line-height: 19px;
-		padding: 10px 0 2px 20px;
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .trim {
-		font-size: 12px;
-		line-height: 14px;
-		padding: 0 0 0 20px;
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .specs {
-		padding: 10px 20px 0 0;
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .spec {
-		flex-direction: column;
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .left-column {
-		flex-direction: column;
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .specs .label,
-	#visualizer .ui .vehicle-info-bar .vehicle-info .trim {
-		font-size: 10px;
-		line-height: 12px;
-		flex: none;
-		justify-content: flex-start;
-		text-align: left;
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .spec.msrp .label {
-		padding: 0;
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .color {
+	#visualizer .ui .vehicle-info-bar .vehicle-info .build.desktop {
 		display: none;
 	}
 
-	#visualizer .ui .vehicle-info-bar .vehicle-info .specs .value {
-		font-size: 19px;
-		line-height: 19px;
-		flex: none;
-		padding: 0 0 2px 0;
-		justify-content: flex-start;
-		text-align: left;
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .specs .value span.super {
-		font-size: 11px;
-		transform: translateY(-3px);
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .build {
-		padding: 0;
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .spec.msrp {
-		padding: 0 0 0 15px;
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .specs .label {
-		padding: 0;
-	}
-
-	#visualizer .ui .vehicle-info-bar .vehicle-info .spec .label.mobile {
+	#visualizer .ui .vehicle-info-bar .vehicle-info .build.mobile {
 		display: flex;
 	}
 
-	#visualizer .ui .vehicle-info-bar .vehicle-info .spec .label.desktop {
+	#visualizer .ui .vehicle-info-bar .vehicle-info .right-column .spec.inventory {
 		display: none;
 	}
 
-	#visualizer .ui .vehicle-info-bar,
-	#visualizer .ui .vehicle-info-bar .vignette {
-		height: 50px;
+	#visualizer .ui .vehicle-info-bar .vehicle-info .model {
+		font-size: 26px;
+		padding: 16px 0 2px 30px;
 	}
+
+	#visualizer .ui .vehicle-info-bar .vehicle-info .trim,
+	#visualizer .ui .vehicle-info-bar .vehicle-info .color {
+		font-size: 10px;
+		line-height: 11px;
+	}
+
+	#visualizer .ui .vehicle-info-bar .vehicle-info .build {
+		padding: 20px 0 0 0;
+	}
+
+	#visualizer .ui .vehicle-info-bar .vehicle-info .right-column .specs {
+		padding: 20px 30px 0 0;
+	}
+
+	#visualizer .ui .vehicle-info-bar .vehicle-info .right-column .value {
+		font-size: 26px;
+		transform: translateY(-4px);
+	}
+
+	#visualizer .ui .vehicle-info-bar .vehicle-info .specs .value span.super {
+		font-size: 12px;
+		transform: translateY(-5px);
+	}
+
+	#visualizer .ui .vehicle-info-bar .vehicle-info .right-column .label {
+		font-size: 10px;
+		line-height: 11px;
+	}
+
+	#visualizer .ui .vehicle-info-bar,
+	#visualizer .ui .vehicle-info-bar .vehicle-info,
+	#visualizer .ui .vehicle-info-bar .vignette {
+		height: 60px;
+	}
+
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {

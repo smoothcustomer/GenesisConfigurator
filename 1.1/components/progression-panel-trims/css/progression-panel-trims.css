@@ -5,11 +5,11 @@
 /* Card: Trim */
 
 #progression-panels .panel-content .card.trim .title {
-	padding: 0 0 30px 0;
+	padding: 0 0 15px 0;
 }
 
 #progression-panels .panel-content .card.trim .card-content {
-	padding: 35px 35px 35px 35px;
+	padding: 35px;
 }
 
 
@@ -18,7 +18,14 @@
 /* ------------------------------------------------------------ */
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
-
+	#progression-panels .panel-content .card.trim .card-content {
+		padding: 30px;
+	}
+	#progression-panels .panel-content .card.trim .title {
+		font-size: 24px;
+		line-height: 28px;
+		padding: 0 0 20px 0;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
