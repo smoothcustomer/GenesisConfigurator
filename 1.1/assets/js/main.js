@@ -8,7 +8,7 @@
  * Window ready event
  */
 $(window).load(function() {
-	console.log('$(window).ready');
+	// console.log('$(window).ready');
 
 	// Initialize app
 	app.init();
@@ -25,7 +25,7 @@ var app = (function(){
 	 * initModule
 	 */
 	var initApp = function() {
-		console.log('app.initApp()');
+		// console.log('app.initApp()');
 
 		// NOTE
 		// Font loading is not working for some reason
@@ -50,7 +50,7 @@ var app = (function(){
 	 * No events should be called in these methods, only in startModules
 	 */
 	var initModules = function() {
-		console.log('app.initModules()');
+		// console.log('app.initModules()');
 
 		// Init core modules
 		events.init();
@@ -60,7 +60,10 @@ var app = (function(){
 		globalNav.init();
 		progressionNav.init();
 		progressionPanels.init();
+		progressionPanelColors.init();
 		visualizer.init();
+		visualizerUI.init();
+		visualizer360.init();
 	};
 
 
@@ -68,17 +71,19 @@ var app = (function(){
 	 * startModules
 	 */
 	var startModules = function() {
-		console.log('app.startModules()');
+		// console.log('app.startModules()');
 
 		// Start core modules
-
+		windowListeners.start();
 
 		// Start component modules
 		globalNav.start();
 		progressionNav.start();
 		progressionPanels.start();
+		progressionPanelColors.start();
 		visualizer.start();
-
+		visualizerUI.start();
+		visualizer360.start();
 
 		// Show body
 		$('body').removeClass('hidden');
@@ -91,7 +96,7 @@ var app = (function(){
 	 * elements do not change size after fonts load.
 	 */
 	loadFonts = function(){
-		console.log('app.loadFonts()');
+		// console.log('app.loadFonts()');
 
 		WebFont.load({
 			custom: {
@@ -105,23 +110,23 @@ var app = (function(){
 				urls: ['assets/css/fonts.css']
 			},
 			loading: function() {
-				console.log('fonts loading');
+				// console.log('fonts loading');
 			},
 			fontloading: function(fontFamily, fontDescription) {
-				console.log(fontFamily+' loading');
+				// console.log(fontFamily+' loading');
 			},
 			fontactive: function(fontFamily, fontDescription) {
-				console.log(fontFamily+' active');
+				// console.log(fontFamily+' active');
 			},
 			fontinactive: function(fontFamily, fontDescription) {
-				console.log(fontFamily+' inactive');
+				// console.log(fontFamily+' inactive');
 			},
 			active: function() {
-				console.log('fonts load complete');
+				// console.log('fonts load complete');
 				$(window).trigger('fontsloaded');
 			},
 			inactive: function() {
-				console.log('fonts load failed');
+				// console.log('fonts load failed');
 				$(window).trigger('fontsloaded');
 			}
 		});
@@ -138,7 +143,7 @@ var app = (function(){
 		 * init
 		 */
 		init: function(page){
-			console.log('app.init()');
+			// console.log('app.init()');
 
 			initApp();
 		}

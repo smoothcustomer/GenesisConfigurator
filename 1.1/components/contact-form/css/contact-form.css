@@ -5,8 +5,8 @@
 #progression-panels .panel-content.summary .column.contact {
 	display: flex;
 	flex-direction: column;
-	width: 380px;
-	flex: 0 0 380px;
+	width: 30%;
+	flex: 0 0 30%;
 }
 
 #progression-panels .panel-content.summary .column.contact .inner-wrap {

@@ -34,6 +34,7 @@
 	padding: 0;
 	height: 80px;
 	cursor: pointer;
+	opacity: 0.4;
 }
 
 #progression-nav .tab-button .label {
@@ -43,7 +44,7 @@
 	line-height: 80px;
 	font-size: 13px;
 	letter-spacing: 1px;
-	color: #888;
+	/* color: #888; */
 	padding: 0 40px 0 0;
 }
 
@@ -51,7 +52,7 @@
 	position: relative;
 	display: flex;
 	width: 30px;
-	opacity: 0.5;
+	/* opacity: 0.5; */
 }
 
 #progression-nav .tab-button .icon img {
@@ -62,28 +63,30 @@
 }
 
 #progression-nav .tab-button.selected .icon {
-	opacity: 1;
+	/* opacity: 1; */
 }
 
 #progression-nav .tab-button.selected .label {
-	color: #fff;
+	/* color: #fff; */
 }
 
 #progression-nav .tab-button .underline {
-	display: none;
+	display: block;
 	position: absolute;
-	width: calc(100% - 37px);
+	width: calc(100% - 35px);
 	height: 2px;
 	bottom: 0;
 	left: 0;
 	line-height: 0;
 	z-index: 10;
 	background-color: #CD9A81;
+	opacity: 0;
+	transform: scaleX(0);
 }
 
-#progression-nav .tab-button.selected .underline {
+/* #progression-nav .tab-button.selected .underline {
 	display: block;
-}
+} */
 
 #progression-nav .cta .icon img {
 	width: 36px;
@@ -177,7 +180,7 @@
 		top: 0;
 	}
 
-	
+
 	#progression-nav {
 		top: calc(60vh - 50px);
 		height: 50px;

@@ -16,7 +16,7 @@ var windowListeners = (function () {
 	 * initModule
 	 */
 	var initModule = function() {
-        console.log('windowListeners.initModule()');
+        // console.log('windowListeners.initModule()');
 
 		initWindowListeners();
 	};
@@ -25,14 +25,32 @@ var windowListeners = (function () {
 	 * initWindowListeners
 	 */
 	var initWindowListeners = function() {
-		console.log('configurator.initWindowListeners()');
+		// console.log('configurator.initWindowListeners()');
 
 		// Scroll Event
 		$(document).on('scroll', handleScroll);
 
 		// Resize Event
 		$(window).on('resize', handleResize);
+
+		// Hashchange Event
+		$(window).on('hashchange', handleHashchange);
 	};
+
+
+	/*
+	 * startModule
+	 */
+	var startModule = function() {
+		console.log('windowListeners.startModule()');
+
+		$(window).trigger('resize');
+	};
+
+
+
+
+
 
 	/*
 	 * handleScroll
@@ -51,6 +69,17 @@ var windowListeners = (function () {
 		events.dispatch('window-resize', { windowWidth: windowWidth, windowHeight: windowHeight });
 	};
 
+	/*
+	 * handleHashchange
+	 */
+	var handleHashchange = function(e) {
+
+		events.dispatch('window-hashchange', {});
+	};
+
+
+
+
 
 
 	// Public Methods
@@ -66,9 +95,17 @@ var windowListeners = (function () {
 		 * Main init function called when module target content is loaded
 		 */
 	    init: function(){
-            console.log('windowListeners.init()');
+            // console.log('windowListeners.init()');
 
 	    	initModule();
-	    }
+	    },
+
+		/*
+		 * start
+		 */
+	    start: function(){
+            // console.log('windowListeners.start()');
+	    	startModule();
+	    },
 	};
 })();

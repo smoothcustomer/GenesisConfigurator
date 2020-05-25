@@ -69,6 +69,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 25%;
+	cursor: pointer;
 }
 
 #progression-panels .panel-content .card .inner-wrap {
@@ -140,40 +141,9 @@
 
 
 
-/* #progression-panels .panel-content .card .select-icon {
-	position: relative;
-	display: flex;
-	width: 40px;
-	flex: 0 0 40px;
-	z-index: 10;
-}
-
-#progression-panels .panel-content .card .select-icon img {
-	position: absolute;
-	width: 26px;
-	top: 0;
-	right: 0;
-}
 
 
-#progression-panels .panel-content .card .select-icon .deselected {
-	display: block;
-	opacity: 0.5;
-}
 
-#progression-panels .panel-content .card .select-icon .selected {
-	display: none;
-}
-
-#progression-panels .panel-content .card.selected .select-icon .deselected {
-	display: none;
-}
-
-#progression-panels .panel-content .card.selected .select-icon .selected {
-	display: block;
-}
-
- */
 
 
 
@@ -354,7 +324,6 @@
 #progression-panels .panel-content .row-header .ctas .compare-button .label {
 	position: absolute;
 	top: 0;
-	left: 80px;
 }
 
 #progression-panels .panel-content .row-header .ctas .compare-button .label.desktop {
@@ -365,12 +334,35 @@
 	display: none;
 }
 
+#progression-panels .panel-content .row-header .ctas .compare-button.trims .label {
+	left: 82px;
+}
+
+#progression-panels .panel-content .row-header .ctas .compare-button.models .label {
+	left: 77px;
+}
+
+#progression-panels .panel-content .row-header .ctas .compare-button.packages .label {
+	left: 73px;
+}
+
 #progression-panels .panel-content .row-header .ctas .compare-button .icon {
 	position: absolute;
 	width: 30px;
 	height: 30px;
 	top: 10px;
-	left: 48px;
+}
+
+#progression-panels .panel-content .row-header .ctas .compare-button.trims .icon {
+	left: 50px;
+}
+
+#progression-panels .panel-content .row-header .ctas .compare-button.models .icon {
+	left: 45px;
+}
+
+#progression-panels .panel-content .row-header .ctas .compare-button.packages .icon {
+	left: 41px;
 }
 
 #progression-panels .panel-content .row-header .ctas .compare-button .icon img {
@@ -378,6 +370,15 @@
 	width: 26px;
 	height: 26px;
 }
+
+
+
+
+/* Waypoints */
+#progression-panels .waypoint {
+	opacity: 0;
+}
+
 
 
 

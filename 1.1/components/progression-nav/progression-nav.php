@@ -32,7 +32,7 @@
 			<div class="underline"></div>
 		</div>
 	</div>
-	<div class="next-button" index="next" label="next">
+	<div class="next-button" index="next" next-index="1" next-label="">
 		<div class="button copper">Next: Accessories</div>
 		<div class="gradient"></div>
 	</div>

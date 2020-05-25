@@ -8,6 +8,9 @@ var progressionNav = (function () {
 	// ---------------------------------------------------------
 	// ---------------------------------------------------------
 	// ---------------------------------------------------------
+	let currentIndex = 0;
+	let nextIndex = 1;
+	let maxIndex = 5;
 
 
 
@@ -22,17 +25,18 @@ var progressionNav = (function () {
 	 * initModule
 	 */
 	var initModule = function() {
-        console.log('progressionNav.initModule()');
+        // console.log('progressionNav.initModule()');
 
 		subscribeToEvents();
 		initTabs();
+		initNextButton();
 	};
 
 	/*
 	 * startModule
 	 */
 	var startModule = function() {
-		console.log('progressionNav.startModule()');
+		// console.log('progressionNav.startModule()');
 
 		startTabs();
 	};
@@ -43,13 +47,16 @@ var progressionNav = (function () {
 	 * subscribeToEvents
 	 */
 	var subscribeToEvents = function() {
-		console.log('progressionNav.subscribeToEvents()');
+		// console.log('progressionNav.subscribeToEvents()');
 
 		//events.subscribe('progressionNav', 'window-resize');
 		events.subscribe('progressionNav', 'window-scroll');
 		events.subscribe('progressionNav', 'progression-nav-tab-mouseenter');
 		events.subscribe('progressionNav', 'progression-nav-tab-mouseleave');
 		events.subscribe('progressionNav', 'progression-nav-tab-click');
+		events.subscribe('progressionNav', 'progression-nav-next-mouseenter');
+		events.subscribe('progressionNav', 'progression-nav-next-mouseleave');
+		events.subscribe('progressionNav', 'progression-nav-next-click');
 	};
 
 	/*
@@ -73,6 +80,15 @@ var progressionNav = (function () {
 			case 'progression-nav-tab-click':
 				handleTabClick(payload.event, payload.element);
 			break;
+			case 'progression-nav-next-mouseenter':
+				handleNextMouseEnter(payload.event, payload.element);
+			break;
+			case 'progression-nav-next-mouseleave':
+				handleNextMouseLeave(payload.event, payload.element);
+			break;
+			case 'progression-nav-next-click':
+				handleNextClick(payload.nextIndex, payload.nextLabel);
+			break;
 		}
 	};
 
@@ -84,8 +100,8 @@ var progressionNav = (function () {
 	 * handleScroll
 	 */
 	var handleScroll = function(scrollPosition) {
-		console.log('progressionNav.handleScroll()');
-		console.log('scrollPosition: ', scrollPosition);
+		// console.log('progressionNav.handleScroll()');
+		// console.log('scrollPosition: ', scrollPosition);
 
 		if (scrollPosition >= 80) {
 			if (!$('#progression-nav').hasClass('sticky')) {
@@ -103,6 +119,9 @@ var progressionNav = (function () {
 	 */
 	var handleTabMouseEnter = function(e, element) {
 		//console.log('progressionNav.handleTabMouseEnter()');
+		// TweenMax.to( hoverBox.find('.video'), mouseOverScaleSpeed, { opacity: 1, ease: Power2.easeOut });
+
+		TweenMax.to(element, 0.3, { opacity: 1, ease: Power2.easeOut });
 	};
 
 	/*
@@ -110,13 +129,16 @@ var progressionNav = (function () {
 	 */
 	var handleTabMouseLeave = function(e, element) {
 		//console.log('progressionNav.handleTabMouseLeave()');
+		if (!element.hasClass('selected')) {
+			TweenMax.to(element, 0.9, { opacity: 0.4, ease: Power2.easeOut });
+		}
 	};
 
 	/*
 	 * handleTabClick
 	 */
 	var handleTabClick = function(e, element) {
-		console.log('progressionNav.handleTabClick()');
+		// console.log('progressionNav.handleTabClick()');
 
 		if (!element.hasClass('selected')) {
 			let index = element.attr('index');
@@ -128,6 +150,42 @@ var progressionNav = (function () {
 	};
 
 
+
+	/*
+	 * handleNextMouseEnter
+	 */
+	var handleNextMouseEnter = function(e, element) {
+		// TweenMax.to(element, 0.3, { opacity: 1, ease: Power2.easeOut });
+	};
+
+	/*
+	 * handleNextMouseLeave
+	 */
+	var handleNextMouseLeave = function(e, element) {
+
+	};
+
+
+	/*
+	 * handleNextClick
+	 */
+	var handleNextClick = function(nextIndex, nextLabel) {
+		// console.log('progressionNav.handleNextClick()');
+		// console.log('nextIndex: ', nextIndex);
+		// console.log('nextLabel: ', nextLabel);
+
+		if (currentIndex != maxIndex) {
+			selectTab(nextIndex, nextLabel);
+			events.dispatch('progression-nav-tab-select', {index: nextIndex, label: nextLabel});
+		}
+	};
+
+
+
+
+
+
+
 	// Tabs
 	// ---------------------------------------------------------
 
@@ -135,7 +193,7 @@ var progressionNav = (function () {
 	 * initTabs
 	 */
 	var initTabs = function() {
-		console.log('progressionNav.initTabs()');
+		// console.log('progressionNav.initTabs()');
 
 		// Tab Button Event Listeners
 		$('#progression-nav .tabs .tab-button').on('mouseenter', function(e){
@@ -153,10 +211,34 @@ var progressionNav = (function () {
 
 
 	/*
+	 * initNextButton
+	 */
+	var initNextButton = function() {
+		// console.log('progressionNav.initNextButton()');
+
+		// Tab Button Event Listeners
+		$('#progression-nav .next-button').on('mouseenter', function(e){
+			events.dispatch('progression-nav-next-mouseenter', {event: e, element: $(this)});
+		});
+
+		$('#progression-nav .next-button').on('mouseleave', function(e){
+			events.dispatch('progression-nav-next-mouseleave', {event: e, element: $(this)});
+		});
+
+		$('#progression-nav .next-button').on('click', function(e){
+			events.dispatch('progression-nav-next-click', {
+				nextIndex: $(this).attr('next-index'),
+				nextLabel: $(this).attr('next-label')
+			});
+		});
+	};
+
+
+	/*
 	 * startTabs
 	 */
 	var startTabs = function() {
-		console.log('progressionNav.startTabs()');
+		// console.log('progressionNav.startTabs()');
 
 		// Check for existing hash value and set default tab selection state
 		let index, label;
@@ -177,14 +259,72 @@ var progressionNav = (function () {
 	 * selectTab
 	 */
 	var selectTab = function(index, label) {
-		console.log('progressionNav.selectTab()');
+		// console.log('progressionNav.selectTab()');
 
+		currentIndex = index;
+
+		// Update next button values
+		updateNextButton(index)
+
+		// Deselect animation
+		TweenMax.to( $('#progression-nav .tabs .tab-button .underline'), 0.3, { scaleX: 0, opacity: 0, ease: Power2.easeOut });
+		TweenMax.to( $('#progression-nav .tabs .tab-button'), 0.3, { opacity: 0.4, ease: Power2.easeOut });
+
+		// Add selected class
 		$('#progression-nav .tabs .tab-button').removeClass('selected');
 		$('#progression-nav .tabs .tab-button[index="' + index + '"]').addClass('selected');
+
+		// Select Animation
+		TweenMax.to( $('#progression-nav .tabs .tab-button.selected .underline'), 0.6, { scaleX: 1, opacity: 1, ease: Power2.easeOut });
+		TweenMax.to( $('#progression-nav .tabs .tab-button.selected'), 0.6, { opacity: 1, ease: Power2.easeOut });
 
 		// Set selection hash
 		window.location.hash = label;
 	}
+
+
+	/*
+	 * updateNextButton
+	 */
+	var updateNextButton = function(newIndex) {
+		// console.log('progressionNav.updateNextButton()');
+		// console.log('newIndex: ', newIndex);
+
+		if (newIndex == maxIndex) {
+			$('.next-button .button').html('Finished');
+
+		} else {
+			let nextIndex = parseInt(newIndex) + 1;
+			let nextLabel = $('.tab-button[index="' + nextIndex + '"]').attr('label');
+
+			// console.log('nextIndex: ', nextIndex);
+			// console.log('nextLabel: ', nextLabel);
+
+			$('.next-button').attr('next-index', nextIndex);
+			$('.next-button').attr('next-label', nextLabel);
+			$('.next-button .button').html('Next: ' + nextLabel);
+		}
+
+	}
+
+
+	/*
+	 * hideProgressionNav
+	 */
+	var hideProgressionNav = function() {
+		console.log('progressionNav.hideProgressionNav()');
+
+	}
+
+	/*
+	 * showProgressionNav
+	 */
+	var showProgressionNav = function() {
+		console.log('progressionNav.showProgressionNav()');
+
+	}
+
+
 
 
 
@@ -203,7 +343,7 @@ var progressionNav = (function () {
 		 * Main init function called when module target content is loaded
 		 */
 	    init: function(){
-            console.log('progressionNav.init()');
+            // console.log('progressionNav.init()');
 	    	initModule();
 	    },
 
@@ -211,7 +351,7 @@ var progressionNav = (function () {
 		 * start
 		 */
 	    start: function(){
-            console.log('progressionNav.start()');
+            // console.log('progressionNav.start()');
 	    	startModule();
 	    },
 

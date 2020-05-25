@@ -1,14 +1,18 @@
 <div class="panel-content">
 	<div class="row">
-		<div class="row-header">
+		<div class="row-header waypoint">
 			<div class="title">Select Packages</div>
 			<div class="ctas">
-				<div class="button dark">Compare Packages</div>
+				<div class="compare-button packages">
+					<div class="icon"><img src="assets/images/icons/icon-compare.svg" alt=""></div>
+					<div class="label desktop">Compare Packages</div>
+					<div class="label mobile">Compare</div>
+				</div>
 			</div>
 		</div>
 
 		<div class="cards">
-			<div class="card package selected">
+			<div class="card package selected waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -34,7 +38,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card package">
+			<div class="card package waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -63,7 +67,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card package">
+			<div class="card package waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -93,7 +97,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card package">
+			<div class="card package waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">

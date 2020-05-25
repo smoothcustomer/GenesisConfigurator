@@ -63,7 +63,11 @@
 	<script src="components/global-nav/js/global-nav.js"></script>
 	<script src="components/progression-nav/js/progression-nav.js"></script>
 	<script src="components/progression-panels/js/progression-panels.js"></script>
+	<script src="components/progression-panel-colors/js/progression-panel-colors.js"></script>
 	<script src="components/visualizer/js/visualizer.js"></script>
+	<script src="components/visualizer-360/js/visualizer-360.js"></script>
+	<script src="components/visualizer-ui/js/visualizer-ui.js"></script>
+
 
 
 </body>

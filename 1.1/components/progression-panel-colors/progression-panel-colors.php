@@ -1,8 +1,8 @@
 <div class="panel-content color">
 	<div class="row">
-		<div class="colors">
+		<div class="colors waypoint">
 			<div class="row-header">
-				<div class="title">Select Exterior</div>
+				<div class="title">Exterior Color</div>
 				<div class="current-selection">Victoria Black <span class="copper">+ $0</span></div>
 			</div>
 			<div class="color-swatches">
@@ -71,7 +71,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="colors">
+		<div class="colors waypoint">
 			<div class="row-header">
 				<div class="title">Select Interior</div>
 				<div class="current-selection">Black Leatherette <span class="copper">+ $0</span></div>

@@ -20,7 +20,7 @@ var globalNav = (function () {
 	 * initModule
 	 */
 	var initModule = function() {
-        console.log('globalNav.initModule()');
+        // console.log('globalNav.initModule()');
 
 		subscribeToEvents();
 
@@ -35,7 +35,7 @@ var globalNav = (function () {
 	 * startModule
 	 */
 	var startModule = function() {
-		console.log('globalNav.startModule()');
+		// console.log('globalNav.startModule()');
 
 	};
 
@@ -44,7 +44,7 @@ var globalNav = (function () {
 	 * subscribeToEvents
 	 */
 	var subscribeToEvents = function() {
-		console.log('globalNav.subscribeToEvents()');
+		// console.log('globalNav.subscribeToEvents()');
 
 		events.subscribe('globalNav', 'window-scroll');
 		events.subscribe('globalNav', 'global-nav-button-mouseenter');
@@ -96,7 +96,7 @@ var globalNav = (function () {
 	 * handleScroll
 	 */
 	var handleScroll = function() {
-		console.log('globalNav.handleScroll()');
+		// console.log('globalNav.handleScroll()');
 
 		// Close nav if open
 		switchPanel('closed');
@@ -110,7 +110,7 @@ var globalNav = (function () {
 	 * initPanels
 	 */
 	var initPanels = function() {
-		console.log('globalNav.initMainButtons()');
+		// console.log('globalNav.initMainButtons()');
 
 		// Set default tab selection state
 		switchPanel('closed'); //* Default should be null so no panels are open
@@ -149,8 +149,8 @@ var globalNav = (function () {
 	 * handleButtonClick
 	 */
 	var handleButtonClick = function(e, element) {
-		console.log('globalNav.handleButtonClick()');
-		console.log('index: ', element.attr('index'));
+		// console.log('globalNav.handleButtonClick()');
+		// console.log('index: ', element.attr('index'));
 
 		if (!element.hasClass('selected')) {
 			switchPanel(element.attr('index'));
@@ -164,8 +164,8 @@ var globalNav = (function () {
 	 * switchPanel
 	 */
 	var switchPanel = function(index) {
-		console.log('globalNav.switchPanel()');
-		console.log('index: ', index);
+		// console.log('globalNav.switchPanel()');
+		// console.log('index: ', index);
 
 		// Reset selected
 		$('.global-nav-button').removeClass('selected');
@@ -190,7 +190,7 @@ var globalNav = (function () {
 	 * initTabs
 	 */
 	var initTabs = function() {
-		console.log('globalNav.initTabs()');
+		// console.log('globalNav.initTabs()');
 
 
 		// Set default tab selection state
@@ -230,8 +230,8 @@ var globalNav = (function () {
 	 * handleTabClick
 	 */
 	var handleTabClick = function(e, element) {
-		console.log('globalNav.handleTabClick()');
-		console.log('index: ', element.attr('index'));
+		// console.log('globalNav.handleTabClick()');
+		// console.log('index: ', element.attr('index'));
 
 		if (!element.hasClass('selected')) {
 			switchTab(element.attr('index'));
@@ -243,8 +243,8 @@ var globalNav = (function () {
 	 * switchTab
 	 */
 	var switchTab = function(index) {
-		console.log('globalNav.switchTab()');
-		console.log('index: ', index);
+		// console.log('globalNav.switchTab()');
+		// console.log('index: ', index);
 
 		// Change tab button state
 		$('.global-nav-panel .tab-nav .tab-nav-button').removeClass('selected');
@@ -273,7 +273,7 @@ var globalNav = (function () {
 		 * Main init function called when module target content is loaded
 		 */
 	    init: function(){
-            console.log('globalNav.init()');
+            // console.log('globalNav.init()');
 	    	initModule();
 	    },
 
@@ -281,7 +281,7 @@ var globalNav = (function () {
 		 * start
 		 */
 		start: function(){
-			console.log('globalNav.start()');
+			// console.log('globalNav.start()');
 			startModule();
 		},
 

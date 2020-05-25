@@ -37,6 +37,8 @@
 	display: flex;
 	width: 120px;
 	height: 120px;
+	opacity: 0;
+	cursor: pointer;
 }
 
 #progression-panels .panel-content.color .color-swatches .swatch .swatch-button {

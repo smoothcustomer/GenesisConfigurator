@@ -1,221 +1,199 @@
 /*
- * configurator module
+ * progressionPanelColors module
  */
-var configurator = (function () {
+var progressionPanelColors = (function () {
 
 
  	// Private Vars
- 	// ---------------------------------------------------------
-	let visualizerHeight;
-	let scrollPosition;
+	// ---------------------------------------------------------
+	// ---------------------------------------------------------
+	// ---------------------------------------------------------
 
 
 
 
     // Private Methods
- 	// ---------------------------------------------------------
+	// ---------------------------------------------------------
+	// ---------------------------------------------------------
+	// ---------------------------------------------------------
 
 	/*
 	 * initModule
 	 */
 	var initModule = function() {
-        console.log('configurator.initModule()');
+        // console.log('progressionPanelColors.initModule()');
 
-		initTabs();
-		initScrollManager();
-		initResize();
+		subscribeToEvents();
+		initSwatches();
 	};
 
 
+	/*
+	 * startModule
+	 */
+	var startModule = function() {
+		// console.log('progressionPanelColors.startModule()');
 
-	/* Scrolling */
+	};
+
 
 	/*
-	 * initScrollManager
+	 * subscribeToEvents
 	 */
-	var initScrollManager = function() {
-		console.log('configurator.initScrollManager()');
+	var subscribeToEvents = function() {
+		// console.log('progressionPanelColors.subscribeToEvents()');
 
-		$(document).on('scroll', handleScroll);
+		events.subscribe('progressionPanelColors', 'swatch-mouse-enter');
+		events.subscribe('progressionPanelColors', 'swatch-mouse-leave');
+		events.subscribe('progressionPanelColors', 'swatch-click');
+		events.subscribe('progressionPanelColors', 'progression-nav-tab-select');
 	};
 
 	/*
-	 * handleScroll
+	 * handleEvent
 	 */
-	var handleScroll = function() {
-		console.log('configurator.handleScroll()');
+	var handleEvent = function(eventName, payload) {
+		// console.log('progressionPanelColors.handleEvent()');
+		// console.log('eventName: ', eventName);
+		// console.log('payload: ', payload);
 
-
-		scrollPosition = $(document).scrollTop();
-		//let newVisualizerHeight = $(window).height() - scrollPosition - 360;
-		//let newVisualizerMinHeight = (560 - scrollPosition);
-
-		if (scrollPosition >= 80) {
-			if (!$('.subnav').hasClass('sticky')) {
-				$('.subnav').addClass('sticky');
-			}
-
-			// $('.visualizer').css({
-			// 	'height': newVisualizerHeight,
-			// 	'min-height': newVisualizerMinHeight
-			// });
-
-		} else if (scrollPosition < 80) {
-			if ($('.subnav').hasClass('sticky')) {
-				$('.subnav').removeClass('sticky');
-			}
-
-			// $('.visualizer').css({
-			// 	'height': '',
-			// 	'min-height': ''
-			// });
+		switch(eventName) {
+			case 'progression-nav-tab-select':
+				handleTabSelect(payload.index, payload.label);
+			break;
+			case 'swatch-mouse-enter':
+				handleSwatchMouseEnter(payload.event, payload.element);
+			break;
+			case 'swatch-mouse-leave':
+				handleSwatchMouseLeave(payload.event, payload.element);
+			break;
+			case 'swatch-click':
+				handleSwatchClick(payload.event, payload.element);
+			break;
 		}
-
-
-		console.log('scrollPosition: ', scrollPosition);
-
 	};
 
 
 
-	/* Resizing */
+	// Event Handlers
+	// ---------------------------------------------------------
 
 	/*
-	 * initResize
+	 * handleTabSelect
 	 */
-	var initResize = function() {
-		console.log('configurator.initResize()');
+	var handleTabSelect = function(index, label) {
+		console.log('progressionPanelColors.handleTabSelect()');
 
-		// Initial resize on page load
-		handleResize();
 
-		$(window).on('resize', handleResize);
-	};
+		// Hide current tab waypoints
+		//TweenMax.to( $('#progression-panels .panel.selected .swatch'), 0, { opacity: 0, ease: Power2.easeOut });
 
-	/*
-	 * handleResize
-	 */
-	var handleResize = function() {
-		console.log('configurator.handleResize()');
 
-		visualizerHeight = $('section.configurator .visualizer').outerHeight();
-		console.log('visualizerHeight: ', visualizerHeight);
+		// Show new tab waypoints
+		$('#progression-panels .panel.selected .swatch').each( function(index) {
+			let delay = index * 0.05;
+			TweenMax.to( $(this), 0, { opacity: 0, y: 120 });
+			TweenMax.to( $(this), 0.9, { opacity: 1, y: 0, ease: Power2.easeOut, delay: delay });
+		});
 	};
 
 
 
 
-
-
-	/* Tabs/Panels */
+	// Swatches
+	// ---------------------------------------------------------
 
 	/*
-	 * initTabs
+	 * initSwatches
 	 */
-	var initTabs = function() {
-		console.log('configurator.initTabs()');
+	var initSwatches = function() {
+		console.log('progressionPanelColors.initSwatches()');
 
-
-		// Check for existing hash value and
-		// set default tab selection state
-		console.log('window.location.hash: ', window.location.hash);
-
-		if (window.location.hash) {
-			let hashElement = $('.tab-button[label="' + window.location.hash.substring(1) + '"]');
-			switchTab(hashElement.attr('index'), hashElement.attr('label'));
-		} else {
-			switchTab(0, $('.tab-button[index="0"]').attr('label'));
-		}
-
-
-		// Global Nav Button Event Listeners
-
-		$('.configurator .subnav .tabs .tab-button').on('mouseenter', function(e){
-			handleTabButtonMouseEnter(e, $(this));
+		// Tab Button Event Listeners
+		$('#progression-panels .panel-content .swatch').on('mouseenter', function(e){
+			events.dispatch('swatch-mouse-enter', {event: e, element: $(this)});
 		});
 
-		$('.configurator .subnav .tabs .tab-button').on('mouseleave', function(e){
-			handleTabButtonMouseLeave(e, $(this));
+		$('#progression-panels .panel-content .swatch').on('mouseleave', function(e){
+			events.dispatch('swatch-mouse-leave', {event: e, element: $(this)});
 		});
 
-		$('.configurator .subnav .tabs .tab-button').on('click', function(e){
-			handleTabButtonClick(e, $(this));
+		$('#progression-panels .panel-content .swatch').on('click', function(e){
+			events.dispatch('swatch-click', {event: e, element: $(this)});
 		});
 	};
 
 	/*
-	 * handleTabButtonMouseEnter
+	 * handleSwatchMouseEnter
 	 */
-	var handleTabButtonMouseEnter = function(e, element) {
-		console.log('configurator.handleTabButtonMouseEnter()');
+	var handleSwatchMouseEnter = function(e, element) {
+		console.log('progressionPanelColors.handleSwatchMouseEnter()');
+		TweenMax.to(element, 0.4, { scale: 1.15, ease: Power2.easeOut });
+
+		// if (!element.hasClass('selected')) {
+		// 	TweenMax.to(element.find('.button'), 0.6, { css: { backgroundColor: "rgba(163, 107, 79, 1)", borderColor: "#a36b4f"  }, ease: Power2.easeOut });
+		// }
 	};
 
 	/*
-	 * handleTabButtonMouseLeave
+	 * handleSwatchMouseLeave
 	 */
-	var handleTabButtonMouseLeave = function(e, element) {
-		console.log('configurator.handleTabButtonMouseLeave()');
+	var handleSwatchMouseLeave = function(e, element) {
+		console.log('progressionPanelColors.handleSwatchMouseLeave()');
+		TweenMax.to(element, 0.4, { scale: 1, ease: Power2.easeOut });
+
+		// if (!element.hasClass('selected')) {
+		// 	TweenMax.to(element.find('.button'), 0.6, { css: { backgroundColor: "rgba(0, 0, 0, 0.2)", borderColor: "#5d5d5d"  }, ease: Power2.easeOut });
+		// }
 	};
 
 	/*
-	 * handleTabButtonClick
+	 * handleSwatchClick
 	 */
-	var handleTabButtonClick = function(e, element) {
-		console.log('configurator.handleTabButtonClick()');
-		// console.log('index: ', element.attr('index'));
+	var handleSwatchClick = function(e, element) {
+		console.log('progressionPanelColors.handleSwatchClick()');
 
-		if (!element.hasClass('selected')) {
-			switchTab(element.attr('index'), element.attr('label'));
-		}
 	};
 
-	/*
-	 * switchTab
-	 */
-	var switchTab = function(index, label) {
-		console.log('configurator.switchTab()');
-		console.log('index: ', index);
-		console.log('label: ', label);
-
-		// Change tab button state
-		$('.configurator .subnav .tabs .tab-button').removeClass('selected');
-		$('.configurator .subnav .tabs .tab-button[index="' + index + '"]').addClass('selected');
-
-		// Change tab state
-		$('.configurator .panels .panel').removeClass('selected');
-		$('.configurator .panels .panel[index="' + index + '"]').addClass('selected');
-
-		// Show/hide visualizer on Model selection step
-		if ( label == 'models' ) {
-			$('.vehicle-info-bar').removeClass('active');
-			$('.visualizer').removeClass('active');
-		} else {
-			$('.vehicle-info-bar').addClass('active');
-			$('.visualizer').addClass('active');
-		}
 
 
-		// Set selection hash
-		window.location.hash = label;
-	};
+
 
 
 
 	// Public Methods
 	// ---------------------------------------------------------
+	// ---------------------------------------------------------
+	// ---------------------------------------------------------
 
 	return {
 
 		// Module name id for dynamic initialization
-        name: 'configurator',
+        name: 'progressionPanelColors',
 
 		/*
 		 * init
 		 * Main init function called when module target content is loaded
 		 */
 	    init: function(){
-            console.log('configurator.init()');
+            // console.log('progressionPanelColors.init()');
 	    	initModule();
+	    },
+
+		/*
+		 * start
+		 */
+		start: function(){
+			// console.log('progressionPanelColors.start()');
+			startModule();
+		},
+
+		/*
+		 * event
+		 */
+		event: function(eventName, payload){
+            //console.log('progressionPanelColors.event()');
+	    	handleEvent(eventName, payload);
 	    }
 	};
 })();

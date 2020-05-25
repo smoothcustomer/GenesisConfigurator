@@ -1,9 +1,9 @@
 <div class="panel-content">
 	<div class="row">
-		<div class="row-header">
+		<div class="row-header waypoint">
 			<div class="title">Select a Trim</div>
 			<div class="ctas">
-				<div class="compare-button">
+				<div class="compare-button trims">
 					<div class="icon"><img src="assets/images/icons/icon-compare.svg" alt=""></div>
 					<div class="label desktop">Compare Trims</div>
 					<div class="label mobile">Compare</div>
@@ -11,7 +11,7 @@
 			</div>
 		</div>
 		<div class="cards">
-			<div class="card trim selected">
+			<div class="card trim selected waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -51,7 +51,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card trim">
+			<div class="card trim waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -94,7 +94,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card trim">
+			<div class="card trim waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -137,7 +137,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card trim">
+			<div class="card trim waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -184,7 +184,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card trim">
+			<div class="card trim waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">

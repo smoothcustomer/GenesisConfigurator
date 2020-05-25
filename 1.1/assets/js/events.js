@@ -16,7 +16,7 @@ var events = (function () {
 	 * initModule
 	 */
 	var initModule = function() {
-        console.log('events.initModule()');
+        // console.log('events.initModule()');
 	};
 
 	/*
@@ -38,9 +38,9 @@ var events = (function () {
 	 * addSubscription
 	 */
 	var addSubscription = function(moduleName, eventName) {
-		console.log('events.addSubscription()');
-		console.log('moduleName: ', moduleName);
-		console.log('eventName: ', eventName);
+		// console.log('events.addSubscription()');
+		// console.log('moduleName: ', moduleName);
+		// console.log('eventName: ', eventName);
 
 		// If event is registered, append subscriber
 		if (subscribers[eventName]) {
@@ -73,7 +73,7 @@ var events = (function () {
 			}
 		}
 
-		console.log('subscribers: ', subscribers);
+		//console.log('subscribers: ', subscribers);
 	};
 
 
@@ -90,7 +90,7 @@ var events = (function () {
 		 * Main init function called when module target content is loaded
 		 */
 	    init: function(){
-            console.log('events.init()');
+            // console.log('events.init()');
 
 	    	initModule();
 	    },

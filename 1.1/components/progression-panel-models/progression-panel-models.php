@@ -1,14 +1,21 @@
 
 <div class="panel-content">
+	<div class="row waypoint">
+		<h1 class="panel-title">Build Your Genesis</h1>
+	</div>
 	<div class="row">
-		<div class="row-header">
-			<div class="title">Build Current Genesis</div>
+		<div class="row-header waypoint">
+			<div class="title">Current Models</div>
 			<div class="ctas">
-				<div class="button dark">Compare Models</div>
+				<div class="compare-button models">
+					<div class="icon"><img src="assets/images/icons/icon-compare.svg" alt=""></div>
+					<div class="label desktop">Compare Models</div>
+					<div class="label mobile">Compare</div>
+				</div>
 			</div>
 		</div>
 		<div class="cards">
-			<div class="card model">
+			<div class="card model waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -43,7 +50,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card model">
+			<div class="card model waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -79,7 +86,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card model">
+			<div class="card model waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -114,7 +121,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card model">
+			<div class="card model waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -153,14 +160,14 @@
 	</div>
 
 	<div class="row">
-		<div class="row-header">
-			<div class="title">Build Prior Genesis</div>
+		<div class="row-header waypoint">
+			<div class="title">Prior Models</div>
 			<div class="ctas">
 				<div class="button dark">Compare Models</div>
 			</div>
 		</div>
 		<div class="cards">
-			<div class="card model">
+			<div class="card model waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -195,7 +202,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card model">
+			<div class="card model waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -231,7 +238,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card model">
+			<div class="card model waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
@@ -266,7 +273,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="card model">
+			<div class="card model waypoint">
 				<div class="inner-wrap">
 					<div class="card-content">
 						<div class="title-wrap">
