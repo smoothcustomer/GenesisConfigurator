@@ -23,9 +23,9 @@ var events = (function () {
 	 * dispatchEvent
 	 */
 	var dispatchEvent = function(eventName, payload) {
-		// console.log('events.dispatchEvent()');
-		// console.log('eventName: ', eventName);
-		// console.log('payload: ', payload);
+		console.log('events.dispatchEvent()');
+		console.log('eventName: ', eventName);
+		console.log('payload: ', payload);
 
 		if (subscribers[eventName]) {
 			for (let i = 0; i < subscribers[eventName].subscriptionList.length; i++) {
@@ -38,9 +38,9 @@ var events = (function () {
 	 * addSubscription
 	 */
 	var addSubscription = function(moduleName, eventName) {
-		// console.log('events.addSubscription()');
-		// console.log('moduleName: ', moduleName);
-		// console.log('eventName: ', eventName);
+		console.log('events.addSubscription()');
+		console.log('moduleName: ', moduleName);
+		console.log('eventName: ', eventName);
 
 		// If event is registered, append subscriber
 		if (subscribers[eventName]) {
@@ -73,7 +73,7 @@ var events = (function () {
 			}
 		}
 
-		//console.log('subscribers: ', subscribers);
+		console.log('subscribers: ', subscribers);
 	};
 
 

@@ -1,221 +1,164 @@
 /*
- * configurator module
+ * progressionPanelTrims module
  */
-var configurator = (function () {
+var progressionPanelTrims = (function () {
 
 
  	// Private Vars
- 	// ---------------------------------------------------------
-	let visualizerHeight;
-	let scrollPosition;
+	// ---------------------------------------------------------
+	// ---------------------------------------------------------
+	// ---------------------------------------------------------
 
 
 
 
     // Private Methods
- 	// ---------------------------------------------------------
+	// ---------------------------------------------------------
+	// ---------------------------------------------------------
+	// ---------------------------------------------------------
 
 	/*
 	 * initModule
 	 */
 	var initModule = function() {
-        console.log('configurator.initModule()');
+        // console.log('progressionPanelTrims.initModule() ');
 
-		initTabs();
-		initScrollManager();
-		initResize();
+		subscribeToEvents();
+		initCompare();
 	};
 
 
+	/*
+	 * startModule
+	 */
+	var startModule = function() {
+		// console.log('progressionPanelTrims.startModule()');
 
-	/* Scrolling */
+	};
+
 
 	/*
-	 * initScrollManager
+	 * subscribeToEvents
 	 */
-	var initScrollManager = function() {
-		console.log('configurator.initScrollManager()');
+	var subscribeToEvents = function() {
+		// console.log('progressionPanelTrims.subscribeToEvents()');
 
-		$(document).on('scroll', handleScroll);
+		events.subscribe('progressionPanelTrims', 'compare-mouse-enter');
+		events.subscribe('progressionPanelTrims', 'compare-mouse-leave');
+		events.subscribe('progressionPanelTrims', 'compare-click');
+		// events.subscribe('progressionPanelTrims', 'progression-nav-tab-select');
 	};
 
 	/*
-	 * handleScroll
+	 * handleEvent
 	 */
-	var handleScroll = function() {
-		console.log('configurator.handleScroll()');
+	var handleEvent = function(eventName, payload) {
+		// console.log('progressionPanelTrims.handleEvent()');
+		// console.log('eventName: ', eventName);
+		// console.log('payload: ', payload);
 
-
-		scrollPosition = $(document).scrollTop();
-		//let newVisualizerHeight = $(window).height() - scrollPosition - 360;
-		//let newVisualizerMinHeight = (560 - scrollPosition);
-
-		if (scrollPosition >= 80) {
-			if (!$('.subnav').hasClass('sticky')) {
-				$('.subnav').addClass('sticky');
-			}
-
-			// $('.visualizer').css({
-			// 	'height': newVisualizerHeight,
-			// 	'min-height': newVisualizerMinHeight
-			// });
-
-		} else if (scrollPosition < 80) {
-			if ($('.subnav').hasClass('sticky')) {
-				$('.subnav').removeClass('sticky');
-			}
-
-			// $('.visualizer').css({
-			// 	'height': '',
-			// 	'min-height': ''
-			// });
+		switch(eventName) {
+			case 'compare-mouse-enter':
+				handleCompareMouseEnter(payload.event, payload.element);
+			break;
+			case 'compare-mouse-leave':
+				handleCompareMouseLeave(payload.event, payload.element);
+			break;
+			case 'compare-click':
+				handleCompareClick(payload.event, payload.element);
+			break;
 		}
-
-
-		console.log('scrollPosition: ', scrollPosition);
-
 	};
 
 
-
-	/* Resizing */
-
-	/*
-	 * initResize
-	 */
-	var initResize = function() {
-		console.log('configurator.initResize()');
-
-		// Initial resize on page load
-		handleResize();
-
-		$(window).on('resize', handleResize);
-	};
+	// Compare
+	// ---------------------------------------------------------
 
 	/*
-	 * handleResize
+	 * initSwatches
 	 */
-	var handleResize = function() {
-		console.log('configurator.handleResize()');
+	var initCompare = function() {
+		console.log('progressionPanelTrims.initSwatches()');
 
-		visualizerHeight = $('section.configurator .visualizer').outerHeight();
-		console.log('visualizerHeight: ', visualizerHeight);
-	};
-
-
-
-
-
-
-	/* Tabs/Panels */
-
-	/*
-	 * initTabs
-	 */
-	var initTabs = function() {
-		console.log('configurator.initTabs()');
-
-
-		// Check for existing hash value and
-		// set default tab selection state
-		console.log('window.location.hash: ', window.location.hash);
-
-		if (window.location.hash) {
-			let hashElement = $('.tab-button[label="' + window.location.hash.substring(1) + '"]');
-			switchTab(hashElement.attr('index'), hashElement.attr('label'));
-		} else {
-			switchTab(0, $('.tab-button[index="0"]').attr('label'));
-		}
-
-
-		// Global Nav Button Event Listeners
-
-		$('.configurator .subnav .tabs .tab-button').on('mouseenter', function(e){
-			handleTabButtonMouseEnter(e, $(this));
+		// Tab Button Event Listeners
+		$('#progression-panels .compare-button.trims').on('mouseenter', function(e){
+			events.dispatch('compare-mouse-enter', {event: e, element: $(this)});
 		});
 
-		$('.configurator .subnav .tabs .tab-button').on('mouseleave', function(e){
-			handleTabButtonMouseLeave(e, $(this));
+		$('#progression-panels .compare-button.trims').on('mouseleave', function(e){
+			events.dispatch('compare-mouse-leave', {event: e, element: $(this)});
 		});
 
-		$('.configurator .subnav .tabs .tab-button').on('click', function(e){
-			handleTabButtonClick(e, $(this));
+		$('#progression-panels .compare-button.trims').on('click', function(e){
+			events.dispatch('compare-click', {event: e, element: $(this)});
 		});
 	};
 
 	/*
-	 * handleTabButtonMouseEnter
+	 * handleCompareMouseEnter
 	 */
-	var handleTabButtonMouseEnter = function(e, element) {
-		console.log('configurator.handleTabButtonMouseEnter()');
+	var handleCompareMouseEnter = function(e, element) {
+		console.log('progressionPanelTrims.handleCompareMouseEnter()');
+		//TweenMax.to(element, 0.4, { scale: 1.15, ease: Power2.easeOut });
+
 	};
 
 	/*
-	 * handleTabButtonMouseLeave
+	 * handleCompareMouseLeave
 	 */
-	var handleTabButtonMouseLeave = function(e, element) {
-		console.log('configurator.handleTabButtonMouseLeave()');
+	var handleCompareMouseLeave = function(e, element) {
+		console.log('progressionPanelTrims.handleCompareMouseLeave()');
+		//TweenMax.to(element, 0.4, { scale: 1, ease: Power2.easeOut });
+
 	};
 
 	/*
-	 * handleTabButtonClick
+	 * handleCompareClick
 	 */
-	var handleTabButtonClick = function(e, element) {
-		console.log('configurator.handleTabButtonClick()');
-		// console.log('index: ', element.attr('index'));
+	var handleCompareClick = function(e, element) {
+		console.log('progressionPanelTrims.handleCompareClick()');
 
-		if (!element.hasClass('selected')) {
-			switchTab(element.attr('index'), element.attr('label'));
-		}
 	};
 
-	/*
-	 * switchTab
-	 */
-	var switchTab = function(index, label) {
-		console.log('configurator.switchTab()');
-		console.log('index: ', index);
-		console.log('label: ', label);
-
-		// Change tab button state
-		$('.configurator .subnav .tabs .tab-button').removeClass('selected');
-		$('.configurator .subnav .tabs .tab-button[index="' + index + '"]').addClass('selected');
-
-		// Change tab state
-		$('.configurator .panels .panel').removeClass('selected');
-		$('.configurator .panels .panel[index="' + index + '"]').addClass('selected');
-
-		// Show/hide visualizer on Model selection step
-		if ( label == 'models' ) {
-			$('.vehicle-info-bar').removeClass('active');
-			$('.visualizer').removeClass('active');
-		} else {
-			$('.vehicle-info-bar').addClass('active');
-			$('.visualizer').addClass('active');
-		}
 
 
-		// Set selection hash
-		window.location.hash = label;
-	};
+
 
 
 
 	// Public Methods
 	// ---------------------------------------------------------
+	// ---------------------------------------------------------
+	// ---------------------------------------------------------
 
 	return {
 
 		// Module name id for dynamic initialization
-        name: 'configurator',
+        name: 'progressionPanelTrims',
 
 		/*
 		 * init
 		 * Main init function called when module target content is loaded
 		 */
 	    init: function(){
-            console.log('configurator.init()');
+            // console.log('progressionPanelTrims.init()');
 	    	initModule();
+	    },
+
+		/*
+		 * start
+		 */
+		start: function(){
+			// console.log('progressionPanelTrims.start()');
+			startModule();
+		},
+
+		/*
+		 * event
+		 */
+		event: function(eventName, payload){
+            //console.log('progressionPanelTrims.event()');
+	    	handleEvent(eventName, payload);
 	    }
 	};
 })();

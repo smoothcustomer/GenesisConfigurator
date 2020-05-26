@@ -1,5 +1,6 @@
 <div class="panel-content">
 	<div class="row">
+
 		<div class="row-header waypoint">
 			<div class="title">Select a Trim</div>
 			<div class="ctas">
@@ -10,6 +11,8 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Cards -->
 		<div class="cards">
 			<div class="card trim selected waypoint">
 				<div class="inner-wrap">
@@ -232,5 +235,12 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Compare -->
+		<div class="compare">
+			Comparison Table
+		</div>
+
+
 	</div>
 </div>

@@ -49,14 +49,15 @@
 
 	<!-- Javascript Libraries -->
 	<script src="assets/js/libs/jquery-2.2.4.min.js"></script>
-	<script src="assets/js/libs/gsap.min.js"></script>
-	<script src="assets/js/libs/CSSRulePlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/CSSRulePlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/ScrollToPlugin.min.js"></script>
 	<script src="assets/js/libs/webfont.js"></script>
 
     <!-- Core Javascript Modules -->
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/events.js"></script>
-	<script src="assets/js/window-listeners.js"></script>
+	<script src="assets/js/window-state.js"></script>
 
 
 	<!-- Component Javascript Modules -->

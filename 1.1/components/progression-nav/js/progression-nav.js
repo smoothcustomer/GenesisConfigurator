@@ -9,6 +9,7 @@ var progressionNav = (function () {
 	// ---------------------------------------------------------
 	// ---------------------------------------------------------
 	let currentIndex = 0;
+	let currentLabel;
 	let nextIndex = 1;
 	let maxIndex = 5;
 
@@ -259,9 +260,24 @@ var progressionNav = (function () {
 	 * selectTab
 	 */
 	var selectTab = function(index, label) {
-		// console.log('progressionNav.selectTab()');
+		console.log('----------------------');
+		console.log('progressionNav.selectTab()');
+		console.log('index: ', index);
+		console.log('label: ', label);
+
+
+		// Models panel transition
+		// Trigger event if changing from/to model selection
+		// Page needs to scroll back to top
+		// ScrollPageToTop is watched in windowState
+		if (currentLabel == 'models' || label == 'models') {
+			events.dispatch('progression-nav-models-transition', {});
+		}
+
+
 
 		currentIndex = index;
+		currentLabel = label;
 
 		// Update next button values
 		updateNextButton(index)

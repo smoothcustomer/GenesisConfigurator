@@ -172,7 +172,6 @@ var visualizer = (function () {
 
 		scrollPosition = _scrollPosition;
 
-
 		setVisualizerHeight(true);
 	}
 
@@ -187,7 +186,6 @@ var visualizer = (function () {
 
 		windowWidth = _windowWidth;
 		windowHeight = _windowHeight;
-
 
 		setVisualizerHeight(false);
 	}

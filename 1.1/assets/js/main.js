@@ -54,7 +54,7 @@ var app = (function(){
 
 		// Init core modules
 		events.init();
-		windowListeners.init();
+		windowState.init();
 
 		// Init component modules
 		globalNav.init();
@@ -74,7 +74,7 @@ var app = (function(){
 		// console.log('app.startModules()');
 
 		// Start core modules
-		windowListeners.start();
+		windowState.start();
 
 		// Start component modules
 		globalNav.start();
