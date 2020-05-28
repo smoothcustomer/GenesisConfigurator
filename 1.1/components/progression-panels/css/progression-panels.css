@@ -5,6 +5,7 @@
 #progression-panels {
 	background-color: #000;
 	min-height: 100%;
+	width: 100%;
 }
 
 #progression-panels .panel {
@@ -18,13 +19,15 @@
 
 #progression-panels .panel-content {
 	display: flex;
-	flex: 1;
+	width: 100%;
+	/* flex: 1; */
 	flex-direction: column;
 }
 
 #progression-panels .panel-content .row {
 	display: flex;
-	flex: 1;
+	width: 100%;
+	/* flex: 1; */
 	flex-direction: column;
 	padding: 0 0 60px 0;
 }
@@ -38,6 +41,12 @@
 	flex: 1;
 	padding: 0 80px 10px 80px;
 }
+
+#progression-panels .panel-content .row-header.compare-header {
+	display: none;
+}
+
+
 
 #progression-panels .panel-content .row-header .title {
 	display: flex;
@@ -125,9 +134,9 @@
 #progression-panels .panel-content .card .title-wrap .drivetrain {
 	position: relative;
 	display: flex;
-	font-family: 'GenesisSansHead-Regular', Helvetica, Arial, Verdana, sans-serif;
-	font-size: 15px;
-	line-height: 16px;
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
 	letter-spacing: 0.5px;
 	color: #CD9A81;
 	z-index: 10;
@@ -294,8 +303,17 @@
 	justify-content: center;
 	width: 100%;
 }
-
+/*
 #progression-panels .panel-content .card.selected .button {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	border: 1px solid transparent;
+	background-color: rgba(255, 255, 255, 0.1);
+} */
+
+#progression-panels .panel-content .selected .button {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -383,11 +401,224 @@
 
 
 
+
+
+/* Compare Tables */
+
+
+/*
+
+
+
+.container      =   .compare-table
+.content-wrap   =   .inner-wrap
+.content        =   .compare-table-content
+.row            =   .compare-row
+.item           =   .compare-element
+
+*/
+
+
+
+#progression-panels .panel-content .row .compare {
+	display: none;
+	width: 100%;
+}
+
+#progression-panels .compare-table {
+	position: relative;
+	display: flex;
+	width: calc(100% - 160px);
+	/* flex-grow: 0;
+	flex-shrink: 0; */
+	/* flex: 1; */
+	padding: 20px 80px;
+}
+
+#progression-panels .compare-table .inner-wrap {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	/* width: calc(100% - 160px); */
+	overflow-x: hidden;
+	/* text-align: center; */
+}
+
+#progression-panels .compare-table .compare-table-content {
+	display: flex;
+	flex-direction: column;
+
+	/* waypoint animation elongates content until finished, which spawns scrollbar. this is a temp fix */
+	padding: 0 0 200px 0;
+}
+
+#progression-panels .compare-table .compare-row {
+	position: relative;
+	display: flex;
+	background-color: #000;
+	/* width: 9999px; */
+	/* padding: 0 0 0 300px; */
+	background-color: transparent;
+}
+
+#progression-panels .compare-table .compare-row .compare-element {
+	display: flex;
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-direction: column;
+	text-align: center;
+	border-right: 1px solid rgba(51, 51, 51, 0.7);
+
+	font-family: 'GenesisSansText-Regular', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 13px;
+	line-height: 22px;
+}
+
+#progression-panels .compare-table .compare-row .compare-element.legend {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	text-align: left;
+	color: #cd9a81;
+
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+/* #progression-panels .compare-table .compare-row.light .compare-element.selected {
+	background-color: #A36B4F;
+}
+
+#progression-panels .compare-table .compare-row .compare-element.selected {
+	background-color: #996348;
+} */
+
+#progression-panels .compare-table .compare-row .compare-element .element-inner-wrap {
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+}
+
+
+
+
+
+
+
+#progression-panels .compare-table .compare-row.light {
+	background-color: #111;
+}
+
+#progression-panels .compare-table .compare-row .compare-element .swatches {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* justify-content: center; */
+}
+
+#progression-panels .compare-table .compare-row .compare-element .swatch {
+	position: relative;
+	display: flex;
+	width: 70px;
+	height: 76px;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#progression-panels .compare-table .compare-row .compare-element .swatch .swatch-button {
+	position: absolute;
+	display: flex;
+	width: 60px;
+	height: 60px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: #555;
+	border-radius: 80%;
+	border: 0;
+}
+
+
+#progression-panels .compare-table .compare-row .compare-element .ctas {
+	margin: 40px 0 0 0;
+}
+
+#progression-panels .compare-table .compare-row .compare-element .ctas .button {
+	width: 100%;
+}
+
+
+#progression-panels .compare-table .compare-row .compare-element .title-wrap {
+	text-align: left;
+}
+
+
+#progression-panels .compare-table .compare-row .compare-element .selected-circle {
+	text-align: center;
+}
+
+#progression-panels .compare-table .compare-row .compare-element .selected-circle img {
+	width: 24px;
+	height: 24px;
+}
+
+
+#progression-panels .compare-table .compare-section-header {
+	display: flex;
+	flex-direction: row;
+	background-color: #222;
+	text-align: left;
+	padding: 30px 40px;
+
+	color: #fff;
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+
+
+
+#progression-panels .compare-table .title-wrap .engine {
+	color: #fff;
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 32px;
+	line-height: 32px;
+	padding: 0 0 7px 0;
+}
+
+#progression-panels .compare-table .title-wrap .drivetrain {
+	color: #fff;
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: 0.5px;
+	color: #CD9A81;
+}
+
+
+
+
+
+
+
+
+
+
 /* Breakpoint Styles */
 /* 1920px, 1600px, 1366px, 1280px, 1024px, 768px */
 /* ------------------------------------------------------------ */
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
+	#progression-panels .compare-table {
+		padding: 20px 20px;
+		width: calc(100% - 40px);
+	}
 
 	#configurator.hide-visualizer #progression-panels {
 		padding: 0;
@@ -502,6 +733,10 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+	#progression-panels .compare-table {
+		padding: 20px 40px;
+		width: calc(100% - 80px);
+	}
 
 	#configurator.hide-visualizer #progression-panels {
 		padding: 0;
@@ -595,24 +830,52 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
+	#progression-panels .compare-table {
+		padding: 20px 80px;
+		width: calc(100% - 160px);
+	}
+
 	#progression-panels .panel-content .card {
 		width: 50%;
 	}
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1599px) {
+	#progression-panels .compare-table {
+		padding: 20px 80px;
+		width: calc(100% - 160px);
+	}
+
 	#progression-panels .panel-content .card {
 		width: 33.33%;
 	}
 }
 
 @media screen and (min-width: 1600px) and (max-width: 1919px) {
+	#progression-panels .compare-table {
+		padding: 20px 80px;
+		width: calc(100% - 160px);
+	}
+
+	/* #progression-panels .compare-table .compare-row .compare-element .swatch {
+		width: 25%;
+	} */
+
 	#progression-panels .panel-content .card {
 		width: 33.33%;
 	}
 }
 
 @media screen and (min-width: 1920px) {
+	#progression-panels .compare-table {
+		padding: 20px 80px;
+		width: calc(100% - 160px);
+	}
+
+	/* #progression-panels .compare-table .compare-row .compare-element .swatch {
+		width: 25%;
+	} */
+
 	#progression-panels .panel-content .card {
 		width: 25%;
 	}

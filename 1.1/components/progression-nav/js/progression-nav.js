@@ -260,7 +260,7 @@ var progressionNav = (function () {
 	 * selectTab
 	 */
 	var selectTab = function(index, label) {
-		console.log('----------------------');
+		// console.log('----------------------');
 		console.log('progressionNav.selectTab()');
 		console.log('index: ', index);
 		console.log('label: ', label);
@@ -376,6 +376,13 @@ var progressionNav = (function () {
 		 */
 		event: function(eventName, payload){
 	    	handleEvent(eventName, payload);
-	    }
+	    },
+
+		/*
+		 * getCurrentLabel
+		 */
+		getCurrentLabel: function(){
+			return currentLabel;
+		}
 	};
 })();

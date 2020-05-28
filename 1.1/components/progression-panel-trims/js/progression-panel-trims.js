@@ -8,7 +8,7 @@ var progressionPanelTrims = (function () {
 	// ---------------------------------------------------------
 	// ---------------------------------------------------------
 	// ---------------------------------------------------------
-
+	let compare = false;
 
 
 
@@ -118,10 +118,60 @@ var progressionPanelTrims = (function () {
 	var handleCompareClick = function(e, element) {
 		console.log('progressionPanelTrims.handleCompareClick()');
 
+		toggleCompareView();
 	};
 
 
 
+	/*
+	 * toggleCompareView
+	 */
+	var toggleCompareView = function() {
+		console.log('progressionPanelTrims.toggleCompareView()');
+
+		// Hide compare view
+		if (compare) {
+			compare = false;
+			hideCompareView();
+
+		// Show compare view
+		} else {
+			compare = true;
+			showCompareView();
+		}
+
+	};
+
+
+
+	/*
+	 * toggleCompareView
+	 */
+	var showCompareView = function(animation = true) {
+		console.log('progressionPanelTrims.showCompareView()');
+
+		$('#progression-panels .cards.trims').css('display', 'none');
+		$('#progression-panels .compare.trims').css('display', 'flex');
+
+		$('#progression-panels .row-header.cards-header').css('display', 'none');
+		$('#progression-panels .row-header.compare-header').css('display', 'flex');
+
+	};
+
+
+	/*
+	 * hideCompareView
+	 */
+	var hideCompareView = function(animation = true) {
+		console.log('progressionPanelTrims.hideCompareView()');
+
+		$('#progression-panels .cards.trims').css('display', 'flex');
+		$('#progression-panels .compare.trims').css('display', 'none');
+
+		$('#progression-panels .row-header.cards-header').css('display', 'flex');
+		$('#progression-panels .row-header.compare-header').css('display', 'none');
+
+	};
 
 
 

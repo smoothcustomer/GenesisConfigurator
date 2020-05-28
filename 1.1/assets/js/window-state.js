@@ -80,6 +80,7 @@ var windowState = (function () {
 		console.log('windowState.startModule()');
 
 		$(window).trigger('resize');
+		//handleResize();
 	};
 
 
@@ -121,6 +122,7 @@ var windowState = (function () {
 	var handleResize = function(e) {
 		let windowWidth = $(window).width();
 		let windowHeight = $(window).height();
+
 		events.dispatch('window-resize', { windowWidth: windowWidth, windowHeight: windowHeight });
 	};
 

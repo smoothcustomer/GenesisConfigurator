@@ -18,6 +18,7 @@
 	<link href="components/visualizer/css/visualizer.css" rel="stylesheet">
 	<link href="components/visualizer-360/css/visualizer-360.css" rel="stylesheet">
 	<link href="components/visualizer-ui/css/visualizer-ui.css" rel="stylesheet">
+	<link href="components/visualizer-mini/css/visualizer-mini.css" rel="stylesheet">
 
 	<link href="components/progression-nav/css/progression-nav.css" rel="stylesheet">
 	<link href="components/progression-panels/css/progression-panels.css" rel="stylesheet">
@@ -65,9 +66,11 @@
 	<script src="components/progression-nav/js/progression-nav.js"></script>
 	<script src="components/progression-panels/js/progression-panels.js"></script>
 	<script src="components/progression-panel-colors/js/progression-panel-colors.js"></script>
+	<!-- <script src="components/progression-panel-trims/js/progression-panel-trims.js"></script> -->
 	<script src="components/visualizer/js/visualizer.js"></script>
 	<script src="components/visualizer-360/js/visualizer-360.js"></script>
 	<script src="components/visualizer-ui/js/visualizer-ui.js"></script>
+	<script src="components/visualizer-mini/js/visualizer-mini.js"></script>
 
 
 

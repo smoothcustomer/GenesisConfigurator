@@ -1,0 +1,79 @@
+
+/* Visualizer */
+/* ------------------------------------------------------------ */
+
+#visualizer-mini {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 300;
+	width: 480px;
+	height: 270px;
+	background-color: #111;
+	opacity: 0;
+}
+
+
+#visualizer-mini.active {
+	display: block;
+}
+
+
+#visualizer-mini .visualizer-panel {
+	position: absolute;
+	width: 480px;
+	height: 270px;
+	left: 0;
+	top: 0;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+#visualizer-mini .info-pane {
+	position: absolute;
+	width: 480px;
+	height: 40px;
+	left: 0;
+	top: 270px;
+	background-color: #111;
+}
+
+
+#visualizer-mini .label {
+	padding: 0 25px;
+	font-family: 'GenesisSansHead-Light', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 15px;
+	line-height: 40px;
+}
+
+
+
+/* Breakpoint Styles */
+/* 1920px, 1600px, 1366px, 1280px, 1024px, 768px */
+/* ------------------------------------------------------------ */
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1599px) {
+
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+
+}
+
+@media screen and (min-width: 1920px) {
+
+}

@@ -372,11 +372,19 @@ section.global-nav header .global-nav-panel.selected {
 	display: block;
 }
 
-.card.selected .button .label.selected {
+/* .card.selected .button .label.selected {
 	display: block;
 }
 
 .card.selected .button .label.deselected {
+	display: none;
+} */
+
+.selected .button .label.selected {
+	display: block;
+}
+
+.selected .button .label.deselected {
 	display: none;
 }
 

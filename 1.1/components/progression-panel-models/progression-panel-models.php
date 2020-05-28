@@ -4,7 +4,8 @@
 		<h1 class="panel-title">Build Your Genesis</h1>
 	</div>
 	<div class="row">
-		<div class="row-header waypoint">
+
+		<div class="row-header cards-header waypoint models">
 			<div class="title">Current Models</div>
 			<div class="ctas">
 				<div class="compare-button models">
@@ -14,6 +15,18 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="row-header compare-header waypoint models">
+			<div class="title">Compare Models</div>
+			<div class="ctas">
+				<div class="compare-button trims">
+					<div class="icon"><img src="assets/images/icons/icon-compare.svg" alt=""></div>
+					<div class="label desktop">Grid View</div>
+					<div class="label mobile">Grid View</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="cards">
 			<div class="card model waypoint">
 				<div class="inner-wrap">

@@ -61,9 +61,11 @@ var app = (function(){
 		progressionNav.init();
 		progressionPanels.init();
 		progressionPanelColors.init();
+		// progressionPanelTrims.init();
 		visualizer.init();
 		visualizerUI.init();
 		visualizer360.init();
+		visualizerMini.init();
 	};
 
 
@@ -81,9 +83,11 @@ var app = (function(){
 		progressionNav.start();
 		progressionPanels.start();
 		progressionPanelColors.start();
+		// progressionPanelTrims.start();
 		visualizer.start();
 		visualizerUI.start();
 		visualizer360.start();
+		visualizerMini.start();
 
 		// Show body
 		$('body').removeClass('hidden');

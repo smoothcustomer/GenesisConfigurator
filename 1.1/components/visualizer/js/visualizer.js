@@ -173,6 +173,16 @@ var visualizer = (function () {
 		scrollPosition = _scrollPosition;
 
 		setVisualizerHeight(true);
+
+		if (scrollPosition >= 80) {
+			if (!$('#visualizer .vehicle-info-bar').hasClass('sticky')) {
+				$('#visualizer .vehicle-info-bar').addClass('sticky');
+			}
+		} else if (scrollPosition < 80) {
+			if ($('#visualizer .vehicle-info-bar').hasClass('sticky')) {
+				$('#visualizer .vehicle-info-bar').removeClass('sticky');
+			}
+		}
 	}
 
 	/*
@@ -208,9 +218,17 @@ var visualizer = (function () {
 			visualizerHeight = parseInt(windowHeight) - parseInt(visualizerWindowPadding) - parseInt(scrollPosition);
 
 			// Adjust for max aspect ratio
-			let newAspectRatio = windowWidth / visualizerHeight;
-			if ( newAspectRatio > maxAspectRatio ) {
-				visualizerHeight = windowWidth / maxAspectRatio;
+			// let newAspectRatio = windowWidth / visualizerHeight;
+			// if ( newAspectRatio > maxAspectRatio ) {
+			// 	visualizerHeight = windowWidth / maxAspectRatio;
+			// }
+
+			if (visualizerHeight < 400) {
+				//visualizerHeight = 0;
+				events.dispatch('show-visualizer-mini', {animation: true});
+
+			} else {
+				events.dispatch('hide-visualizer-mini', {animation: true});
 			}
 		}
 
@@ -222,7 +240,7 @@ var visualizer = (function () {
 		if (active || active == null) {
 
 			if (animate) {
-				TweenMax.to( $('#visualizer'), 0.6, { height: visualizerHeight, ease: Power2.easeOut });
+				TweenMax.to( $('#visualizer'), 0.3, { height: visualizerHeight, ease: Power2.easeOut });
 			} else {
 				$('#visualizer').css('height', visualizerHeight);
 			}

@@ -198,7 +198,23 @@
 	width: 100%;
 	top: 0;
 	left: 0;
+	pointer-events: none;
 }
+
+
+#visualizer .ui .vehicle-info-bar.sticky {
+	position: fixed;
+	top: 80px;
+	left: 0;
+	z-index: 100;
+}
+
+
+
+
+
+
+
 
 #visualizer .ui .vehicle-info-bar .vehicle-info {
 	position: absolute;
